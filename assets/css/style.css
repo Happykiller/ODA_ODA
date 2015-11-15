@@ -368,6 +368,10 @@ input {
     color: white;
 }
 
+.logo:hover {
+	cursor:pointer;
+}
+
 #h2 .logo {
 	margin-top: 30px;
 	margin-left: 40px;
