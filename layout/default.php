@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h1>
-                    <?= $page->getKey('title')?><br><br>
+                    <b><?= $page->getKey('title')?></b>
                 </h1>
             </div>
         </div><!--/row-->

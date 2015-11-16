@@ -38,7 +38,7 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
             <h1>
-                BUILD FASTER WEB SERVICES<br><br>
+                <b>BUILD FASTER WEB SERVICES</b><br><br>
                 ODA is a full-stack framework for build internet services (website, app, service)<br>
             </h1>
             <button class="btn btn-conf btn-clear2" onclick="window.location.href='doc/'">Docs</button>
