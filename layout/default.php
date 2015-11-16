@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="<?= $page->rootUrl ?>assets/img/favicon.ico">
+    <link rel="icon" href="<?= url('/assets/img/favicon.ico') ?>">
 
     <title>ODA a full-stack library for build internet services</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?= $page->rootUrl ?>assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<?= url('/assets/css/bootstrap.css') ?>" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?= $page->rootUrl ?>assets/css/ionicons.min.css" rel="stylesheet">
-    <link href="<?= $page->rootUrl ?>assets/css/style.css" rel="stylesheet">
+    <link href="<?= url('/assets/css/ionicons.min.css') ?>" rel="stylesheet">
+    <link href="<?= url('/assets/css/style.css') ?>" rel="stylesheet">
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="<?= $page->rootUrl ?>assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="<?= url('/assets/js/ie10-viewport-bug-workaround.js') ?>"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -32,7 +32,7 @@
 
 <div id="h">
     <div class="logo">
-        <h2 onclick="window.location.href='<?= $page->rootUrl ?>index.html'">ODA</h2>
+        <h2 onclick="window.location.href='/oda/'">ODA</h2>
     </div><!--/logo-->
     <div class="container centered">
         <div class="row">
@@ -79,15 +79,14 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="<?= $page->rootUrl ?>assets/js/jquery.min.js"></script>
-<script src="<?= $page->rootUrl ?>assets/js/bootstrap.min.js"></script>
-<script src="<?= $page->rootUrl ?>assets/js/retina-1.1.0.js"></script>
-<script src="<?= $page->rootUrl ?>assets/js/jquery.hoverdir.js"></script>
-<script src="<?= $page->rootUrl ?>assets/js/jquery.hoverex.min.js"></script>
-<script src="<?= $page->rootUrl ?>assets/js/jquery.prettyPhoto.js"></script>
-<script src="<?= $page->rootUrl ?>assets/js/jquery.isotope.min.js"></script>
-<script src="<?= $page->rootUrl ?>assets/js/custom.js"></script>
-
+<script src="<?= url('/assets/js/jquery.min.js') ?>"></script>
+<script src="<?= url('/assets/js/bootstrap.min.js') ?>"></script>
+<script src="<?= url('/assets/js/retina-1.1.0.js') ?>"></script>
+<script src="<?= url('/assets/js/jquery.hoverdir.js') ?>"></script>
+<script src="<?= url('/assets/js/jquery.hoverex.min.js') ?>"></script>
+<script src="<?= url('/assets/js/jquery.prettyPhoto.js') ?>"></script>
+<script src="<?= url('/assets/js/jquery.isotope.min.js') ?>"></script>
+<script src="<?= url('/assets/js/custom.js') ?>"></script>
 
 <script>
     // Portfolio

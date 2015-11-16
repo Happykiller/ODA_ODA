@@ -22,8 +22,8 @@
 	padding: 0px;
     font-family: 'Lato', sans-serif;
 } 
-body { 
-	background: #fff; 
+body {
+	background: url(../img/header2.jpg) no-repeat center top;
 	margin: 0; 
 	color: #5a5a5a;
 }
@@ -45,8 +45,7 @@ p {
 	margin-top: 10px; 
 }
 
-html,
-body {
+html, body {
 	height: 100%;
 }
 
@@ -209,11 +208,8 @@ input {
 
 /* HEADER SECTION */
 #h {
-	background: url(../img/header2.jpg) no-repeat center top;
 	padding-top: 5px;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 700px;
+	min-height: 300px;
 	width: 100%;
 	
     -webkit-background-size: 100%;
@@ -231,7 +227,7 @@ input {
 #h .logo {
 	margin-top: 30px;
 	margin-left: 40px;
-	padding-bottom: 150px;
+	padding-bottom: 50px;
 }
 
 #h .logo h2{
