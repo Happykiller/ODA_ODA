@@ -2,7 +2,25 @@
 title: Documentation
 template: default
 ---
+# I8n
 
-## lulu
+> Cette partie traitera de l'internationalisation
 
-lulu
+> Le mécanisme est simple suivant votre configuration vous disposez de deux fichiers de contenu
+ `vendor/oda/resources/i8n/i8n.json` dans le framework et un autre dans l'application `i8n/i8n.json`, celui de
+  l'application surclasse celui du framework. Dans ces fichiers vous pourrez construire pour chaque langue désirée
+  un couple tag-valeur, regrouper par groupe.
+
+### Mèthode $.Oda.I8n.get
+
+> C'est la méthode de base pour récupérer la valeur d'un tag pour la locale actuelle.
+
+1. Les paramètres
+* `p_group` : (chaine de caractère) Pour selectioner le groupe dans lequel la méthode ira cherger la valeur du tag
+* `p_tag` : (chaine de caractère) Le tag pour lequel la valeur est souhaité
+2. Le retour
+* Si le tag est trouvé sa valeur sera retourné, sinon la valeur `Not define`.
+3. Exemple d'appel
+```
+var tagValue = $.Oda.I8n.get('oda-project','userLabel');
+```

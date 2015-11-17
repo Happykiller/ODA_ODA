@@ -13,7 +13,7 @@ template: default
 
 > Ce tutoriel a pour objectif de vous aider à créer une application à partir de zéro.
 
-# Scènario utilisation en tant que simple librairie
+## Scènario utilisation en tant que simple librairie
 
 1. Dans l'application
 ```
