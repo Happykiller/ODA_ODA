@@ -32,7 +32,7 @@
 
 <div id="h">
     <div class="logo">
-        <h2 onclick="window.location.href='/oda/'">ODA</h2>
+        <h2 onclick="window.location.href='/ODA/'">ODA</h2>
     </div><!--/logo-->
     <div class="container centered">
         <div class="row">

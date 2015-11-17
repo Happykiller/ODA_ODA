@@ -77,4 +77,4 @@ AND c.`indice` in (1,10)
 SET `id_menu` = concat(`id_menu`,b.`id`,';');
 ```
 
-[SousToturiel](/oda/)
+[SousToturiel](/ODA/)
