@@ -4,6 +4,8 @@ template: default
 ---
 # I8n
 
+> Cette partie concerne la partie cliente
+
 > Cette partie traitera de l'internationalisation
 
 > Le mécanisme est simple suivant votre configuration vous disposez de deux fichiers de contenu
@@ -24,3 +26,29 @@ template: default
 ```
 var tagValue = $.Oda.I8n.get('oda-project','userLabel');
 ```
+
+# Security
+
+## Menu & Accés au page
+
+> Cette partie concerne la partie cliente
+
+rang
+
+## API
+
+> Cette partie concerne la partie server
+
+Public, Privé et rang
+
+# API
+
+> Cette partie concerne la partie cliente
+
+## cache
+
+## mockup
+
+## ajax
+
+## offline
