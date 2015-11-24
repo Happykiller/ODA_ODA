@@ -5,7 +5,7 @@ template: default
 
 # Installation
 
-> !Attention! : il est bon de savoir que le framework Oda peut être utiliser de plusieurs manière
+> !Attention! : il est bon de savoir que le framework Oda peut être utiliser de plusieurs manières
 > - En tant que simple librairie de méthode
 > - En tant que framework avec une initiatialisation minimal (i8n, notification, message d'acceuil)
 > - En tant que framework avec une initiatialisation application (comme précèdament + éléments propre à l'application ses i8n, sa configuration, ses styles, gestion des routes et sa classe)
