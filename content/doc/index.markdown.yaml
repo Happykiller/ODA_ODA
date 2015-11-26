@@ -27,23 +27,82 @@ template: default
 var tagValue = $.Oda.I8n.get('oda-project','userLabel');
 ```
 
-# Security
+# Securité
+
+* Il est important de comprendre que la sécurité et les droits repose sur la notion de rang.
+* Chaque rang possède un indice, l'indice sert à créer une structure de droit hierarchique.
+* Lexique
+- `api_tab_rangs` La table qui contient les différents rangs avec leur indice
+- `api_tab_rang_api` La table qui défini les droits pour les api
+- `api_tab_menu_rangs_droit` La table qui défini les droits pour les menus
 
 ## Menu & Accés au page
 
 > Cette partie concerne la partie cliente
 
-rang
+Le contrôle des accés aux pages se fait par le menu, si une page n'est pas dans le menu l'utilisateur n'a pas le droit de la consulter.
 
-## API
+Une exeption si la page utilise la catégorie (Liens chachés).
+
+Exemple dans la table `api_tab_menu_rangs_droit` nous pourrions trouver :
+```
+| id_rang       | id_menu       |
+| ------------- | ------------- |
+| 5             | ;1;2;3;       |
+```
+
+Cela signifie que les utilisateurs qui ont le rang 5 (visiteur par defaut) pourront visiter les pages avec les id 1,2,3.
+
+## Clé Oda
+
+Pour sécurisé les appels REST entre le client et le server, mais aussi pour assuré la SESSION, il existe une clé `keyAuthODA`.
+
+Grâce à cette clé, le serveur connaîtra l'utilsateur et les droits.
+
+1. Authentification
+
+Pour s'authentifier il faut appeler en GET le REST suivant :
+
+`<server>/<vendor>/happykiller/oda/resources/api/getAuth.php`
+
+L'interface demande :
+
+- login (String) : le code utilisateur
+- mdp (String) : le mot de passe
+
+L'interface retournera :
+
+- keyAuthODA (String) :  la clé de votre session valable 12H
+
+2. Appel sécurisé
+
+Certaine interface seront sécurisés, il faudra alors fournir en plus des paramètres de propre à l'interface, la clé oda `keyAuthODA`.
+
+3. Se déconnecter
+
+Pour se déconnecter il faut appeler en GET le REST suivant :
+
+`<server>/<vendor>/happykiller/oda/resources/api/deleteSession.php`
+
+L'interface demande :
+
+- ley (String) : La clé de la session
+
+## Interface
 
 > Cette partie concerne la partie server
 
+### Mode publique
+
+Toutes blabla
+
 Public, Privé et rang
 
-# API
+# Interface
 
 > Cette partie concerne la partie cliente
+
+## mode de sortie
 
 ## cache
 

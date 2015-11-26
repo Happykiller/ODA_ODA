@@ -102,6 +102,7 @@ Ou
 ```
 npm run deploy-full
 ```
+6. Dans les cas app et full éditer le fichier de configuration `config/config.js`
 
 ## Scènario de deployement du serveur
 
@@ -130,6 +131,11 @@ npm run deploy-full
 }
 ```
 4. Exécuter la commande pour mettre à jour les dépendances PHP avec Oda
+5. Allez dans le dossier `<vendor>/happykiller/oda/deploy/` et lancer la commande
+```
+php installer.php
+```
+6. Editer le fichier de configuration `<vendor>/include/config.php`
 
 # Ajouter une route
 

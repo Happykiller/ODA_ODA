@@ -1,6 +1,6 @@
 (function($) {
 
-// prettyPhoto
+	// prettyPhoto
 	jQuery(document).ready(function(){
 		jQuery('a[data-gal]').each(function() {
 			jQuery(this).attr('rel', jQuery(this).data('gal'));
@@ -8,5 +8,10 @@
 		jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({animationSpeed:'slow',theme:'light_square',slideshow:false,overlay_gallery: false,social_tools:false,deeplinking:false});
 	}); 
 
+	var htmlSummary = "";
+	$('#div_content h1, h2, h3, h4').each(function() {
+		htmlSummary += jQuery(this).html() + "<br>";
+	});
+	$('#div_summary').html(htmlSummary);
 		
 })(jQuery);

@@ -48,7 +48,9 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" id="div_summary">
+        </div><!--/col-md-12-->
+        <div class="col-md-12" id="div_content">
             <?= $page->getContent() ?>
         </div><!--/col-md-12-->
     </div><!--/row-->
