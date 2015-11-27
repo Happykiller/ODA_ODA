@@ -78,6 +78,8 @@
     </div><!--/container-->
 </div><!--/.F-->
 
+<a href="#" class="scrollup">Scroll</a>
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

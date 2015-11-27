@@ -13,7 +13,7 @@ template: default
   l'application surclasse celui du framework. Dans ces fichiers vous pourrez construire pour chaque langue désirée
   un couple tag-valeur, regrouper par groupe.
 
-### Mèthode $.Oda.I8n.get
+## Mèthode $.Oda.I8n.get
 
 > C'est la méthode de base pour récupérer la valeur d'un tag pour la locale actuelle.
 
