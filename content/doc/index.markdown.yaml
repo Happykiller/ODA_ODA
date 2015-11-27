@@ -86,7 +86,7 @@ Pour se déconnecter il faut appeler en GET le REST suivant :
 
 L'interface demande :
 
-- ley (String) : La clé de la session
+- key (String) : La clé de la session
 
 ## Interface
 
@@ -94,15 +94,35 @@ L'interface demande :
 
 ### Mode publique
 
-Toutes blabla
+Toutes les interfaces implémentes la class `OdaLibInterface`. Au moment de la création nous pouvons dire si l'interface sera publique ou non.
 
-Public, Privé et rang
+```
+//Build the interface
+$params = new OdaPrepareInterface();
+$params->modePublic = false;
+$INTERFACE = new OdaLibInterface($params);
+```
 
-# Interface
+Si l'interface est 'non' pulique, il faudra fournir un clé Oda valide.
+
+### Interface privé suivant le rang
+
+Si votre interface (ex : <monInterface>) est déclaré privé, et que dans la table `api_tab_rang_api` elle est déclaré des
+restrictions seront appliqués.
+
+Exemple :
+```
+| interface     | id_rang       | open          |
+| ------------- | ------------- | ------------- |
+| exemple       | 3             | 0             |
+```
+
+Dans cette exemple il est défini que l'interface qui contient le mot `exemple` (fichier `<server>/api/exemple.php`)
+permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieurs ou égale en indice au rang `3` (Responsable).
+
+# Appel interface
 
 > Cette partie concerne la partie cliente
-
-## mode de sortie
 
 ## cache
 
@@ -111,3 +131,11 @@ Public, Privé et rang
 ## ajax
 
 ## offline
+
+# Interface
+
+> Cette partie concerne la partie serveur
+
+## Construction
+
+## mode de sortie
