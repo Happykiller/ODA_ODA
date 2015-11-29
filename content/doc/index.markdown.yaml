@@ -120,19 +120,67 @@ Exemple :
 Dans cette exemple il est défini que l'interface qui contient le mot `exemple` (fichier `<server>/api/exemple.php`)
 permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieurs ou égale en indice au rang `3` (Responsable).
 
-# Appel interface
+# Appel REST
 
 > Cette partie concerne la partie cliente
 
-## cache
+La gestion des appels REST se fait dans le l'extension `$.Oda.Interface`, tout les appels au serveur se feront par cette extension.
+
+## Mèthode callRest
+
+Le méthode `callRest` est la méthode principale pour tout vos appels.
+
+1. Les paramètres
+* `p_url` : (chaine de caractère) Cela représente l'url de l'interface (ex : `http://domaine.com/api/interface`)
+* `p_tabSetting` : (objet) l'objet contiendra tout les options pour l'appel, il supporte l'ensemble des paramtères de [jQuery.ajax([settings])](http://api.jquery.com/jquery.ajax/)
+<ul>
+  <li>
+     <code>dataType</code> : (String) type du data soumis (ex : 'json')
+  </li>
+  <li>
+     ... (autres paramètres standards)
+  </li>
+  <li>
+     <code>functionRetour</code> : (function(response)) la fonction a exectué en cas de retour réussi, la seul présence de se paramètre suffit à déclarer l'appel <b>synchrone</b> ou <b>asynchrone</b>
+  </li>
+  <li>
+     <code>odaCacheOnDemande</code> : (Boolean) Dans le cas d'une interface avec un cache optionable
+  </li>
+</ul>
+* `p_tabInput` : (objet) l'objet contiendra tout les données nécéssaires ou optionelles pour l'interface
+
+2. Le retour
+
+Si l'appel est synchrone le retour sera du type (objet) contenant la réponse à l'appel, sinon il retourne l'exetention.
+
+3. Exemple d'appel
+```
+var tabInput = { "data1" : "valeur1" };
+$.Oda.Interface.callRest("domaine/api/interface", {functionRetour : function(response) {
+    $.Oda.Log.trace(response);
+}}, tabInput);
+```
+
+## Mode d'interface
+
+Pour une application il est possible de définir un scénario d'utilisation des interfaces. Quatre modes sont disponibles `cache`, `ajax`, `mokup`, `offline`.
+
+La définition de la stratégie se fait par le l'extention : `$.Oda.Context.modeInterface`, il faut choisir qu'elles méthodes seront utilisées et dans quel ordre.
+
+Exemple :
+```
+$.Oda.Context.modeInterface = ["cache","ajax","mokup","offline"]
+```
+
+### cache
 
 blabla
 
-## mockup
+### mockup
 
-## ajax
+### ajax
 
-## offline
+### offline
 
 # Interface
 
