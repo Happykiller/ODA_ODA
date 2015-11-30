@@ -323,3 +323,7 @@ Pour établir ce que l'interface va afficher en retour de son appel, il faut uti
 * `addDataObject` : (Objet) Un facilitateur pour ajouter un objet.
 * `addDataStr` : (String) Pour ajouter qu'une chaine.
 * `dieInError` :  (String) Pour retourner une erreur.
+
+# Modal (Popup)
+
+Todo
