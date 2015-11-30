@@ -131,6 +131,9 @@ npm run deploy-full
 }
 ```
 4. Exécuter la commande pour mettre à jour les dépendances PHP avec Oda
+```
+composer update
+```
 5. Allez dans le dossier `<vendor>/happykiller/oda/deploy/` et lancer la commande
 ```
 php installer.php
