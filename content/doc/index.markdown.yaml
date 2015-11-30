@@ -172,20 +172,154 @@ Exemple :
 $.Oda.Context.modeInterface = ["cache","ajax","mokup","offline"]
 ```
 
-### cache
+### Cache
 
-blabla
+Le mécanisme de mise en cache se fait suivant la configuration contenu dans `cache/cache.json`.
 
-### mockup
+Chaque interface peut être mise en cache. Pour se faire il faut déclarer un objet dans la liste.
 
-### ajax
+Le cache est gérer dans le stockage locale du navigateur (limiter suivant les navigateurs, moins de 5mo).
 
-### offline
+Les paramètres :
+* `key` : (String) la chaine d'identification de l'interface
+* `ttl` : (Integer) C'est le temps pendant lequel le cache est valable
+* `onDemande` :  (Boolean) Optionel, si il est positioné à vrai alors le cache n'est utilisé que si spécifié dans l'appel. Voir le paramètre `odaCacheOnDemande` de la méthode callRest.
+
+Example :
+```
+{
+  "key" : "api/interface",
+  "ttl" : 60,
+  "onDemande" : true
+}
+```
+
+### Mock-up ou maquettte
+
+Ce mécanisme est utilisé pour simuler une interface suivant le configuration contenu dans `mokup/molup.json`
+
+Chaque interface peut utiliser cette fonction, pour l'utiliser il faut déclarer un objet dans la liste.
+
+Les paramètres :
+* `interface` : (String) la chaine d'identification de l'interface
+* `value` : (Objet) Il s'agit d'une liste pour conditioner les données retourner suivant les paramètres d'appel
+<ul>
+  <li>
+     <code>args</code> : (String | Objet) "default" ou l'objet contenant les paramètres
+  </li>
+  <li>
+     <code>return</code> : (Objet) L'objet attendu en réponse à l'appel
+  </li>
+</ul>
+
+Example :
+```
+{
+  "interface" : "api/interface",
+  "value" : [
+    {
+      "args" : {"param1" : "value1"},
+      "return" : {"attr1":1}
+    },
+    {
+      "args" : "default",
+      "return" : {"attr1":1}
+    }
+  ]
+}
+```
+
+### Ajax
+
+Il s'agit de l'appel standard.
+
+### Offline
+
+Ce mode permet de renvoyer ce qui est en cache sans restrinction de temps, c'est à dire qu'il ignore le paramètre `ttl` du mode cache.
 
 # Interface
 
 > Cette partie concerne la partie serveur
 
+Pour aider un exemple d'interface est diponible dans `api/exemple.php`.
+
 ## Construction
 
-## mode de sortie
+La construction d'une interface se fait en créant un objet `Oda\OdaInterface`.
+
+Le constructeur attends une paramètre de type `Oda\OdaPrepareInterface`.
+
+Les paramètres :
+* `modeDebug` : (Boolean) (par défaut faux) à vrai des informations supplémentaires seront fournis à l'exécution.
+* `modePublic` : (Boolean) (par défaut vrai) Voir le chapitre sur la sécurité
+* `modeSortie` : (Boolean) (par défaut json) Voir le capitre sur le mode de sortie
+* `fileName` : (String) (par défaut null) Voir le capitre sur le mode de sortie
+* `arrayIntput` : (Array) (par défaut vide) Il s'agit du tableau des paramètres qu'attend l'interface
+* `arrayIntputOpt` : (Array) (par défaut vide) Il s'agit du tableau des paramètres optionels pour l'interface, avec leur valeur par défaut
+
+Example :
+```
+//Build the interface
+$params = new OdaPrepareInterface();
+$params->arrayInput = array("code_user","type");
+$params->arrayInputOpt = array("option" => null);
+$ODA_INTERFACE = new OdaInterface($params);
+```
+
+## Mode de sortie
+
+Les interfaces peuvent être configurer pour renvoyer différent type de contenu.
+
+Pour paramétrer le type de sortie, soit sur l'objet interface avec l'attribut `modeSortie` soit en fournissant le paramètre `ODAFileType`.
+
+Les différents types de sortie :
+* `text` : simple texte
+* `json` : format standard
+* `xml` : restriction sur le format des données, un tableau
+* `csv` : restriction sur le format des données, un tableau
+
+## Fichier de sortie
+
+Les interfaces peuvent être configurer pour renvoyer un fichier à la place d'afficher les données.
+
+Pour paramétrer le fichier de sortie, soit sur l'objet interface avec l'attribut `fileName` soit en fournissant le paramètre `ODAFileName`.
+
+## Les paramètres à destination de l'interface
+
+Dans une interface tous les paramètres d'appel sont disponibles dans l'attribut sur l'interface : `inputs`
+
+Exemple :
+```
+$codeUser = $ODA_INTERFACE->inputs["code_user"];
+```
+
+## Les reqêtes
+
+Les interfaces Oda permettent une implémentation intégrer pour le requêtage SQL.
+
+Exemple :
+```
+$params = new OdaPrepareReqSql();
+$params->sql = "
+SELECT a.`id`
+FROM `table` a
+WHERE 1=1
+AND a.`code_user` = :code_user
+;";
+$params->bindsValue = [
+    "code_user" => $INTERFACE->inputs["code_user"]
+];
+$params->typeSQL = OdaLibBd::SQL_GET_ALL;
+$response = $HOW_INTERFACE->BD_ENGINE->reqODASQL($params);
+```
+
+* Si dans la configuration du côté serveur, il a été spécifié une extension, il n'est toutefois pas nécessaire de l'indiquer dans le nom des tables.
+
+## La sortie
+
+Pour établir ce que l'interface va afficher en retour de son appel, il faut utiliser des méthodes.
+
+* `addDataReqSQL` : (Oda\OdaRetourReqSql) Un facilitateur pour ajouter le retour des requêtes SQL.
+* `addDataObject` : (Objet) Un facilitateur pour ajouter un objet.
+* `addDataStr` : (String) Pour ajouter qu'une chaine.
+* `dieInError` :  (String) Pour retourner une erreur.
