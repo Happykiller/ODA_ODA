@@ -9,12 +9,14 @@ $app = new \Slim\Slim(['debug' => true]);
 
 $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(content_path));
 
-$files = new RegexIterator($files, '/^.+\.yaml/i', RecursiveRegexIterator::GET_MATCH);
+$files = new RegexIterator($files, '/^.+\.(markdown|html)/i', RecursiveRegexIterator::GET_MATCH);
+
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 foreach($files as $file){
     $file = $file[0];
     $page = new \App\Page($file);
-    $app->any($page->path, function() use ($page, $app){
+    $app->any($page->path, function() use ($page, $app, $lang){
         $pathHelper = getcwd() . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'helpers.php';
         require $pathHelper;
         echo $page->render();

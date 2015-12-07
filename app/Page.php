@@ -20,27 +20,19 @@ class Page
     public $content;
     public $keys;
     public $type = 'html';
+    public $lang = 'fr';
 
     public function __construct($url)
     {
         $this->url = $url;
-        $pos = strpos($url, 'markdown');
-        if($pos){
-            $this->type = 'markdown';
-        }
-        $this->path = $this->getUrl($url);
+        $path = str_replace(content_path, '', $url);
+        $tab_options = explode ('.',$path);
+        $this->type = $tab_options[sizeof($tab_options)-1];
+        $this->lang = $tab_options[sizeof($tab_options)-2];
+        $path = str_replace('index', '', $tab_options[0]);
+        $this->path = str_replace('\\', '/', $path);
         $this->keys = $this->getKeys();
         $this->content = $this->getContent();
-    }
-
-    public function getUrl($url){
-        $path = str_replace(content_path, '', $url);
-        $path = str_replace('.yaml', '', $path);
-        $path = str_replace('.html', '', $path);
-        $path = str_replace('.markdown', '', $path);
-        $path = str_replace('index', '', $path);
-        $path = str_replace('\\', '/', $path);
-        return $path;
     }
 
     public function render(){
