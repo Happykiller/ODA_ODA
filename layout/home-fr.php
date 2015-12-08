@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $page->lang ?>">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="<?= url('/assets/img/favicon.ico') ?>">
 
-    <title>ODA a full-stack library for build internet services</title>
+    <title>ODA | Accueil</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= url('/assets/css/bootstrap.css') ?>" rel="stylesheet">
@@ -38,17 +38,17 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
             <h1>
-                <b>BUILD FASTER WEB SERVICES</b><br><br>
-                ODA is a full-stack framework for build internet services (website, app, service)<br>
+                <b>Construire facilement et rapidement ses services</b><br><br>
+               ODA est un outil complet pour la création de service internet (website, app, service)<br>
             </h1>
-            <button class="btn btn-conf btn-clear2" onclick="window.location.href='doc/'">Docs</button>
-            <button class="btn btn-conf btn-clear2" onclick="window.location.href='tuto/'">Tutorials</button>
-            <button class="btn btn-conf btn-clear2" onclick="window.open('https://github.com/Happykiller/ODA_FW_CLIENT')">Github Client-side</button>
-            <button class="btn btn-conf btn-clear2" onclick="window.open('https://github.com/Happykiller/ODA_FW_SERVER')">Github Server-side</button>
+            <button class="btn btn-conf btn-clear2" onclick="window.location.href='doc/'">Documentation</button>
+            <button class="btn btn-conf btn-clear2" onclick="window.location.href='tuto/'">Tutoriels</button>
+            <button class="btn btn-conf btn-clear2" onclick="window.open('https://github.com/Happykiller/ODA_FW_CLIENT')">Github Côté Client</button>
+            <button class="btn btn-conf btn-clear2" onclick="window.open('https://github.com/Happykiller/ODA_FW_SERVER')">Github Côté Serveur</button>
           </div>
         </div><!--/row-->
 
-        <h2 class="centered mb">My goal was to create a tool that allows me to achieve all my projects, website, third party service, application.</h2>
+        <h2 class="centered mb">Mon but was to create a tool that allows me to achieve all my projects, website, third party service, application.</h2>
 
         <div class="row mt">
           <div class="col-sm-4">

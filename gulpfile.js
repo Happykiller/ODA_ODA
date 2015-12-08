@@ -9,7 +9,7 @@ gulp.task('browser-sync', function() {
     plugins.browserSync.init({
         proxy: "localhost:80/ODA/"
     });
-    gulp.watch("content/**/*.yaml", function(){
+    gulp.watch(["content/**/*","layout/**/*"], function(){
         plugins.browserSync.reload();
     });
 });

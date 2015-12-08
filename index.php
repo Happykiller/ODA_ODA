@@ -16,11 +16,13 @@ $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 foreach($files as $file){
     $file = $file[0];
     $page = new \App\Page($file);
-    $app->any($page->path, function() use ($page, $app, $lang){
-        $pathHelper = getcwd() . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'helpers.php';
-        require $pathHelper;
-        echo $page->render();
-    });
+    if($page->lang === $lang){
+        $app->any($page->path, function() use ($page, $app){
+            $pathHelper = getcwd() . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'helpers.php';
+            require $pathHelper;
+            echo $page->render();
+        });
+    }
 }
 
 $app->run();
