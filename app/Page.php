@@ -47,8 +47,6 @@ class Page
         $doc = Parser::parse(file_get_contents($this->url));
         $parser = new GithubMarkdown();
         $parser->enableNewLines = true;
-        //https://help.github.com/articles/markdown-basics/
-        //https://help.github.com/articles/github-flavored-markdown/
         return $parser->parse($doc->getContent());
     }
 
