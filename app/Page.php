@@ -13,8 +13,7 @@ use VKBansal\FrontMatter\Document;
 use \cebe\markdown\GithubMarkdown;
 
 
-class Page
-{
+class Page{
     public $url;
     public $path;
     public $content;
@@ -22,8 +21,7 @@ class Page
     public $type = 'html';
     public $lang = 'fr';
 
-    public function __construct($url)
-    {
+    public function __construct($url){
         $this->url = $url;
         $path = str_replace(content_path, '', $url);
         $tab_options = explode ('.',$path);
