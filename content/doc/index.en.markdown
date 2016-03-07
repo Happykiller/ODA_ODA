@@ -334,6 +334,11 @@ Todo
 
 ## Template widget
 
+### Button
+```
+<button type="button" oda-submit="submit" onclick="$.Oda.Controler.Auth.goIn();" class="btn btn-primary disabled" disabled><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> <label oda-label="oda-main.bt-submit>"></label></button>
+```
+
 ### Checkbox
 ```
 <div class="form-group">
