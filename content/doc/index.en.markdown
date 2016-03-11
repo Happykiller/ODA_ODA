@@ -326,13 +326,58 @@ Pour établir ce que l'interface va afficher en retour de son appel, il faut uti
 
 # Modal (Popup)
 
-Todo
+* Exemple d'implémentation
+```
+$.Oda.Display.Popup.open({
+    "name" : "pExemple",
+    "size" : "lg",
+    "label" : $.Oda.I8n.get('group','entete'),
+    "details" : strHtml,
+    "footer" : '<button type="button" oda-label="oda-main.bt-submit" oda-submit="submit" onclick="$.Oda.App.Controller.Part.submit();" class="btn btn-primary disabled" disabled>Submit</button >',
+    "callback" : function(){
+        $.Oda.Scope.Gardian.add({
+            id : "gEditPatient",
+            listElt : ["firstName", "lastName"],
+            function : function(e){
+                if( ($("#firstName").data("isOk")) && ($("#lastName").data("isOk")) ){
+                    $("#submit").removeClass("disabled");
+                    $("#submit").removeAttr("disabled");
+                }else{
+                    $("#submit").addClass("disabled");
+                    $("#submit").attr("disabled", true);
+                }
+            }
+        });
+    }
+});
+```
+
+# Template HTML
+
+* Dans un fichier HTML (patials, template, index.html) définir un template
+```
+<script id="tlpExemple" type="text/template">
+    <div>
+        {{variable}}
+    </div>
+</script>
+```
+* Les élements entre `{{...}}` sont des expressions avec les variables défini dans le scope du template (voir plus bas)
+* Appeler la fonction de template et définir le scope
+```
+var strHtml = $.Oda.Display.TemplateHtml.create({
+    template : "tlpExemple"
+    , scope : {
+        "variable": "Coucou"
+    }
+});
+```
 
 # Formulaire
 
 > Cette partie concerne la partie cliente
 
-## Template widget
+## Widgets
 
 ### Button
 ```
