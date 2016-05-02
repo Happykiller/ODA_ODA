@@ -207,7 +207,7 @@
         <div class="row centered">
           <div class="col-md-8 col-md-offset-2">
             <h1>To better cross the bridge of web technology, feel free to contact me!</h1>
-            <button class="btn btn-conf btn-clear" onClick="window.open('http://perso-happykiller.rhcloud.com/LFJFR/#?key=odasite')">Request for Information</button>
+            <button class="btn btn-conf btn-clear" onClick="window.open('http://lfjfr.happykiller.net#?key=odasite')">Learn to know me</button>
           </div>
         </div><!--/row-->
       </div><!--/container-->

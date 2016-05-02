@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="<?= url('/assets/img/favicon.png') ?>">
 
-    <title>ODA | Accueil</title>
+    <title>ODA est un outil complet pour la création de service internet</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= url('/assets/css/bootstrap.css') ?>" rel="stylesheet">
@@ -48,7 +48,7 @@
           </div>
         </div><!--/row-->
 
-        <h2 class="centered mb">Mon but was to create a tool that allows me to achieve all my projects, website, third party service, application.</h2>
+        <h2 class="centered mb">Mon objetif était de créer un outil qui me permet de réaliser tous mes projets, site web, services tiers, application.</h2>
 
         <div class="row mt">
           <div class="col-sm-4">
@@ -58,12 +58,12 @@
 
           <div class="col-sm-4">
             <i class="ion-ios7-browsers-outline"></i>
-            <h3>Client structure</h3>
+            <h3>Structure client</h3>
           </div><!--/col-md-4-->
 
           <div class="col-sm-4">
             <i class="ion-ios7-copy-outline"></i>
-            <h3>Server structure</h3>
+            <h3>Structure serveur</h3>
           </div><!--/col-md-4-->
 
         </div><!--/row-->
@@ -73,13 +73,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <p>The framework helps creating form and navigation by take in charge the web design. This is possible through the use of personalized HTML5 tag performed by the client-based framework jQuery and JavaScript.</p>
+          <p>Le framework aide à la création de vue, à la navigation. Cela est possible par l'utilisation de tag HTML5 personnalisés interprétés par le côté client du framework (Jquery, JavaScript).</p>
         </div><!--/col-md-6-->
         <div class="col-md-4">
-          <p>The client side framework helps by offering a web project structure, this structure will allow the implementation of road management, multi-language, templating, and tests. Taking place in an architecture by layer, the client framework fully supports REST calls with a set of functionality such as caching, mokup, offline mode.</p>
+          <p>Le côté client du framework aide à offrir une stucture de projet web, cette structure permet l'implémentation de la gestion des route, templating, et tests. En fournissant une architecture par couche, le côté client intégre dans son design le support des appels REST, mise en cache, mokup, mode offline.</p>
         </div><!--/col-md-6-->
         <div class="col-md-4">
-          <p>The purpose server-side framework is to facilitate the exposure of information from the database in REST. The framework is oriented to use the purest and SQL processing JSON for REST. On the other functionality such as database management for its creation, migration are present, such as management of mail shipments.</p>
+          <p>Le but du côté serveur est de faciliter l'exposition des données par REST. Le framework est orienté pour utiliser le SQL pour produire les données au format JSON. D'autres fonctionalités sont couvertes comme la gestion de base de donnée, les emails, des documents.</p>
         </div><!--/col-md-6-->
       </div><!--/row-->
     </div><!-- /.container -->
@@ -113,7 +113,7 @@
     <div id="g">
       <div class="container">
         <div class="row centered">
-          <h2>Check some of my latest works.</h2>
+          <h2>Voici des exemples de mes dernières réalisations.</h2>
         </div><!--/row-->
       </div><!--/.container-->
     </div>
@@ -126,7 +126,7 @@
                 <img src="assets/img/portfolio/portfolio_01.jpg" class="img-responsive" alt="">
                 <div class="he-view">
                     <div class="bg a0" data-animate="fadeIn">
-                        <h3 class="a1" data-animate="fadeInDown">Service of Poker</h3>
+                        <h3 class="a1" data-animate="fadeInDown">Service pour Poker</h3>
                         <a data-rel="prettyPhoto" href="assets/img/portfolio/portfolio_01.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-search"></i></a>
                         <a href="http://perso-happykiller.rhcloud.com/POK/" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-link"></i></a>
                     </div><!-- he bg -->
@@ -139,7 +139,7 @@
           <img src="assets/img/portfolio/portfolio_02.jpg" class="img-responsive" alt="">
             <div class="he-view">
               <div class="bg a0" data-animate="fadeIn">
-                <h3 class="a1" data-animate="fadeInDown">Service of curriculum vitae</h3>
+                <h3 class="a1" data-animate="fadeInDown">Service pour CV</h3>
                 <a data-rel="prettyPhoto" href="assets/img/portfolio/portfolio_02.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-search"></i></a>
                 <a href="http://perso-happykiller.rhcloud.com/LFJFR/" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-link"></i></a>
                </div><!-- he bg -->
@@ -152,7 +152,7 @@
           <img src="assets/img/portfolio/portfolio_03.jpg" class="img-responsive" alt="">
             <div class="he-view">
               <div class="bg a0" data-animate="fadeIn">
-                <h3 class="a1" data-animate="fadeInDown">Service of statistics for HeartStone</h3>
+                <h3 class="a1" data-animate="fadeInDown">Service de statistique pour le jeux HeartStone</h3>
                 <a data-rel="prettyPhoto" href="assets/img/portfolio/portfolio_03.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-search"></i></a>
                 <a href="http://perso-happykiller.rhcloud.com/HOW/" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-link"></i></a>
               </div><!-- he bg -->
@@ -165,7 +165,7 @@
           <img src="assets/img/portfolio/portfolio_04.jpg" class="img-responsive" alt="">
             <div class="he-view">
               <div class="bg a0" data-animate="fadeIn">
-                <h3 class="a1" data-animate="fadeInDown">Help for restaurant ticket</h3>
+                <h3 class="a1" data-animate="fadeInDown">Service pour gestion panier de Ticket Restaurant</h3>
                 <a data-rel="prettyPhoto" href="assets/img/portfolio/portfolio_04.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-search"></i></a>
                 <a href="http://perso-happykiller.rhcloud.com/OTR/" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-link"></i></a>
               </div><!-- he bg -->
@@ -178,7 +178,7 @@
           <img src="assets/img/portfolio/portfolio_05.jpg" class="img-responsive" alt="">
             <div class="he-view">
               <div class="bg a0" data-animate="fadeIn">
-                <h3 class="a1" data-animate="fadeInDown">All compatible for app</h3>
+                <h3 class="a1" data-animate="fadeInDown">Tous compatibles en application</h3>
                 <a data-rel="prettyPhoto" href="assets/img/portfolio/portfolio_05.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-search"></i></a>
                 <a href="https://play.google.com/store/apps/details?id=com.oda.how&hl=fr" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-link"></i></a>
               </div><!-- he bg -->
@@ -191,7 +191,7 @@
           <img src="assets/img/portfolio/portfolio_09.jpg" class="img-responsive" alt="">
             <div class="he-view">
               <div class="bg a0" data-animate="fadeIn">
-                <h3 class="a1" data-animate="fadeInDown">And more !</h3>
+                <h3 class="a1" data-animate="fadeInDown">Et plus !</h3>
                 <a data-rel="prettyPhoto" href="assets/img/portfolio/portfolio_09.jpg" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-search"></i></a>
                 <a href="http://perso-happykiller.rhcloud.com/LFJFR/#?key=odasite" class="dmbutton a2" data-animate="fadeInUp"><i class="ion-link"></i></a>
               </div><!-- he bg -->
@@ -206,8 +206,8 @@
       <div class="container">
         <div class="row centered">
           <div class="col-md-8 col-md-offset-2">
-            <h1>To better cross the bridge of web technology, feel free to contact me!</h1>
-            <button class="btn btn-conf btn-clear" onClick="window.open('http://perso-happykiller.rhcloud.com/LFJFR/#?key=odasite')">Request for Information</button>
+            <h1>Le meilleur moyen de traverser le pond de la technologie du web, et de me contacter !</h1>
+            <button class="btn btn-conf btn-clear" onClick="window.open('http://lfjfr.happykiller.net#?key=odasite')">Apprendre à me connaître</button>
           </div>
         </div><!--/row-->
       </div><!--/container-->
