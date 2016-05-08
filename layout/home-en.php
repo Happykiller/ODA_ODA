@@ -219,6 +219,7 @@
           <div class="col-md-8 col-md-offset-2">
             <a href="#" onclick="window.open('https://twitter.com/hashtag/FW_ODA?src=hash')"><i class="ion-social-twitter"></i></a>
             <a href="#" onclick="window.open('https://www.facebook.com/FW_ODA')"><i class="ion-social-facebook"></i></a>
+            <a href="#" onclick="window.open('http://lfjfr.happykiller.net#?key=odasite')"><i class="ion-person"></i></a>
           </div><!--/col-md-8-->
         </div>
       </div><!--/container-->
@@ -234,7 +235,6 @@
     <script src="<?= url('/assets/js/jquery.hoverex.min.js') ?>"></script>
     <script src="<?= url('/assets/js/jquery.prettyPhoto.js') ?>"></script>
     <script src="<?= url('/assets/js/jquery.isotope.min.js') ?>"></script>
-    <script src="<?= url('/assets/js/custom.js') ?>"></script>
 
     <script>
     // Portfolio

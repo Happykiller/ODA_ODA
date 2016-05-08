@@ -1,6 +1,7 @@
 ---
 title: Tutorials
-template: default
+template: tuto
+
 ---
 
 # Installation

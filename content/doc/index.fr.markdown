@@ -1,7 +1,11 @@
 ---
 title: Documentation
-template: default
+template: doc
+text_lib_client: Librairie Cliente
+text_lib_server: Librairie Servuer
+
 ---
+
 # I8n
 
 > Cette partie concerne la partie cliente
@@ -88,7 +92,7 @@ L'interface demande :
 
 - key (String) : La clé de la session
 
-## Interface
+## Sécutité pour les interfaces
 
 > Cette partie concerne la partie server
 
@@ -237,7 +241,7 @@ Il s'agit de l'appel standard.
 
 Ce mode permet de renvoyer ce qui est en cache sans restrinction de temps, c'est à dire qu'il ignore le paramètre `ttl` du mode cache.
 
-# Interface
+# Interface serveur
 
 > Cette partie concerne la partie serveur
 
@@ -418,129 +422,4 @@ var strHtml = $.Oda.Display.TemplateHtml.create({
 ```
 
 ## Gardien
-
-# Client Map
-
-```
-$
-|-- Oda
-     |-- version
-     |-- Session
-     |-- SessionDefault
-     |-- Context
-     |      |-- modeInterface
-     |      |-- ModeExecution
-     |      |        |---init
-     |      |        |---scene
-     |      |        |---notification
-     |      |        |---message
-     |      |        |---rooter
-     |      |        |---app
-     |      |        +---footer
-     |      |-- debug
-     |      |-- vendorName
-     |      |-- rootPath
-     |      |-- projectLabel
-     |      |-- mainDiv
-     |      |-- host
-     |      |-- rest
-     |      |-- resources
-     |      |-- window
-     |      |-- console
-     |      +-- startDate
-     |-- Regexs
-     |    |-- mail
-     |    |-- login
-     |    |-- pass
-     |    |-- firstName
-     |    |-- lastName
-     |    +-- noInjection
-     |-- init()
-     |-- Controller
-     |--App
-     |-- Cache
-     |    |-- cache
-     |    |-- config
-     |    |-- clean()
-     |    |-- cleanAll()
-     |    |-- load({key,attrs,demande})
-     |    |-- loadWithOutTtl({key,attrs})
-     |    |-- remove({key,attrs})
-     |    |-- save({key,attrs,datas})
-     |-- Loader
-     |    |-- TODO
-     |-- Mobile
-     |    |-- TODO
-     |-- MokUp
-     |    |-- TODO
-     |-- Event
-     |     |-- addListener({name, callback})
-     |     +-- send({name, data})
-     |-- Date
-     |    |-- convertSecondsToTime(second)
-     |    |-- getStrDateFR()
-     |    |-- getStrDateTimeFrFromUs(dateUs)
-     |    |-- getStrDateTime()
-     |    +-- getStrDateTimeFrFromUs(dateTimeUs)
-     |-- Interface
-     |    |-- TODO
-     |-- Display
-     |      |-- jsonToStringSingleQuote(json)
-     |      |-- loading(div)
-     |      |-- render({id,html})
-     |      |-- Menu
-     |      |    |-- remove()
-     |      |    |-- show()
-     |      |    +-- display
-     |      |-- MenuSlide
-     |      |    |-- remove()
-     |      |    |-- show()
-     |      |    +-- display
-     |      |-- Message
-     |      |     |-- hide({id})
-     |      |     +-- show() 
-     |      |-- Notification
-     |      |        |-- create(message, type, time)
-     |      |        |-- danger(message)
-     |      |        |-- error(message)
-     |      |        |-- info(message)
-     |      |        |-- load()
-     |      |        |-- remove({id})
-     |      |        |-- removeAll()
-     |      |        |-- success(message)
-     |      |        |-- warning(message)
-     |      |        +-- id
-     |      |-- Popup
-     |      |     |-- close({name}
-     |      |     |-- closeAll()
-     |      |     |-- open({name, size, label, details, footer, callback, callbackParams})
-     |      |     +-- iterator
-     |      |-- Scene
-     |      |     |-- avatar({codeUser, callback})
-     |      |     +-- load()
-     |      |-- Table
-     |      |     +-- createDataTable({target, data, attribute, option})
-     |      +-- TemplateHtml
-     |              |-- create({name, scope})
-     |              +-- eval({exrp, scope})
-     |-- Tooling
-     |    |-- TODO
-     |-- I8n
-     |    |-- TODO
-     |-- Security
-     |    |-- TODO
-     +-- Worker
-     |    |-- TODO
-     |-- Tuto
-     |    |-- TODO
-     |-- Scope
-     |    |-- TODO
-     |-- Storage
-     |    |-- TODO
-     |-- Router
-     |    |-- TODO
-     |-- Google
-     |     |-- sessionState({callback})
-     |     +-- startSessionAuth(functionOk, functionKo)
-     |-- Log
-```
+todo
