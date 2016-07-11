@@ -51,13 +51,50 @@ $
      |    |-- load({key,attrs,demande})
      |    |-- loadWithOutTtl({key,attrs})
      |    |-- remove({key,attrs})
-     |    |-- save({key,attrs,datas})
+     |    +-- save({key,attrs,datas})
      |-- Loader
-     |    |-- TODO
+     |    |-- Status
+     |    |-- iterator
+     |    |-- buffer
+     |    |-- eltAlreadyLoad
+     |    |-- load(params)
+     |    |-- loading(params)
+     |    |-- loadingGrp(params)
+     |    +-- loadingElt(params)
      |-- Mobile
-     |    |-- TODO
+     |    |-- funcReturnGPSPosition
+     |    |-- funcReturnCaptureImg
+     |    |-- networkState
+     |    |-- positionGps
+     |         |- coords
+     |         |   |- latitude
+     |         |   |- longitude
+     |         |   |- altitude
+     |         |   |- accuracy
+     |         |   |- altitudeAccuracy
+     |         |   |- heading
+     |         |   +- speed
+     |         |- timestamp
+     |         +- statut
+     |    |-- pictureSource
+     |    |-- destinationType
+     |    |-- onMobile
+     |    |-- onMobileTest
+     |    |-- onSuccessGPSPosition(position)
+     |    |-- onErrorGPSPosition(error)
+     |    |-- onPhotoSuccess(imageData)
+     |    |-- onPhotoURISuccess(imageURI)
+     |    |-- onPhotoFail(message)
+     |    |-- initModuleMobile()
+     |    |-- getConnectionString(networkState)
+     |    |-- testConnection()
+     |    |-- getGpsPosition(onReturn)
+     |    |-- getGpsPositionString(position)
+     |    |-- getPhotoFromCamera(retourCapture)
+     |    +-- getPhotoFromLibrary(retourCapture)
      |-- MokUp
-     |    |-- TODO
+     |    |-- mokup
+     |    +-- get(params)
      |-- Event
      |     |-- addListener({name, callback})
      |     +-- send({name, data})
@@ -68,7 +105,18 @@ $
      |    |-- getStrDateTime()
      |    +-- getStrDateTimeFrFromUs(dateTimeUs)
      |-- Interface
-     |    |-- TODO
+     |    |-- call(params)
+     |    |-- callRest(url, tabSetting, tabInput)
+     |    |-- Methode
+     |    |    |- ajax(params)
+     |    |    |- mokup(params)
+     |    |    |- cache(params)
+     |    |    +- offline(params)
+     |    |-- getParameter(params)
+     |    |-- getRangs(params)
+     |    |-- addStat(params)
+     |    |-- sendMail(params)
+     |    +-- traceLog(params)
      |-- Display
      |      |-- jsonToStringSingleQuote(json)
      |      |-- loading(div)
@@ -109,7 +157,38 @@ $
      |              |-- create({name, scope})
      |              +-- eval({exrp, scope})
      |-- Tooling
-     |    |-- TODO
+     |    |-- timerDebounce
+     |    |-- timerThrottle
+     |    |-- lastThrottle
+     |    |-- checkParams(params, def)
+     |    |-- urlDownloadFromServerResources(params)
+     |    |-- timeout(func, time, arg)
+     |    |-- arrondir(value, precision)
+     |    |-- clone(params)
+     |    |-- deepEqual(elt1, elt2)
+     |    |-- debounce(callback, delay)
+     |    |-- decodeHtml(html)
+     |    |-- findBetweenWords(params)
+     |    |-- replaceAll(params)
+     |    |-- clearSlashes(params)
+     |    |-- getLangBrowser(params)
+     |    |-- getListValeurPourAttribut(params)
+     |    |-- isInArray(params)
+     |    |-- isUndefined(params)
+     |    |-- getMilise(params)
+     |    |-- getParameterGet(params)
+     |    |-- getParamsLibrary(params)
+     |    |-- objectSize(params)
+     |    |-- objDataTableFromJsonArray(params)
+     |    |-- order(params)
+     |    |-- orderInter(params)
+     |    |-- pad2(params)
+     |    |-- postResources(params)
+     |    |-- throttle(params)
+     |    |-- detectBrower(params)
+     |    |-- isOdaConpatible(params)
+     |    |-- merge(params)
+     |    +-- filter(params)
      |-- I8n
      |    |-- TODO
      |-- Security
