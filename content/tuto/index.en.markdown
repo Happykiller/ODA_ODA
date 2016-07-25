@@ -176,6 +176,8 @@ SET `id_menu` = concat(`id_menu`,b.`id`,';');
 
 # Add tooltips
 
+![Image of Yaktocat](../assets/img/tuto.gif)
+
 > This tutorial aims to create visual aid to guide users
 
 1. Declare the content of your tooltips

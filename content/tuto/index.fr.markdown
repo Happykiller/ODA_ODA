@@ -176,6 +176,8 @@ SET `id_menu` = concat(`id_menu`,b.`id`,';');
 
 # Ajouter de la guidance
 
+![Image of Yaktocat](../assets/img/tuto.gif)
+
 > Ce tutoriel a pour objectif de créer de l'aide visuel pour guider les utilisateurs
 
 1. Déclarer le contenu de vos bulles d'aide
