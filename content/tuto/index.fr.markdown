@@ -173,3 +173,31 @@ ON c.`id` = a.`id_rang`
 AND c.`indice` in (1,10)
 SET `id_menu` = concat(`id_menu`,b.`id`,';');
 ```
+
+# Ajouter de la guidance
+
+> Ce tutoriel a pour objectif de créer de l'aide visuel pour guider les utilisateurs
+
+1. Déclarer le contenu de vos bulles d'aide
+    * Rajouter des div avec la balise `oda-tuto-content` dans les parties voulues
+```
+<!-- tuto -->
+<div style="display: none">
+    <div oda-tuto-content="tuto-cool">
+        <span oda-label="home.tuto-cool"></span>
+    </div>
+    <div oda-tuto-content="tuto-metricsPaquets">
+        <span oda-label="home.tuto-metricsPaquets"></span>
+    </div>
+</div>
+<!-- /tuto -->
+```
+
+2. Décider de l'endroit où accrocher
+    * Rajouter la balise `oda-tuto` dans le code des éléments
+    * id (obligatoire)
+    * locaction (optionel) : pour positionner
+    * bt-next (optionel) : pour conditionner son affichage à la séquence globale
+```
+<span oda-tuto=id:tuto-cool;location:bottom;bt-next:true;" oda-label="home.activity">home.activity</span>
+```

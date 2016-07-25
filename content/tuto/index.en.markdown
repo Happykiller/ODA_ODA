@@ -173,3 +173,31 @@ ON c.`id` = a.`id_rang`
 AND c.`indice` in (1,10)
 SET `id_menu` = concat(`id_menu`,b.`id`,';');
 ```
+
+# Add tooltips
+
+> This tutorial aims to create visual aid to guide users
+
+1. Declare the content of your tooltips
+    * Add div with the `oda-tutorial-content` tag in the desired parts
+```
+<!-- tuto -->
+<div style="display: none">
+    <div oda-tuto-content="tuto-cool">
+        <span oda-label="home.tuto-cool"></span>
+    </div>
+    <div oda-tuto-content="tuto-metricsPaquets">
+        <span oda-label="home.tuto-metricsPaquets"></span>
+    </div>
+</div>
+<!-- /tuto -->
+```
+
+2. Decide where to hang
+    * Add the `oda-tuto` tag in the code elements
+    * id (mandatory)
+    * locaction (optional) : to position
+    * bt-next (optional) : to condition its display in the overall sequence
+```
+<span oda-tuto=id:tuto-cool;location:bottom;bt-next:true;" oda-label="home.activity">home.activity</span>
+```
