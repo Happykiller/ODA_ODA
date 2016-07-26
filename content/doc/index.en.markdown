@@ -8,97 +8,97 @@ text_lib_server: Library server
 
 # I8n
 
-> Cette partie concerne la partie cliente
+> This part concerns the client part
 
-> Cette partie traitera de l'internationalisation
+> This section discusses the internationalization
 
-> Le mécanisme est simple suivant votre configuration vous disposez de deux fichiers de contenu
- `vendor/oda/resources/i8n/i8n.json` dans le framework et un autre dans l'application `i8n/i8n.json`, celui de
-  l'application surclasse celui du framework. Dans ces fichiers vous pourrez construire pour chaque langue désirée
-  un couple tag-valeur, regrouper par groupe.
+> The mechanism is simple depending on your configuration you have two content files
+ `vendor/oda/resources/i8n/i8n.json` in the framework and another in the application `i8n/i8n.json`, that of
+   the application that outperforms the framework. In these files you can build for each desired language
+   a torque-value tag, group by group.
 
-## Mèthode $.Oda.I8n.get
+## Method $.Oda.I8n.get
 
-> C'est la méthode de base pour récupérer la valeur d'un tag pour la locale actuelle.
+> This is the basic way to get the value of a tag to the current locale.
 
-1. Les paramètres
-* `p_group` : (chaine de caractère) Pour selectioner le groupe dans lequel la méthode ira cherger la valeur du tag
-* `p_tag` : (chaine de caractère) Le tag pour lequel la valeur est souhaité
-2. Le retour
-* Si le tag est trouvé sa valeur sera retourné, sinon la valeur `Not define`.
-3. Exemple d'appel
+1. The settings
+* `p_group`: (String) To select the group in which the method will cherger the tag value
+* `p_tag`: (String) The tag for which the value is desired
+2. The return
+* If the tag is found its value will be returned, otherwise the value `Not define`.
+3. Example call
 ```
 var tagValue = $.Oda.I8n.get('oda-project','userLabel');
 ```
 
-# Securité
+# Security
 
-* Il est important de comprendre que la sécurité et les droits repose sur la notion de rang.
-* Chaque rang possède un indice, l'indice sert à créer une structure de droit hierarchique.
-* Lexique
-- `api_tab_rangs` La table qui contient les différents rangs avec leur indice
-- `api_tab_rang_api` La table qui défini les droits pour les api
-- `api_tab_menu_rangs_droit` La table qui défini les droits pour les menus
+* It is important to understand that the security and human rights based on the concept of rank.
+* Each row has an index, the index is used to create a hierarchical structure right.
+* Lexicon
+- `api_tab_rangs` The table that contains the different ranks with their index
+- `api_tab_rang_api` The table that defines the rights for api
+- `api_tab_menu_rangs_droit` The table that defines the rights for menus
 
-## Menu & Accés au page
+## Menu & Access to page
 
-> Cette partie concerne la partie cliente
+> This part concerns the client part
 
-Le contrôle des accés aux pages se fait par le menu, si une page n'est pas dans le menu l'utilisateur n'a pas le droit de la consulter.
+Control access to pages is via the menu, if a page is not on the menu the user has no right to consult.
 
-Une exeption si la page utilise la catégorie (Liens chachés).
+An exception if the page uses the category (Hidden Links).
 
-Exemple dans la table `api_tab_menu_rangs_droit` nous pourrions trouver :
+Example in the table `api_tab_menu_rangs_droit` we can find:
 ```
 | id_rang       | id_menu       |
 | ------------- | ------------- |
 | 5             | ;1;2;3;       |
 ```
 
-Cela signifie que les utilisateurs qui ont le rang 5 (visiteur par defaut) pourront visiter les pages avec les id 1,2,3.
+This means that users who have the rank 5 (visitor by default) can visit the pages with id 1,2,3.
 
-## Clé Oda
+## Key Oda
 
-Pour sécurisé les appels REST entre le client et le server, mais aussi pour assuré la SESSION, il existe une clé `keyAuthODA`.
+To secure REST calls between the client and the server, but also ensured SESSION, there is a key `keyAuthODA`.
 
-Grâce à cette clé, le serveur connaîtra l'utilsateur et les droits.
+With this key, the server will know the user and rights.
 
-1. Authentification
+1. Authentication
 
-Pour s'authentifier il faut appeler en GET le REST suivant :
+To authenticate must be called in the following REST GET:
 
 `<server>/<vendor>/happykiller/oda/resources/api/getAuth.php`
 
-L'interface demande :
+The interface needs:
 
-- login (String) : le code utilisateur
-- mdp (String) : le mot de passe
+- login (String): the user code
+- mdp (String): the password
 
-L'interface retournera :
+The interface will return:
 
-- keyAuthODA (String) :  la clé de votre session valable 12H
+- keyAuthODA (String):  the key to your valid session 12H
 
-2. Appel sécurisé
+2. Secure call
 
-Certaine interface seront sécurisés, il faudra alors fournir en plus des paramètres de propre à l'interface, la clé oda `keyAuthODA`.
+Some interface will be secure, it will then provide more clean settings interface, the key oda `keyAuthODA`.
 
-3. Se déconnecter
+3. Sign out
 
-Pour se déconnecter il faut appeler en GET le REST suivant :
+To log out you must call the following REST GET:
 
 `<server>/<vendor>/happykiller/oda/resources/api/deleteSession.php`
 
-L'interface demande :
+The interface needs:
 
-- key (String) : La clé de la session
+- key (String): The session key
 
 ## Interface
 
-> Cette partie concerne la partie server
+> This section relates to the server part
 
-### Mode publique
+### Public mode
 
-Toutes les interfaces implémentes la class `OdaLibInterface`. Au moment de la création nous pouvons dire si l'interface sera publique ou non.
+All interfaces implemented the class `OdaLibInterface`. At the time of creation we can say that the interface will be public or not.
 
 ```
 //Build the interface
@@ -107,14 +107,14 @@ $params->modePublic = false;
 $INTERFACE = new OdaLibInterface($params);
 ```
 
-Si l'interface est 'non' pulique, il faudra fournir un clé Oda valide.
+If the interface is non-public, it will provide a valid Oda key.
 
-### Interface privé suivant le rang
+### Private interface according to rank
 
-Si votre interface (ex : <monInterface>) est déclaré privé, et que dans la table `api_tab_rang_api` elle est déclaré des
-restrictions seront appliqués.
+If your interface (eg <myInterface>) is declared private, and in the `api_tab_rang_api` table is reported
+restrictions will apply.
 
-Exemple :
+Example:
 ```
 | interface     | id_rang       | open          |
 | ------------- | ------------- | ------------- |
@@ -126,7 +126,7 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 
 # Appel REST
 
-> Cette partie concerne la partie cliente
+> This part concerns the client part
 
 La gestion des appels REST se fait dans le l'extension `$.Oda.Interface`, tout les appels au serveur se feront par cette extension.
 
@@ -135,23 +135,23 @@ La gestion des appels REST se fait dans le l'extension `$.Oda.Interface`, tout l
 Le méthode `callRest` est la méthode principale pour tout vos appels.
 
 1. Les paramètres
-* `p_url` : (chaine de caractère) Cela représente l'url de l'interface (ex : `http://domaine.com/api/interface`)
-* `p_tabSetting` : (objet) l'objet contiendra tout les options pour l'appel, il supporte l'ensemble des paramtères de [jQuery.ajax([settings])](http://api.jquery.com/jquery.ajax/)
+* `p_url`: (chaine de caractère) Cela représente l'url de l'interface (ex: `http://domaine.com/api/interface`)
+* `p_tabSetting`: (objet) l'objet contiendra tout les options pour l'appel, il supporte l'ensemble des paramtères de [jQuery.ajax([settings])](http://api.jquery.com/jquery.ajax/)
 <ul>
   <li>
-     <code>dataType</code> : (String) type du data soumis (ex : 'json')
+     <code>dataType</code>: (String) type du data soumis (ex: 'json')
   </li>
   <li>
      ... (autres paramètres standards)
   </li>
   <li>
-     <code>functionRetour</code> : (function(response)) la fonction a exectué en cas de retour réussi, la seul présence de se paramètre suffit à déclarer l'appel <b>synchrone</b> ou <b>asynchrone</b>
+     <code>functionRetour</code>: (function(response)) la fonction a exectué en cas de retour réussi, la seul présence de se paramètre suffit à déclarer l'appel <b>synchrone</b> ou <b>asynchrone</b>
   </li>
   <li>
-     <code>odaCacheOnDemande</code> : (Boolean) Dans le cas d'une interface avec un cache optionable
+     <code>odaCacheOnDemande</code>: (Boolean) Dans le cas d'une interface avec un cache optionable
   </li>
 </ul>
-* `p_tabInput` : (objet) l'objet contiendra tout les données nécéssaires ou optionelles pour l'interface
+* `p_tabInput`: (objet) l'objet contiendra tout les données nécéssaires ou optionelles pour l'interface
 
 2. Le retour
 
@@ -159,8 +159,8 @@ Si l'appel est synchrone le retour sera du type (objet) contenant la réponse à
 
 3. Exemple d'appel
 ```
-var tabInput = { "data1" : "valeur1" };
-$.Oda.Interface.callRest("domaine/api/interface", {functionRetour : function(response) {
+var tabInput = { "data1": "valeur1" };
+$.Oda.Interface.callRest("domaine/api/interface", {functionRetour: function(response) {
     $.Oda.Log.trace(response);
 }}, tabInput);
 ```
@@ -169,9 +169,9 @@ $.Oda.Interface.callRest("domaine/api/interface", {functionRetour : function(res
 
 Pour une application il est possible de définir un scénario d'utilisation des interfaces. Quatre modes sont disponibles `cache`, `ajax`, `mokup`, `offline`.
 
-La définition de la stratégie se fait par le l'extention : `$.Oda.Context.modeInterface`, il faut choisir qu'elles méthodes seront utilisées et dans quel ordre.
+La définition de la stratégie se fait par le l'extention: `$.Oda.Context.modeInterface`, il faut choisir qu'elles méthodes seront utilisées et dans quel ordre.
 
-Exemple :
+Exemple:
 ```
 $.Oda.Context.modeInterface = ["cache","ajax","mokup","offline"]
 ```
@@ -184,17 +184,17 @@ Chaque interface peut être mise en cache. Pour se faire il faut déclarer un ob
 
 Le cache est gérer dans le stockage locale du navigateur (limiter suivant les navigateurs, moins de 5mo).
 
-Les paramètres :
-* `key` : (String) la chaine d'identification de l'interface
-* `ttl` : (Integer) C'est le temps pendant lequel le cache est valable
-* `onDemande` :  (Boolean) Optionel, si il est positioné à vrai alors le cache n'est utilisé que si spécifié dans l'appel. Voir le paramètre `odaCacheOnDemande` de la méthode callRest.
+Les paramètres:
+* `key`: (String) la chaine d'identification de l'interface
+* `ttl`: (Integer) C'est le temps pendant lequel le cache est valable
+* `onDemande`:  (Boolean) Optionel, si il est positioné à vrai alors le cache n'est utilisé que si spécifié dans l'appel. Voir le paramètre `odaCacheOnDemande` de la méthode callRest.
 
-Example :
+Example:
 ```
 {
-  "key" : "api/interface",
-  "ttl" : 60,
-  "onDemande" : true
+  "key": "api/interface",
+  "ttl": 60,
+  "onDemande": true
 }
 ```
 
@@ -204,30 +204,30 @@ Ce mécanisme est utilisé pour simuler une interface suivant le configuration c
 
 Chaque interface peut utiliser cette fonction, pour l'utiliser il faut déclarer un objet dans la liste.
 
-Les paramètres :
-* `interface` : (String) la chaine d'identification de l'interface
-* `value` : (Objet) Il s'agit d'une liste pour conditioner les données retourner suivant les paramètres d'appel
+Les paramètres:
+* `interface`: (String) la chaine d'identification de l'interface
+* `value`: (Objet) Il s'agit d'une liste pour conditioner les données retourner suivant les paramètres d'appel
 <ul>
   <li>
-     <code>args</code> : (String | Objet) "default" ou l'objet contenant les paramètres
+     <code>args</code>: (String | Objet) "default" ou l'objet contenant les paramètres
   </li>
   <li>
-     <code>return</code> : (Objet) L'objet attendu en réponse à l'appel
+     <code>return</code>: (Objet) L'objet attendu en réponse à l'appel
   </li>
 </ul>
 
-Example :
+Example:
 ```
 {
-  "interface" : "api/interface",
-  "value" : [
+  "interface": "api/interface",
+  "value": [
     {
-      "args" : {"param1" : "value1"},
-      "return" : {"attr1":1}
+      "args": {"param1": "value1"},
+      "return": {"attr1":1}
     },
     {
-      "args" : "default",
-      "return" : {"attr1":1}
+      "args": "default",
+      "return": {"attr1":1}
     }
   ]
 }
@@ -253,15 +253,15 @@ La construction d'une interface se fait en créant un objet `Oda\OdaInterface`.
 
 Le constructeur attends une paramètre de type `Oda\OdaPrepareInterface`.
 
-Les paramètres :
-* `modeDebug` : (Boolean) (par défaut faux) à vrai des informations supplémentaires seront fournis à l'exécution.
-* `modePublic` : (Boolean) (par défaut vrai) Voir le chapitre sur la sécurité
-* `modeSortie` : (Boolean) (par défaut json) Voir le capitre sur le mode de sortie
-* `fileName` : (String) (par défaut null) Voir le capitre sur le mode de sortie
-* `arrayIntput` : (Array) (par défaut vide) Il s'agit du tableau des paramètres qu'attend l'interface
-* `arrayIntputOpt` : (Array) (par défaut vide) Il s'agit du tableau des paramètres optionels pour l'interface, avec leur valeur par défaut
+Les paramètres:
+* `modeDebug`: (Boolean) (par défaut faux) à vrai des informations supplémentaires seront fournis à l'exécution.
+* `modePublic`: (Boolean) (par défaut vrai) Voir le chapitre sur la sécurité
+* `modeSortie`: (Boolean) (par défaut json) Voir le capitre sur le mode de sortie
+* `fileName`: (String) (par défaut null) Voir le capitre sur le mode de sortie
+* `arrayIntput`: (Array) (par défaut vide) Il s'agit du tableau des paramètres qu'attend l'interface
+* `arrayIntputOpt`: (Array) (par défaut vide) Il s'agit du tableau des paramètres optionels pour l'interface, avec leur valeur par défaut
 
-Example :
+Example:
 ```
 //Build the interface
 $params = new OdaPrepareInterface();
@@ -276,11 +276,11 @@ Les interfaces peuvent être configurer pour renvoyer différent type de contenu
 
 Pour paramétrer le type de sortie, soit sur l'objet interface avec l'attribut `modeSortie` soit en fournissant le paramètre `ODAFileType`.
 
-Les différents types de sortie :
-* `text` : simple texte
-* `json` : format standard
-* `xml` : restriction sur le format des données, un tableau
-* `csv` : restriction sur le format des données, un tableau
+Les différents types de sortie:
+* `text`: simple texte
+* `json`: format standard
+* `xml`: restriction sur le format des données, un tableau
+* `csv`: restriction sur le format des données, un tableau
 
 ## Fichier de sortie
 
@@ -290,9 +290,9 @@ Pour paramétrer le fichier de sortie, soit sur l'objet interface avec l'attribu
 
 ## Les paramètres à destination de l'interface
 
-Dans une interface tous les paramètres d'appel sont disponibles dans l'attribut sur l'interface : `inputs`
+Dans une interface tous les paramètres d'appel sont disponibles dans l'attribut sur l'interface: `inputs`
 
-Exemple :
+Exemple:
 ```
 $codeUser = $ODA_INTERFACE->inputs["code_user"];
 ```
@@ -301,14 +301,14 @@ $codeUser = $ODA_INTERFACE->inputs["code_user"];
 
 Les interfaces Oda permettent une implémentation intégrer pour le requêtage SQL.
 
-Exemple :
+Exemple:
 ```
 $params = new OdaPrepareReqSql();
 $params->sql = "
 SELECT a.`id`
 FROM `table` a
 WHERE 1=1
-AND a.`code_user` = :code_user
+AND a.`code_user` =:code_user
 ;";
 $params->bindsValue = [
     "code_user" => $INTERFACE->inputs["code_user"]
@@ -323,26 +323,26 @@ $response = $HOW_INTERFACE->BD_ENGINE->reqODASQL($params);
 
 Pour établir ce que l'interface va afficher en retour de son appel, il faut utiliser des méthodes.
 
-* `addDataReqSQL` : (Oda\OdaRetourReqSql) Un facilitateur pour ajouter le retour des requêtes SQL.
-* `addDataObject` : (Objet) Un facilitateur pour ajouter un objet.
-* `addDataStr` : (String) Pour ajouter qu'une chaine.
-* `dieInError` :  (String) Pour retourner une erreur.
+* `addDataReqSQL`: (Oda\OdaRetourReqSql) Un facilitateur pour ajouter le retour des requêtes SQL.
+* `addDataObject`: (Objet) Un facilitateur pour ajouter un objet.
+* `addDataStr`: (String) Pour ajouter qu'une chaine.
+* `dieInError`:  (String) Pour retourner une erreur.
 
 # Modal (Popup)
 
 * Exemple d'implémentation
 ```
 $.Oda.Display.Popup.open({
-    "name" : "pExemple",
-    "size" : "lg",
-    "label" : $.Oda.I8n.get('group','entete'),
-    "details" : strHtml,
-    "footer" : '<button type="button" oda-label="oda-main.bt-submit" oda-submit="submit" onclick="$.Oda.App.Controller.Part.submit();" class="btn btn-primary disabled" disabled>Submit</button >',
-    "callback" : function(){
+    "name": "pExemple",
+    "size": "lg",
+    "label": $.Oda.I8n.get('group','entete'),
+    "details": strHtml,
+    "footer": '<button type="button" oda-label="oda-main.bt-submit" oda-submit="submit" onclick="$.Oda.App.Controller.Part.submit();" class="btn btn-primary disabled" disabled>Submit</button >',
+    "callback": function(){
         $.Oda.Scope.Gardian.add({
-            id : "gEditPatient",
-            listElt : ["firstName", "lastName"],
-            function : function(e){
+            id: "gEditPatient",
+            listElt: ["firstName", "lastName"],
+            function: function(e){
                 if( ($("#firstName").data("isOk")) && ($("#lastName").data("isOk")) ){
                     $("#submit").removeClass("disabled");
                     $("#submit").removeAttr("disabled");
@@ -370,8 +370,8 @@ $.Oda.Display.Popup.open({
 * Appeler la fonction de template et définir le scope
 ```
 var strHtml = $.Oda.Display.TemplateHtml.create({
-    template : "tlpExemple"
-    , scope : {
+    template: "tlpExemple"
+    , scope: {
         "variable": "Coucou"
     }
 });
@@ -379,7 +379,7 @@ var strHtml = $.Oda.Display.TemplateHtml.create({
 
 # Formulaire
 
-> Cette partie concerne la partie cliente
+> This part concerns the client part
 
 ## Widgets
 

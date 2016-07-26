@@ -22,7 +22,7 @@ text_lib_server: Librairie Servuer
 > C'est la méthode de base pour récupérer la valeur d'un tag pour la locale actuelle.
 
 1. Les paramètres
-* `p_group` : (chaine de caractère) Pour selectioner le groupe dans lequel la méthode ira cherger la valeur du tag
+* `p_group` : (chaine de caractère) Pour selectionner le groupe dans lequel la méthode ira cherger la valeur du tag
 * `p_tag` : (chaine de caractère) Le tag pour lequel la valeur est souhaité
 2. Le retour
 * Si le tag est trouvé sa valeur sera retourné, sinon la valeur `Not define`.
@@ -37,8 +37,8 @@ var tagValue = $.Oda.I8n.get('oda-project','userLabel');
 * Chaque rang possède un indice, l'indice sert à créer une structure de droit hierarchique.
 * Lexique
 - `api_tab_rangs` La table qui contient les différents rangs avec leur indice
-- `api_tab_rang_api` La table qui défini les droits pour les api
-- `api_tab_menu_rangs_droit` La table qui défini les droits pour les menus
+- `api_tab_rang_api` La table qui définit les droits pour les api
+- `api_tab_menu_rangs_droit` La table qui définit les droits pour les menus
 
 ## Menu & Accés au page
 
@@ -46,7 +46,7 @@ var tagValue = $.Oda.I8n.get('oda-project','userLabel');
 
 Le contrôle des accés aux pages se fait par le menu, si une page n'est pas dans le menu l'utilisateur n'a pas le droit de la consulter.
 
-Une exeption si la page utilise la catégorie (Liens chachés).
+Une exception si la page utilise la catégorie (Liens cachés).
 
 Exemple dans la table `api_tab_menu_rangs_droit` nous pourrions trouver :
 ```
@@ -59,9 +59,9 @@ Cela signifie que les utilisateurs qui ont le rang 5 (visiteur par defaut) pourr
 
 ## Clé Oda
 
-Pour sécurisé les appels REST entre le client et le server, mais aussi pour assuré la SESSION, il existe une clé `keyAuthODA`.
+Pour sécuriser les appels REST entre le client et le server, mais aussi pour assuré la SESSION, il existe une clé `keyAuthODA`.
 
-Grâce à cette clé, le serveur connaîtra l'utilsateur et les droits.
+Grâce à cette clé, le serveur connaîtra l'utilisateur  et les droits.
 
 1. Authentification
 
@@ -94,11 +94,11 @@ L'interface demande :
 
 ## Sécutité pour les interfaces
 
-> Cette partie concerne la partie server
+> Cette partie concerne la partie serveur
 
 ### Mode publique
 
-Toutes les interfaces implémentes la class `OdaLibInterface`. Au moment de la création nous pouvons dire si l'interface sera publique ou non.
+Toutes les interfaces implémentent  la class `OdaLibInterface`. Au moment de la création nous pouvons dire si l'interface sera publique ou non.
 
 ```
 //Build the interface
@@ -107,7 +107,7 @@ $params->modePublic = false;
 $INTERFACE = new OdaLibInterface($params);
 ```
 
-Si l'interface est 'non' pulique, il faudra fournir un clé Oda valide.
+Si l'interface est 'non' publique, il faudra fournir un clé Oda valide.
 
 ### Interface privé suivant le rang
 
