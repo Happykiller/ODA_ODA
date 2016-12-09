@@ -103,7 +103,8 @@ $
     |    |-- getStrDateFR()
     |    |-- getStrDateTimeFrFromUs(dateUs)
     |    |-- getStrDateTime()
-    |    +-- getStrDateTimeFrFromUs(dateTimeUs)
+    |    |-- getStrDateTimeFrFromUs(dateTimeUs)
+    |    +-- dateFormat(date, format)
     |-- Interface
     |    |-- call(params)
     |    |-- callRest(url, tabSetting, tabInput)
