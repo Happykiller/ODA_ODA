@@ -231,7 +231,7 @@ $
     |    |-- get(key, default)
     |    |-- setTtl(key, ttl)
     |    |-- getTtl(key)
-    |    |-- remove(keyà
+    |    |-- remove(key)
     |    |-- reset()
     |    +-- getIndex(filtre)
     |-- Router
