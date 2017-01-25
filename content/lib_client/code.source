@@ -1,4 +1,4 @@
-----------code:mapjs:begin
+code:mapjs:begin
 <pre>
 $
 |-- <a href='#' onclick='getUrlForFunction("$.Oda =");'>Oda</a>
@@ -255,4 +255,4 @@ $
          |-- error(msg)
          +-- warning(msg)
 </pre>
-----------code:mapjs:end
+code:mapjs:end

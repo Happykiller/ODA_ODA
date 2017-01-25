@@ -56,26 +56,23 @@ class Page{
             $sources = file_get_contents($pathSources);
         }
 
-        if(isset($sources)){
-            echo "<pre>";
-            print_r($sources);
-            echo "</pre>";
-        }
-
         $pattern = '/\{\{code:(.*?)\}/';
         preg_match_all($pattern, $doc, $matches);
 
+        $truc = $doc->getContent();
+
         if(isset($matches[1]) && count($matches[1]) != 0){
             foreach ($matches[1] as $value){
-                echo "<pre>";
-                print_r($value);
-                echo "</pre>";
+                $pattern = '/code:'.$value.':begin(.*?)code:'.$value.':end/ms';
+                preg_match_all($pattern, $sources, $matches2);
+
+                $truc = str_replace("{{code:".$value."}}",$matches2[1][0],$truc);
             }
         }
 
         $parser = new GithubMarkdown();
         $parser->enableNewLines = true;
-        return $parser->parse($doc->getContent());
+        return $parser->parse($truc);
     }
 
     public function getKeys(){
