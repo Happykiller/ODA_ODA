@@ -32,6 +32,10 @@
 			var li = document.createElement('li');
 			var a = document.createElement('a');
 			a.setAttribute('href', '#');
+			if(lvl === 1){
+				a.setAttribute('style', 'font-weight: bold;');
+				li.setAttribute('style', 'margin: 0 0 10px 0;');
+			}
 			a.textContent = title.textContent;
 			li.appendChild(a);
 			// On a un <ul> parent ?
@@ -50,7 +54,12 @@
 	Sommaire.prototype.bindScroll = function(a, title) {
 		a.addEventListener('click', function(e){
 			e.preventDefault();
-			document.body.scrollTop = title.offsetTop;
+			var offset = $(title).offset().top;
+			//console.log(title.offsetTop);
+			//console.log(offset);
+			//console.log(offset - title.offsetTop);
+			//1036 ?
+			document.body.scrollTop = offset;
 		});
 	}
 

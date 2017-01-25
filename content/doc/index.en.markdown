@@ -421,5 +421,20 @@ var strHtml = $.Oda.Display.TemplateHtml.create({
 </div>
 ```
 
-## Gardien
-Todo
+## Gardian
+* Guards allow you to listen to changes on form fields
+
+Example:
+```
+$.Oda.Scope.Gardian.add({
+    id : "createPatient",
+    listElt : ["firstName", "lastName"],
+    function : function(e){
+        if( ($("#firstName").data("isOk")) && ($("#lastName").data("isOk")) ){
+            $("#submit").btEnable();
+        }else{
+            $("#submit").btDisable();
+        }
+    }
+});
+```
