@@ -1,14 +1,4 @@
----
-title: Librairie cliente (Javascript)
-template: lib_client
-
----
-
-# Carte de la librairie client
-
-{{code:mapjs}}
-{{code:trsrs}}
-
+----------code:mapjs:begin
 <pre>
 $
 |-- <a href='#' onclick='getUrlForFunction("$.Oda =");'>Oda</a>
@@ -265,3 +255,4 @@ $
          |-- error(msg)
          +-- warning(msg)
 </pre>
+----------code:mapjs:end

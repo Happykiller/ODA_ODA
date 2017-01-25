@@ -16,6 +16,7 @@ use \cebe\markdown\GithubMarkdown;
 class Page{
     public $url;
     public $path;
+    public $basePath;
     public $content;
     public $keys;
     public $type = 'html';
@@ -43,6 +44,35 @@ class Page{
 
     public function getContent(){
         $doc = Parser::parse(file_get_contents($this->url));
+
+        $pathTab = explode (DIRECTORY_SEPARATOR,$this->url);
+        $pathSources = $pathTab[0];
+        for ($i = 1; $i < count($pathTab)-1; $i++) {
+            $pathSources .= DIRECTORY_SEPARATOR . $pathTab[$i];
+        }
+        $pathSources .= DIRECTORY_SEPARATOR . "code.source";
+
+        if (file_exists($pathSources)) {
+            $sources = file_get_contents($pathSources);
+        }
+
+        if(isset($sources)){
+            echo "<pre>";
+            print_r($sources);
+            echo "</pre>";
+        }
+
+        $pattern = '/\{\{code:(.*?)\}/';
+        preg_match_all($pattern, $doc, $matches);
+
+        if(isset($matches[1]) && count($matches[1]) != 0){
+            foreach ($matches[1] as $value){
+                echo "<pre>";
+                print_r($value);
+                echo "</pre>";
+            }
+        }
+
         $parser = new GithubMarkdown();
         $parser->enableNewLines = true;
         return $parser->parse($doc->getContent());
