@@ -92,3 +92,35 @@
 	});
 		
 })(jQuery);
+
+var sourceCode = null;
+
+function getUrlForFunction(p){
+	if(sourceCode === null){
+		$.get( "https://raw.githubusercontent.com/Happykiller/ODA_FW_CLIENT/d221f015fbb791c1a5515bddce7b8733bc060401/dist/Oda.js", "text")
+		.done(function( data ) {
+			sourceCode = data;
+			getUrlForFunctionInSourceCode(p);
+		});	
+	}else{
+		getUrlForFunctionInSourceCode(p);
+	}
+};
+
+function getUrlForFunctionInSourceCode(p){
+	var url = null;
+	var splitData = sourceCode.split('\n');
+	for(var index in splitData){
+		var line = splitData[index];
+		if(line.indexOf(p) !== -1){
+			url = "https://github.com/Happykiller/ODA_FW_CLIENT/blob/master/dist/Oda.js#L"
+			var targetLine = parseInt(index)+1;
+			url = url + targetLine;
+			break;
+		}
+	}
+	if(url){
+		var win = window.open(url, '_blank');
+		win.focus();
+	}
+};

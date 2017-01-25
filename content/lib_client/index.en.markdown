@@ -119,6 +119,9 @@ $
     |    |-- sendMail(params)
     |    +-- traceLog(params)
     |-- Display
+    |    |-- Polyfill
+    |    |    |-- createHtmlElement(params)
+    |    |    +-- extendHtmlElement(params)
     |    |-- jsonToStringSingleQuote(json)
     |    |-- loading(div)
     |    |-- render({id,html})

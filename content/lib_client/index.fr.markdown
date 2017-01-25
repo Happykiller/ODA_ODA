@@ -4,14 +4,13 @@ template: lib_client
 
 ---
 
-# Client Map
-
-```
+# Carte de la librairie client
+<pre>
 $
-|-- Oda
-    |-- version
-    |-- Session
-    |-- SessionDefault
+|-- <a href='#' onclick='getUrlForFunction("$.Oda =");'>Oda</a>
+    |-- <a href='#' onclick='getUrlForFunction("version:");'>version</a>
+    |-- <a href='#' onclick='getUrlForFunction("Session:");'>Session</a>
+    |-- <a href='#' onclick='getUrlForFunction("SessionDefault:");'>SessionDefault</a>
     |-- Context
     |    |-- modeInterface
     |    |-- ModeExecution
@@ -119,6 +118,9 @@ $
     |    |-- sendMail(params)
     |    +-- traceLog(params)
     |-- Display
+    |    |-- Polyfill
+    |    |    |-- <a href='#' onclick='getUrlForFunction("createHtmlElement:");'>createHtmlElement(params)</a>
+    |    |    +-- <a href='#' onclick='getUrlForFunction("extendHtmlElement:");'>extendHtmlElement(params)</a>
     |    |-- jsonToStringSingleQuote(json)
     |    |-- loading(div)
     |    |-- render({id,html})
@@ -153,7 +155,7 @@ $
     |    |    |-- avatar({codeUser, callback})
     |    |    +-- load()
     |    |-- Table
-    |    |    +-- createDataTable({target, data, attribute, option})
+    |    |    +-- <a href='#' onclick='getUrlForFunction("\"createDataTable\":");'>createDataTable({target, data, attribute, option})</a>
     |    +-- TemplateHtml
     |         |-- create({name, scope})
     |         +-- eval({exrp, scope})
@@ -258,4 +260,4 @@ $
          |-- debug(msg)
          |-- error(msg)
          +-- warning(msg)
-```
+</pre>
