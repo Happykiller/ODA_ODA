@@ -438,3 +438,47 @@ $.Oda.Scope.Gardian.add({
     }
 });
 ```
+
+# Web component
+* It is possible to declare web components
+
+## New web component
+* This is to create a new html tag
+
+Example utilisation:
+```
+<oda-card card-id="1" card-quality="Rare">Abomination</oda-card>
+```
+
+Example implementation:
+```
+$.Oda.Display.Polyfill.createHtmlElement({
+    name: "oda-card",
+    createdCallback: function(){
+        var elt = $(this);
+        var id = elt.attr("card-id");
+        var qualite = elt.attr("card-quality");
+    }
+});
+```
+
+## Enriching an existing component
+* This is to create a new attribute for an html tag
+
+Example utilisation :
+```
+<a href="coucou" is="oda-link" oda-link-value="nonici">Hello</a>
+```
+
+Example implementation
+```
+$.Oda.Display.Polyfill.extendHtmlElement({
+    name: "oda-link",
+    type: "a",
+    createdCallback: function(){
+        var elt = $(this);
+        var link = elt.attr("oda-link-value");
+        console.log("link: "+ link);
+    }
+});
+```

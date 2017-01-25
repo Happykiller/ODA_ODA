@@ -438,3 +438,47 @@ $.Oda.Scope.Gardian.add({
     }
 });
 ```
+
+# Web composant
+* Il est possible de déclarer des web composants
+
+## Nouveau composant
+* Il s'agit de créer de nouvelle balise html
+
+Exemple utilisation :
+```
+<oda-card card-id="1" card-quality="Rare">Abomination</oda-card>
+```
+
+Exemple implémentation :
+```
+$.Oda.Display.Polyfill.createHtmlElement({
+    name: "oda-card",
+    createdCallback: function(){
+        var elt = $(this);
+        var id = elt.attr("card-id");
+        var qualite = elt.attr("card-quality");
+    }
+});
+```
+
+## Enrichir un composant existant
+* Il s'agit de créer un nouvel attribut pour une balise html
+
+Exemple utilisation :
+```
+<a href="coucou" is="oda-link" oda-link-value="nonici">Hello</a>
+```
+
+Exemple implémentation :
+```
+$.Oda.Display.Polyfill.extendHtmlElement({
+    name: "oda-link",
+    type: "a",
+    createdCallback: function(){
+        var elt = $(this);
+        var link = elt.attr("oda-link-value");
+        console.log("link: "+ link);
+    }
+});
+```
