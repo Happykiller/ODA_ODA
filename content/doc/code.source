@@ -1,0 +1,266 @@
+code:tabRangsDroit:begin
+```
+| id_rang       | id_menu       |
+| ------------- | ------------- |
+| 5             | ;1;2;3;       |
+```
+code:tabRangsDroit:end
+
+
+code:buidInterface:begin
+```
+//Build the interface
+$params = new OdaPrepareInterface();
+$params->modePublic = false;
+$INTERFACE = new OdaLibInterface($params);
+```
+code:buidInterface:end
+
+
+code:tabInterfaceRight:begin
+```
+| interface     | id_rang       | open          |
+| ------------- | ------------- | ------------- |
+| exemple       | 3             | 0             |
+```
+code:tabInterfaceRight:end
+
+
+code:callExample:begin
+```
+var tabInput = { "data1": "valeur1" };
+$.Oda.Interface.callRest("domaine/api/interface", {functionRetour: function(response) {
+    $.Oda.Log.trace(response);
+}}, tabInput);
+```
+code:callExample:end
+
+
+code:setModeInterface:begin
+```
+$.Oda.Context.modeInterface = ["cache","ajax","mokup","offline"]
+```
+code:setModeInterface:end
+
+
+code:cacheSetExample:begin
+```
+{
+  "key" : "api/interface",
+  "ttl" : 60,
+  "onDemande" : true
+}
+```
+code:cacheSetExample:end
+
+
+code:mockupSetExample:begin
+```
+{
+  "interface" : "api/interface",
+  "value" : [
+    {
+      "args" : {"param1" : "value1"},
+      "return" : {"attr1":1}
+    },
+    {
+      "args" : "default",
+      "return" : {"attr1":1}
+    }
+  ]
+}
+```
+code:mockupSetExample:end
+
+
+code:buildInerface:begin
+```
+//Build the interface
+$params = new OdaPrepareInterface();
+$params->arrayInput = array("code_user","type");
+$params->arrayInputOpt = array("option" => null);
+$ODA_INTERFACE = new OdaInterface($params);
+```
+code:buildInerface:end
+
+
+code:getInput:begin
+```
+$codeUser = $ODA_INTERFACE->inputs["code_user"];
+```
+code:getInput:end
+
+
+code:reqInterface:begin
+```
+$params = new OdaPrepareReqSql();
+$params->sql = "
+SELECT a.`id`
+FROM `table` a
+WHERE 1=1
+AND a.`code_user` = :code_user
+;";
+$params->bindsValue = [
+    "code_user" => $INTERFACE->inputs["code_user"]
+];
+$params->typeSQL = OdaLibBd::SQL_GET_ALL;
+$response = $HOW_INTERFACE->BD_ENGINE->reqODASQL($params);
+```
+code:reqInterface:end
+
+
+code:implModal:begin
+```
+$.Oda.Display.Popup.open({
+    "name" : "pExemple",
+    "size" : "lg",
+    "label" : $.Oda.I8n.get('group','entete'),
+    "details" : strHtml,
+    "footer" : '<button type="button" oda-label="oda-main.bt-submit" oda-submit="submit" onclick="$.Oda.App.Controller.Part.submit();" class="btn btn-primary disabled" disabled>Submit</button >',
+    "callback" : function(){
+        $.Oda.Scope.Gardian.add({
+            id : "gEditPatient",
+            listElt : ["firstName", "lastName"],
+            function : function(e){
+                if( ($("#firstName").data("isOk")) && ($("#lastName").data("isOk")) ){
+                    $("#submit").removeClass("disabled");
+                    $("#submit").removeAttr("disabled");
+                }else{
+                    $("#submit").addClass("disabled");
+                    $("#submit").attr("disabled", true);
+                }
+            }
+        });
+    }
+});
+```
+code:implModal:end
+
+
+code:htmlTemplate:begin
+```
+<script id="tlpExemple" type="text/template">
+    <div>
+        {{variable}}
+    </div>
+</script>
+```
+code:htmlTemplate:end
+
+
+code:jsTemplate:begin
+```
+var strHtml = $.Oda.Display.TemplateHtml.create({
+    template : "tlpExemple"
+    , scope : {
+        "variable": "Coucou"
+    }
+});
+```
+code:jsTemplate:end
+
+
+code:widgetButton:begin
+```
+<button type="button" oda-submit="submit" onclick="$.Oda.Controler.Auth.goIn();" class="btn btn-primary disabled" disabled><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> <label oda-label="oda-main.bt-submit>"></label></button>
+```
+code:widgetButton:end
+
+
+code:widgetCheckbox:begin
+```
+<div class="form-group">
+    <label oda-label="activity.activityModeDay">activity.activityModeDay</label>
+    <div class="checkbox">
+        <input type="checkbox" oda-input-checkbox="allDay">
+        <label oda-label="activity.activityAllDay">
+            activity.activityAllDay
+        </label>
+    </div>
+</div>
+```
+code:widgetCheckbox:end
+
+
+code:widgetText:begin
+```
+<div class="form-group">
+    <label for="title" oda-label="activity.activityTitle">activity.activityTitle</label>
+    <input required type="text" class="form-control" oda-input-text="title" oda-input-text-tips="activity.activityTitle-tips" oda-input-text-placeholder="activity.activityTitle-placeholder" oda-input-text-check="Oda.Regexs:noInjection">
+</div>
+```
+code:widgetText:end
+
+
+code:widgetSelect:begin
+```
+<div class="form-group">
+    <label for="start" oda-label="activity.activityStart">activity.activityStart</label>
+    <select class="form-control" oda-input-select="start" required>
+        <option value="" oda-label="oda-main.select-default"></option>
+        <option value="00:00">00:00</option>
+        <option value="00:30">00:30</option>
+    </select>
+</div>
+```
+code:widgetSelect:end
+
+
+code:gardian:begin
+```
+$.Oda.Scope.Gardian.add({
+    id : "createPatient",
+    listElt : ["firstName", "lastName"],
+    function : function(e){
+        if( ($("#firstName").data("isOk")) && ($("#lastName").data("isOk")) ){
+            $("#submit").btEnable();
+        }else{
+            $("#submit").btDisable();
+        }
+    }
+});
+```
+code:gardian:end
+
+
+code:htmlNewWebConponant:begin
+```
+<oda-card card-id="1" card-quality="Rare">Abomination</oda-card>
+```
+code:htmlNewWebConponant:end
+
+
+code:jsNewWebConponant:begin
+```
+$.Oda.Display.Polyfill.createHtmlElement({
+    name: "oda-card",
+    createdCallback: function(){
+        var elt = $(this);
+        var id = elt.attr("card-id");
+        var qualite = elt.attr("card-quality");
+    }
+});
+```
+code:jsNewWebConponant:end
+
+
+code:htmlEditWebConponant:begin
+```
+<a href="coucou" is="oda-link" oda-link-value="nonici">Hello</a>
+```
+code:htmlEditWebConponant:end
+
+
+code:jsEditWebConponant:begin
+```
+$.Oda.Display.Polyfill.extendHtmlElement({
+    name: "oda-link",
+    type: "a",
+    createdCallback: function(){
+        var elt = $(this);
+        var link = elt.attr("oda-link-value");
+        console.log("link: "+ link);
+    }
+});
+```
+code:jsEditWebConponant:end
