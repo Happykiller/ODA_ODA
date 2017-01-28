@@ -49,11 +49,7 @@ Le contrôle des accés aux pages se fait par le menu, si une page n'est pas dan
 Une exception si la page utilise la catégorie (Liens cachés).
 
 Exemple dans la table `api_tab_menu_rangs_droit` nous pourrions trouver :
-```
-| id_rang       | id_menu       |
-| ------------- | ------------- |
-| 5             | ;1;2;3;       |
-```
+{{code:tabRangsDroit}}
 
 Cela signifie que les utilisateurs qui ont le rang 5 (visiteur par defaut) pourront visiter les pages avec les id 1,2,3.
 
@@ -99,13 +95,7 @@ L'interface demande :
 ### Mode publique
 
 Toutes les interfaces implémentent  la class `OdaLibInterface`. Au moment de la création nous pouvons dire si l'interface sera publique ou non.
-
-```
-//Build the interface
-$params = new OdaPrepareInterface();
-$params->modePublic = false;
-$INTERFACE = new OdaLibInterface($params);
-```
+{{code:buidInterface}}
 
 Si l'interface est 'non' publique, il faudra fournir un clé Oda valide.
 
@@ -115,11 +105,7 @@ Si votre interface (ex : <monInterface>) est déclaré privé, et que dans la ta
 restrictions seront appliqués.
 
 Exemple :
-```
-| interface     | id_rang       | open          |
-| ------------- | ------------- | ------------- |
-| exemple       | 3             | 0             |
-```
+{{code:tabInterfaceRight}
 
 Dans cette exemple il est défini que l'interface qui contient le mot `exemple` (fichier `<server>/api/exemple.php`)
 permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieurs ou égale en indice au rang `3` (Responsable).
@@ -158,12 +144,7 @@ Le méthode `callRest` est la méthode principale pour tout vos appels.
 Si l'appel est synchrone le retour sera du type (objet) contenant la réponse à l'appel, sinon il retourne l'exetention.
 
 3. Exemple d'appel
-```
-var tabInput = { "data1" : "valeur1" };
-$.Oda.Interface.callRest("domaine/api/interface", {functionRetour : function(response) {
-    $.Oda.Log.trace(response);
-}}, tabInput);
-```
+{{code:callExample}}
 
 ## Mode d'interface
 
@@ -172,9 +153,7 @@ Pour une application il est possible de définir un scénario d'utilisation des 
 La définition de la stratégie se fait par le l'extention : `$.Oda.Context.modeInterface`, il faut choisir qu'elles méthodes seront utilisées et dans quel ordre.
 
 Exemple :
-```
-$.Oda.Context.modeInterface = ["cache","ajax","mokup","offline"]
-```
+{{code:setModeInterface}}
 
 ### Cache
 
@@ -189,14 +168,8 @@ Les paramètres :
 * `ttl` : (Integer) C'est le temps pendant lequel le cache est valable
 * `onDemande` :  (Boolean) Optionel, si il est positioné à vrai alors le cache n'est utilisé que si spécifié dans l'appel. Voir le paramètre `odaCacheOnDemande` de la méthode callRest.
 
-Example :
-```
-{
-  "key" : "api/interface",
-  "ttl" : 60,
-  "onDemande" : true
-}
-```
+Exemple :
+{{code:cacheSetExample}}
 
 ### Mock-up ou maquettte
 
@@ -217,21 +190,7 @@ Les paramètres :
 </ul>
 
 Example :
-```
-{
-  "interface" : "api/interface",
-  "value" : [
-    {
-      "args" : {"param1" : "value1"},
-      "return" : {"attr1":1}
-    },
-    {
-      "args" : "default",
-      "return" : {"attr1":1}
-    }
-  ]
-}
-```
+{{code:mockupSetExample}}
 
 ### Ajax
 
@@ -262,13 +221,7 @@ Les paramètres :
 * `arrayIntputOpt` : (Array) (par défaut vide) Il s'agit du tableau des paramètres optionels pour l'interface, avec leur valeur par défaut
 
 Example :
-```
-//Build the interface
-$params = new OdaPrepareInterface();
-$params->arrayInput = array("code_user","type");
-$params->arrayInputOpt = array("option" => null);
-$ODA_INTERFACE = new OdaInterface($params);
-```
+{{code:buildInerface}}
 
 ## Mode de sortie
 
@@ -293,29 +246,14 @@ Pour paramétrer le fichier de sortie, soit sur l'objet interface avec l'attribu
 Dans une interface tous les paramètres d'appel sont disponibles dans l'attribut sur l'interface : `inputs`
 
 Exemple :
-```
-$codeUser = $ODA_INTERFACE->inputs["code_user"];
-```
+{{code:getInput}}
 
 ## Les reqêtes
 
 Les interfaces Oda permettent une implémentation intégrer pour le requêtage SQL.
 
 Exemple :
-```
-$params = new OdaPrepareReqSql();
-$params->sql = "
-SELECT a.`id`
-FROM `table` a
-WHERE 1=1
-AND a.`code_user` = :code_user
-;";
-$params->bindsValue = [
-    "code_user" => $INTERFACE->inputs["code_user"]
-];
-$params->typeSQL = OdaLibBd::SQL_GET_ALL;
-$response = $HOW_INTERFACE->BD_ENGINE->reqODASQL($params);
-```
+{{code:reqInterface}}
 
 * Si dans la configuration du côté serveur, il a été spécifié une extension, il n'est toutefois pas nécessaire de l'indiquer dans le nom des tables.
 
@@ -331,51 +269,17 @@ Pour établir ce que l'interface va afficher en retour de son appel, il faut uti
 # Modal (Popup)
 
 * Exemple d'implémentation
-```
-$.Oda.Display.Popup.open({
-    "name" : "pExemple",
-    "size" : "lg",
-    "label" : $.Oda.I8n.get('group','entete'),
-    "details" : strHtml,
-    "footer" : '<button type="button" oda-label="oda-main.bt-submit" oda-submit="submit" onclick="$.Oda.App.Controller.Part.submit();" class="btn btn-primary disabled" disabled>Submit</button >',
-    "callback" : function(){
-        $.Oda.Scope.Gardian.add({
-            id : "gEditPatient",
-            listElt : ["firstName", "lastName"],
-            function : function(e){
-                if( ($("#firstName").data("isOk")) && ($("#lastName").data("isOk")) ){
-                    $("#submit").removeClass("disabled");
-                    $("#submit").removeAttr("disabled");
-                }else{
-                    $("#submit").addClass("disabled");
-                    $("#submit").attr("disabled", true);
-                }
-            }
-        });
-    }
-});
-```
+{{code:implModal}}
 
 # Template HTML
 
 * Dans un fichier HTML (patials, template, index.html) définir un template
-```
-<script id="tlpExemple" type="text/template">
-    <div>
-        {{variable}}
-    </div>
-</script>
-```
+{{code:htmlTemplate}}
+
 * Les élements entre `{{...}}` sont des expressions avec les variables défini dans le scope du template (voir plus bas)
 * Appeler la fonction de template et définir le scope
-```
-var strHtml = $.Oda.Display.TemplateHtml.create({
-    template : "tlpExemple"
-    , scope : {
-        "variable": "Coucou"
-    }
-});
-```
+{{code:jsTemplate}}
+
 
 # Formulaire
 
@@ -384,60 +288,22 @@ var strHtml = $.Oda.Display.TemplateHtml.create({
 ## Widgets
 
 ### Bouton
-```
-<button type="button" oda-submit="submit" onclick="$.Oda.Controler.Auth.goIn();" class="btn btn-primary disabled" disabled><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> <label oda-label="oda-main.bt-submit>"></label></button>
-```
+{{code:widgetButton}}
 
 ### Checkbox
-```
-<div class="form-group">
-    <label oda-label="activity.activityModeDay">activity.activityModeDay</label>
-    <div class="checkbox">
-        <input type="checkbox" oda-input-checkbox="allDay">
-        <label oda-label="activity.activityAllDay">
-            activity.activityAllDay
-        </label>
-    </div>
-</div>
-```
+{{code:widgetCheckbox}}
 
 ### Input text
-```
-<div class="form-group">
-    <label for="title" oda-label="activity.activityTitle">activity.activityTitle</label>
-    <input required type="text" class="form-control" oda-input-text="title" oda-input-text-tips="activity.activityTitle-tips" oda-input-text-placeholder="activity.activityTitle-placeholder" oda-input-text-check="Oda.Regexs:noInjection">
-</div>
-```
+{{code:widgetText}}
 
 ### Input select
-```
-<div class="form-group">
-    <label for="start" oda-label="activity.activityStart">activity.activityStart</label>
-    <select class="form-control" oda-input-select="start" required>
-        <option value="" oda-label="oda-main.select-default"></option>
-        <option value="00:00">00:00</option>
-        <option value="00:30">00:30</option>
-    </select>
-</div>
-```
+{{code:widgetSelect}}
 
 ## Gardien
 * Les gardiens permettent d'écouter des changements sur des champs des formulaires
 
 Exemple :
-```
-$.Oda.Scope.Gardian.add({
-    id : "createPatient",
-    listElt : ["firstName", "lastName"],
-    function : function(e){
-        if( ($("#firstName").data("isOk")) && ($("#lastName").data("isOk")) ){
-            $("#submit").btEnable();
-        }else{
-            $("#submit").btDisable();
-        }
-    }
-});
-```
+{{code:gardian}}
 
 # Web composant
 * Il est possible de déclarer des web composants
@@ -446,39 +312,16 @@ $.Oda.Scope.Gardian.add({
 * Il s'agit de créer de nouvelle balise html
 
 Exemple utilisation :
-```
-<oda-card card-id="1" card-quality="Rare">Abomination</oda-card>
-```
+{{code:htmlNewWebConponant}}
 
 Exemple implémentation :
-```
-$.Oda.Display.Polyfill.createHtmlElement({
-    name: "oda-card",
-    createdCallback: function(){
-        var elt = $(this);
-        var id = elt.attr("card-id");
-        var qualite = elt.attr("card-quality");
-    }
-});
-```
+{{code:jsNewWebConponant}}
 
 ## Enrichir un composant existant
 * Il s'agit de créer un nouvel attribut pour une balise html
 
 Exemple utilisation :
-```
-<a href="coucou" is="oda-link" oda-link-value="nonici">Hello</a>
-```
+{{code:htmlEditWebConponant}}
 
 Exemple implémentation :
-```
-$.Oda.Display.Polyfill.extendHtmlElement({
-    name: "oda-link",
-    type: "a",
-    createdCallback: function(){
-        var elt = $(this);
-        var link = elt.attr("oda-link-value");
-        console.log("link: "+ link);
-    }
-});
-```
+{{code:jsEditWebConponant}}

@@ -5,9 +5,9 @@ $
     |-- <a href='#' onclick='getUrlForFunction("version:");'>version</a>
     |-- <a href='#' onclick='getUrlForFunction("Session:");'>Session</a>
     |-- <a href='#' onclick='getUrlForFunction("SessionDefault:");'>SessionDefault</a>
-    |-- Context
-    |    |-- modeInterface
-    |    |-- ModeExecution
+    |-- <a href='#' onclick='getUrlForFunction("Context:");'>Context</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("modeInterface:");'>modeInterface</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("ModeExecution: {");'>ModeExecution</a>
     |    |    |---init
     |    |    |---scene
     |    |    |---notification
@@ -26,14 +26,14 @@ $
     |    |-- window
     |    |-- console
     |    +-- startDate
-    |-- Regexs
+    |-- <a href='#' onclick='getUrlForFunction("Regexs: {");'>Regexs</a>
     |    |-- mail
     |    |-- login
     |    |-- pass
     |    |-- firstName
     |    |-- lastName
     |    +-- noInjection
-    |-- init()
+    |-- <a href='#' onclick='getUrlForFunction("init: function(){");'>init()</a>
     |-- Controller
     |--App
     |-- Cache
