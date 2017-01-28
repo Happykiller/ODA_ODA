@@ -1,0 +1,19 @@
+{
+  "name": "oda",
+  "version": "0.0.1",
+  "homepage": "http://oda.happykiller.net",
+  "authors": ["Fabrice Rosito <fabrice.rosito@gmail.com>"],
+  "description": "Documentation for ODA",
+  "keywords": ["oda"],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "devDependencies": {
+  },
+  "dependencies": {
+    "Oda": "*"
+  }
+}
