@@ -11,6 +11,7 @@ $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(content_pa
 
 $files = new RegexIterator($files, '/^.+\.(markdown|html)/i', RecursiveRegexIterator::GET_MATCH);
 
+//get lang of navigator
 $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 foreach($files as $file){
@@ -18,8 +19,6 @@ foreach($files as $file){
     $page = new \App\Page($file);
     if($page->lang === $lang){
         $app->any($page->path, function() use ($page, $app){
-            $pathHelper = getcwd() . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'helpers.php';
-            require $pathHelper;
             echo $page->render();
         });
     }
