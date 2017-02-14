@@ -109,7 +109,7 @@ $
     |    |-- getParameter(params)
     |    |-- getRangs(params)
     |    |-- addStat(params)
-    |    |-- sendMail(params)
+    |    |-- <a href='#' onclick='getUrlForFunction("sendMail: function");'>sendMail(params)</a> 
     |    +-- traceLog(params)
     |-- Display
     |    |-- Polyfill
@@ -129,16 +129,21 @@ $
     |    |-- Message
     |    |    |-- hide({id})
     |    |    +-- show() 
-    |    |-- Notification
-    |    |    |-- create(message, type, time)
-    |    |    |-- danger(message)
-    |    |    |-- error(message)
-    |    |    |-- info(message)
-    |    |    |-- load()
-    |    |    |-- remove({id})
-    |    |    |-- removeAll()
-    |    |    |-- success(message)
-    |    |    |-- warning(message)
+    |    |-- <a href='#' onclick='getUrlForFunction("Notification: {");'>Notification</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("success: function");'>success(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("successI8n: function");'>successI8n(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("info: function");'>info(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("sucinfoI8ncess: function");'>infoI8n(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("warning: function");'>warning(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("warningI8n: function");'>warningI8n(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("danger: function");'>danger(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("dangerI8n: function");'>dangerI8n(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("error: function");'>error(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("errorI8n: function");'>errorI8n(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("load: function");'>load()</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("create: function");'>create(message, type, time)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("remove: function");'>remove({id})</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("removeAll: function");'>removeAll()</a>
     |    |    +-- id
     |    |-- Popup
     |    |    |-- close({name}
