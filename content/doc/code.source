@@ -150,10 +150,13 @@ code:htmlTemplate:end
 
 code:jsTemplate:begin
 ```
-var strHtml = $.Oda.Display.TemplateHtml.create({
-    template : "tlpExemple"
-    , scope : {
+$.Oda.Display.TemplateHtml.create({
+    template: "tlpExemple",
+    scope: {
         "variable": "Coucou"
+    },
+    callback: function(strHtml){
+        console.log(strHtml)
     }
 });
 ```

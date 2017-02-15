@@ -280,7 +280,6 @@ Pour établir ce que l'interface va afficher en retour de son appel, il faut uti
 * Appeler la fonction de template et définir le scope
 {{code:jsTemplate}}
 
-
 # Formulaire
 
 > Cette partie concerne la partie cliente

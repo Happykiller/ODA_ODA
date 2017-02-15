@@ -276,8 +276,8 @@ Pour établir ce que l'interface va afficher en retour de son appel, il faut uti
 * Dans un fichier HTML (patials, template, index.html) définir un template
 {{code:htmlTemplate}}
 
-* Les élements entre `{{...}}` sont des expressions avec les variables défini dans le scope du template (voir plus bas)
-* Appeler la fonction de template et définir le scope
+* The elements between `{{...}}` Are expressions with variables defined in the scope of the template (see below)
+* Call the template function and define the scope
 {{code:jsTemplate}}
 
 # Formulaire
