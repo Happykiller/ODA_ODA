@@ -158,21 +158,19 @@ $.Oda.Router.addRoute("chargesContest", {
 ```
 $.Oda.Router.routesAllowed.push('chargesContest')
 ```
-3. Gestion des droits par $.Oda.Security.loadRight()
-  * Rajouter le menu dans la table `api_tab_menu`
-```
-INSERT INTO `@prefix@api_tab_menu` (`id`, `Description`, `Description_courte`, `id_categorie`, `Lien`) VALUES (NULL, 'Contest charges', 'Contest charges', '98', 'chargesContest');
-```
-4. Rajouter l'id du menu dans la table `menu_rangs_droit` pour le ou les rangs voulu
-```
-UPDATE `@prefix@api_tab_menu_rangs_droit` a
-INNER JOIN `@prefix@api_tab_menu` b
-ON b.`Lien` = 'chargesContest'
-INNER JOIN `@prefix@api_tab_rangs` c
-ON c.`id` = a.`id_rang`
-AND c.`indice` in (1,10)
-SET `id_menu` = concat(`id_menu`,b.`id`,';');
-```
+
+3. Management of rights $.Oda.Security.loadRight()
+  * Add menu to table `api_tab_menu`
+{{code:addRouteMenu}}
+
+The list of default categories:
+{{code:listMenuCate}}
+
+4. Add the menu id in the table `menu_rangs_droit` For the desired rank
+{{code:addRouteMenuRight}}
+
+The list of default rank:
+{{code:listRank}}
 
 # Add tooltips
 

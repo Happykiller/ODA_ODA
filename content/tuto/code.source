@@ -1,0 +1,42 @@
+code:listMenuCate:begin
+```
+| id            | desc          |
+| ------------- | ------------- |
+| 1             | Home          |
+| 2             | Admin         |
+| 3             | Manage        |
+| 4             | Report        |
+| 98            | Hidden        |
+| 99            | Extern        |
+```
+code:listMenuCate:end
+
+code:listRank:begin
+```
+| indice        | desc          |
+| ------------- | ------------- |
+| 1             | Admin         |
+| 10            | Superviser    |
+| 20            | Manager       |
+| 30            | User          |
+| 99            | Visitor       |
+```
+code:listRank:end
+
+code:addRouteMenu:begin
+```
+INSERT INTO `@prefix@api_tab_menu` (`Description`, `Description_courte`, `id_categorie`, `Lien`) VALUES ('<groupI8n.title>', '<groupI8n.title>', <idCate>, '<rootUrl>');
+```
+code:addRouteMenu:end
+
+code:addRouteMenuRight:begin
+```
+UPDATE `@prefix@api_tab_menu_rangs_droit` a
+INNER JOIN `@prefix@api_tab_menu` b
+ON b.`Lien` = '<rootUrl>'
+INNER JOIN `@prefix@api_tab_rangs` c
+ON c.`id` = a.`id_rang`
+AND c.`indice` in (<listOfIndice>)
+SET `id_menu` = concat(`id_menu`,b.`id`,';');
+```
+code:addRouteMenuRight:end
