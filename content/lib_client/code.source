@@ -154,7 +154,7 @@ $
     |    |    |-- avatar({codeUser, callback})
     |    |    +-- load()
     |    |-- Table
-    |    |    +-- <a href='#' onclick='getUrlForFunction("\"createDataTable\":");'>createDataTable({target, data, attribute, option})</a>
+    |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Table.createDataTable");'>createDataTable({target, data, attribute, option})</a>
     |    +-- TemplateHtml
     |         |-- create({name, scope})
     |         +-- eval({exrp, scope})
@@ -175,6 +175,7 @@ $
     |    |-- clearSlashes(params)
     |    |-- getLangBrowser(params)
     |    |-- getListValeurPourAttribut(params)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.getTypeOfVar");'>getTypeOfVar(var)</a>
     |    |-- isInArray(params)
     |    |-- isUndefined(params)
     |    |-- getMilise(params)

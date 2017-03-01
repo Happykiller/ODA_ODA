@@ -97,7 +97,7 @@ var sourceCode = null;
 
 function getUrlForFunction(p){
 	if(sourceCode === null){
-		$.get( "https://raw.githubusercontent.com/Happykiller/ODA_FW_CLIENT/d221f015fbb791c1a5515bddce7b8733bc060401/dist/Oda.js", "text")
+		$.get( "https://raw.githubusercontent.com/Happykiller/ODA_FW_CLIENT/master/dist/Oda.js", "text")
 		.done(function( data ) {
 			sourceCode = data;
 			getUrlForFunctionInSourceCode(p);
