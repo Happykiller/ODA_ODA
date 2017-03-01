@@ -33,18 +33,18 @@ $
     |    |-- firstName
     |    |-- lastName
     |    +-- noInjection
-    |-- <a href='#' onclick='getUrlForFunction("init: function(){");'>init()</a>
+    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.init");'>init()</a>
     |-- Controller
     |--App
     |-- Cache
     |    |-- cache
     |    |-- config
-    |    |-- clean()
-    |    |-- cleanAll()
-    |    |-- load({key,attrs,demande})
-    |    |-- loadWithOutTtl({key,attrs})
-    |    |-- remove({key,attrs})
-    |    +-- save({key,attrs,datas})
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Cache.clean");'>clean()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Cache.cleanAll");'>cleanAll()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Cache.load");'>load({key,attrs,demande})</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Cache.loadWithOutTtl");'>loadWithOutTtl({key,attrs})</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Cache.remove");'>remove({key,attrs})</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Cache.save");'>save({key,attrs,datas})</a>
     |-- Loader
     |    |-- Status
     |    |-- iterator
