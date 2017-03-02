@@ -50,10 +50,10 @@ $
     |    |-- iterator
     |    |-- buffer
     |    |-- eltAlreadyLoad
-    |    |-- load(params)
-    |    |-- loading(params)
-    |    |-- loadingGrp(params)
-    |    +-- loadingElt(params)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Loader.load");'>load(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Loader.loading");'>loading(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Loader.loadingGrp");'>loadingGrp(params)</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Loader.loadingElt");'>loadingElt(params)</a>
     |-- Mobile
     |    |-- funcReturnGPSPosition
     |    |-- funcReturnCaptureImg
@@ -73,31 +73,31 @@ $
     |    |-- destinationType
     |    |-- onMobile
     |    |-- onMobileTest
-    |    |-- onSuccessGPSPosition(position)
-    |    |-- onErrorGPSPosition(error)
-    |    |-- onPhotoSuccess(imageData)
-    |    |-- onPhotoURISuccess(imageURI)
-    |    |-- onPhotoFail(message)
-    |    |-- initModuleMobile()
-    |    |-- getConnectionString(networkState)
-    |    |-- testConnection()
-    |    |-- getGpsPosition(onReturn)
-    |    |-- getGpsPositionString(position)
-    |    |-- getPhotoFromCamera(retourCapture)
-    |    +-- getPhotoFromLibrary(retourCapture)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.onSuccessGPSPosition");'>onSuccessGPSPosition(position)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.onErrorGPSPosition");'>onErrorGPSPosition(error)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.onPhotoSuccess");'>onPhotoSuccess(imageData)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.onPhotoURISuccess");'>onPhotoURISuccess(imageURI)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.onPhotoFail");'>onPhotoFail(message)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.initModuleMobile");'>initModuleMobile()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.getConnectionString");'>getConnectionString(networkState)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.testConnection");'>testConnection()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.getGpsPosition");'>getGpsPosition(onReturn)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.getGpsPositionString");'>getGpsPositionString(position)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.getPhotoFromCamera");'>getPhotoFromCamera(retourCapture)</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Mobile.getPhotoFromLibrary");'>getPhotoFromLibrary(retourCapture)</a>
     |-- MokUp
     |    |-- mokup
-    |    +-- get(params)
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.MokUp.get");'>get(params)</a>
     |-- Event
-    |     |-- addListener({name, callback})
-    |     +-- send({name, data})
+    |     |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Event.addListener");'>addListener({name, callback})</a>
+    |     +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Event.send");'>send({name, data})</a>
     |-- Date
-    |    |-- convertSecondsToTime(second)
-    |    |-- getStrDateFR()
-    |    |-- getStrDateTimeFrFromUs(dateUs)
-    |    |-- getStrDateTime()
-    |    |-- getStrDateTimeFrFromUs(dateTimeUs)
-    |    +-- dateFormat(date, format)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Date.convertSecondsToTime");'>convertSecondsToTime(second)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Date.getStrDateFR");'>getStrDateFR()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Date.getStrDateTimeFrFromUs");'>getStrDateTimeFrFromUs(dateUs)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Date.getStrDateTime");'>getStrDateTime()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Date.getStrDateTimeFrFromUs");'>getStrDateTimeFrFromUs(dateTimeUs)</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Date.dateFormat");'>dateFormat(date, format)</a>
     |-- Interface
     |    |-- call(params)
     |    |-- callRest(url, tabSetting, tabInput)
