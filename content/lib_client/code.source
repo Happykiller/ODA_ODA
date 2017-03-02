@@ -99,25 +99,25 @@ $
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Date.getStrDateTimeFrFromUs");'>getStrDateTimeFrFromUs(dateTimeUs)</a>
     |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Date.dateFormat");'>dateFormat(date, format)</a>
     |-- Interface
-    |    |-- call(params)
-    |    |-- callRest(url, tabSetting, tabInput)
     |    |-- Methode
-    |    |    |- ajax(params)
-    |    |    |- mokup(params)
-    |    |    |- cache(params)
-    |    |    +- offline(params)
-    |    |-- getParameter(params)
-    |    |-- getRangs(params)
-    |    |-- addStat(params)
-    |    |-- <a href='#' onclick='getUrlForFunction("sendMail: function");'>sendMail(params)</a> 
-    |    +-- traceLog(params)
+    |    |    |- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.Methode.ajax");'>ajax(params)</a> 
+    |    |    |- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.Methode.mokup");'>mokup(params)</a> 
+    |    |    |- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.Methode.cache");'>cache(params)</a> 
+    |    |    +- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.Methode.offline");'>offline(params)</a> 
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.call");'>call(params)</a> 
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.callRest");'>callRest(url, tabSetting, tabInput)</a> 
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.getParameter");'>getParameter(params)</a> 
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.getRangs");'>getRangs(params)</a> 
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.addStat");'>addStat(params)</a> 
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.sendMail");'>sendMail(params)</a> 
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.traceLog");'>traceLog(params)
     |-- Display
     |    |-- Polyfill
-    |    |    |-- <a href='#' onclick='getUrlForFunction("createHtmlElement:");'>createHtmlElement(params)</a>
-    |    |    +-- <a href='#' onclick='getUrlForFunction("extendHtmlElement:");'>extendHtmlElement(params)</a>
-    |    |-- jsonToStringSingleQuote(json)
-    |    |-- loading(div)
-    |    |-- render({id,html})
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Polyfill.createHtmlElement");'>createHtmlElement(params)</a>
+    |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Polyfill.extendHtmlElement");'>extendHtmlElement(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.jsonToStringSingleQuote");'>jsonToStringSingleQuote(json)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.loading");'>loading(div)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.render");'>render({id,html})</a>
     |    |-- Menu
     |    |    |-- remove()
     |    |    |-- show()
@@ -130,20 +130,20 @@ $
     |    |    |-- hide({id})
     |    |    +-- show() 
     |    |-- <a href='#' onclick='getUrlForFunction("Notification: {");'>Notification</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("success: function");'>success(message)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("successI8n: function");'>successI8n(message)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("info: function");'>info(message)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("sucinfoI8ncess: function");'>infoI8n(message)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("warning: function");'>warning(message)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("warningI8n: function");'>warningI8n(message)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("danger: function");'>danger(message)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("dangerI8n: function");'>dangerI8n(message)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("error: function");'>error(message)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("errorI8n: function");'>errorI8n(message)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("load: function");'>load()</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("create: function");'>create(message, type, time)</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("remove: function");'>remove({id})</a>
-    |    |    |-- <a href='#' onclick='getUrlForFunction("removeAll: function");'>removeAll()</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.success");'>success(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.successI8n");'>successI8n(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.info");'>info(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.sucinfoI8ncess");'>infoI8n(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.warning");'>warning(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.warningI8n");'>warningI8n(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.danger");'>danger(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.dangerI8n");'>dangerI8n(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.error");'>error(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.errorI8n");'>errorI8n(message)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.load");'>load()</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.create");'>create(message, type, time)</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.remove");'>remove({id})</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.removeAll");'>removeAll()</a>
     |    |    +-- id
     |    |-- Popup
     |    |    |-- close({name}
