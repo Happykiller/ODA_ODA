@@ -1,13 +1,13 @@
 code:mapjs:begin
 <pre>
 $
-|-- <a href='#' onclick='getUrlForFunction("$.Oda =");'>Oda</a>
-    |-- <a href='#' onclick='getUrlForFunction("version:");'>version</a>
-    |-- <a href='#' onclick='getUrlForFunction("Session:");'>Session</a>
-    |-- <a href='#' onclick='getUrlForFunction("SessionDefault:");'>SessionDefault</a>
-    |-- <a href='#' onclick='getUrlForFunction("Context:");'>Context</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("modeInterface:");'>modeInterface</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("ModeExecution: {");'>ModeExecution</a>
+|-- Oda
+    |-- version
+    |-- Session
+    |-- SessionDefault
+    |-- Context
+    |    |-- modeInterface
+    |    |-- ModeExecution
     |    |    |---init
     |    |    |---scene
     |    |    |---notification
@@ -26,7 +26,7 @@ $
     |    |-- window
     |    |-- console
     |    +-- startDate
-    |-- <a href='#' onclick='getUrlForFunction("Regexs: {");'>Regexs</a>
+    |-- Regexs
     |    |-- mail
     |    |-- login
     |    |-- pass
@@ -119,17 +119,17 @@ $
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.loading");'>loading(div)</a>
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.render");'>render({id,html})</a>
     |    |-- Menu
-    |    |    |-- remove()
-    |    |    |-- show()
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Menu.remove");'>remove()</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Menu.show");'>show()</a>
     |    |    +-- display
     |    |-- MenuSlide
-    |    |    |-- remove()
-    |    |    |-- show()
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Menu.remove");'>remove()</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Menu.show");'>show()</a>
     |    |    +-- display
     |    |-- Message
-    |    |    |-- hide({id})
-    |    |    +-- show() 
-    |    |-- <a href='#' onclick='getUrlForFunction("Notification: {");'>Notification</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Message.hide");'>hide({id})</a>
+    |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Message.hide");'>show()</a>
+    |    |-- Notification
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.success");'>success(message)</a>
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.successI8n");'>successI8n(message)</a>
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.info");'>info(message)</a>
@@ -146,18 +146,27 @@ $
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Notification.removeAll");'>removeAll()</a>
     |    |    +-- id
     |    |-- Popup
-    |    |    |-- close({name}
-    |    |    |-- closeAll()
-    |    |    |-- open({name, size, label, details, footer, callback, callbackParams})
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Popup.close");'>close({name})</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Popup.closeAll");'>closeAll()</a>
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Popup.open");'>open({name, size, label, details, footer, callback, callbackParams})</a>
     |    |    +-- iterator
     |    |-- Scene
-    |    |    |-- avatar({codeUser, callback})
-    |    |    +-- load()
+    |    |    |-- Avatar
+    |    |    |    |-- loaded
+    |    |    |    |-- $elt
+    |    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Scene.Avatar.getElt");'>getElt()</a>
+    |    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Scene.Avatar.load");'>load()</a>
+    |    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Scene.Avatar.unLoad");'>unLoad()</a>
+    |    |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Scene.Avatar.avatar");'>avatar({codeUser, callback})</a>
+    |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Scene.load");'>load()</a>
     |    |-- Table
     |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Table.createDataTable");'>createDataTable({target, data, attribute, option})</a>
+    |    |-- Push
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Push.create");'>create(params)</a>
+    |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Push.createI8n");'>createI8n(params)</a>
     |    +-- TemplateHtml
-    |         |-- create({name, scope})
-    |         +-- eval({exrp, scope})
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.TemplateHtml.create");'>create({name, scope})</a>
+    |         +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.TemplateHtml.eval");'>eval({exrp, scope})</a>
     |-- Tooling
     |    |-- timerDebounce
     |    |-- timerThrottle
