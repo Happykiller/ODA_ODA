@@ -107,85 +107,85 @@ restrictions will apply.
 Example:
 {{code:tabInterfaceRight}
 
-Dans cette exemple il est défini que l'interface qui contient le mot `exemple` (fichier `<server>/api/exemple.php`)
-permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieurs ou égale en indice au rang `3` (Responsable).
+In this example it is defined that the interface which contains the word `example` (file` <server> / api / exemple.php`)
+Allows for its private mode that (because closed open = `0`) for the lower rows or equal in index to the rank` 3` (Responsible).
 
-# Appel REST
+# Call REST
 
 > This part concerns the client part
 
-La gestion des appels REST se fait dans le l'extension `$.Oda.Interface`, tout les appels au serveur se feront par cette extension.
+The management of the REST calls is done in the extension `$ .Oda.Interface`, all the calls to the server will be done by this extension.
 
-## Mèthode callRest
+## Method callRest
 
-Le méthode `callRest` est la méthode principale pour tout vos appels.
+The `callRest` method is the primary method for all your calls.
 
-1. Les paramètres
-* `p_url`: (chaine de caractère) Cela représente l'url de l'interface (ex: `http://domaine.com/api/interface`)
-* `p_tabSetting`: (objet) l'objet contiendra tout les options pour l'appel, il supporte l'ensemble des paramtères de [jQuery.ajax([settings])](http://api.jquery.com/jquery.ajax/)
+1. Parameters
+* `p_url`: (String) This is the url of the interface (ex: `http://domaine.com/api/interface`)
+* `p_tabSetting`: (Object) the object will contain all the options for the call, it supports all the parameters of [jQuery.ajax([settings])](http://api.jquery.com/jquery.ajax/)
 <ul>
   <li>
-     <code>dataType</code>: (String) type du data soumis (ex: 'json')
+     <code>dataType</code>: (String) submit data type (ex: 'json')
   </li>
   <li>
-     ... (autres paramètres standards)
+     ... (Other standard parameters)
   </li>
   <li>
-     <code>functionRetour</code>: (function(response)) la fonction a exectué en cas de retour réussi, la seul présence de se paramètre suffit à déclarer l'appel <b>synchrone</b> ou <b>asynchrone</b>
+     <code>functionRetour</code>: (Function (response)) the function has executed in case of a successful return, the presence of the parameter is sufficient to declare the <b> synchronous </ b> or <b> asynchronous </ b>
   </li>
   <li>
-     <code>odaCacheOnDemande</code>: (Boolean) Dans le cas d'une interface avec un cache optionable
+     <code>odaCacheOnDemande</code>: (Boolean) In the case of an interface with an optionable cache
   </li>
 </ul>
-* `p_tabInput`: (objet) l'objet contiendra tout les données nécéssaires ou optionelles pour l'interface
+* `p_tabInput`: (Object) The object contains all the necessary or optional data for the interface
 
-2. Le retour
+2. The return
 
-Si l'appel est synchrone le retour sera du type (objet) contenant la réponse à l'appel, sinon il retourne l'exetention.
+If the call is synchronous the return will be of the type (object) containing the response to the call, otherwise it returns the exetention.
 
-3. Exemple d'appel
+3. Example call
 {{code:callExample}}
 
-## Mode d'interface
+## Interface mode
 
-Pour une application il est possible de définir un scénario d'utilisation des interfaces. Quatre modes sont disponibles `cache`, `ajax`, `mokup`, `offline`.
+For an application it is possible to define a scenario of use of the interfaces. Four modes are available: `cache`,` ajax`, `mokup`,` offline`.
 
-La définition de la stratégie se fait par le l'extention: `$.Oda.Context.modeInterface`, il faut choisir qu'elles méthodes seront utilisées et dans quel ordre.
+The definition of the strategy is done by the extention: `$ .Oda.Context.modeInterface`, it is necessary to choose which methods will be used and in what order.
 
-Exemple:
+Example:
 {{code:setModeInterface}}
 
 ### Cache
 
-Le mécanisme de mise en cache se fait suivant la configuration contenu dans `cache/cache.json`.
+The caching mechanism is done according to the configuration contained in `cache / cache.json`.
 
-Chaque interface peut être mise en cache. Pour se faire il faut déclarer un objet dans la liste.
+Each interface can be cached. To do this, you must declare an object in the list.
 
-Le cache est gérer dans le stockage locale du navigateur (limiter suivant les navigateurs, moins de 5mo).
+The cache is managed in the local storage of the browser (limit according to browsers, less than 5mo).
 
-Les paramètres:
-* `key`: (String) la chaine d'identification de l'interface
-* `ttl`: (Integer) C'est le temps pendant lequel le cache est valable
-* `onDemande`:  (Boolean) Optionel, si il est positioné à vrai alors le cache n'est utilisé que si spécifié dans l'appel. Voir le paramètre `odaCacheOnDemande` de la méthode callRest.
+The settings:
+* `key`: (String) The interface identification string
+* `ttl`: (Integer) This is the time that the cache is valid
+* `onDemande`:  (Boolean) Optional, if set to true then the cache is used only if specified in the call. See the `odaCacheOnDemande` parameter of the callRest method.
 
 Example:
 {{code:cacheSetExample}}
 
-### Mock-up ou maquettte
+### Mock-up
 
-Ce mécanisme est utilisé pour simuler une interface suivant le configuration contenu dans `mokup/molup.json`
+This mechanism is used to simulate an interface according to the configuration contained in `mokup/molup.json`
 
-Chaque interface peut utiliser cette fonction, pour l'utiliser il faut déclarer un objet dans la liste.
+Each interface can use this function, to use it it must declare an object in the list.
 
-Les paramètres:
-* `interface`: (String) la chaine d'identification de l'interface
-* `value`: (Objet) Il s'agit d'une liste pour conditioner les données retourner suivant les paramètres d'appel
+Parameters:
+* `interface`: (String) The interface identification string
+* `value`: (Objet) This is a list to condition the data back according to the call parameters
 <ul>
   <li>
-     <code>args</code>: (String | Objet) "default" ou l'objet contenant les paramètres
+     <code>args</code>: (String | Objet) "default" or the object containing the parameters
   </li>
   <li>
-     <code>return</code>: (Objet) L'objet attendu en réponse à l'appel
+     <code>return</code>: (Objet) The object expected in response to the call
   </li>
 </ul>
 
@@ -194,86 +194,86 @@ Example:
 
 ### Ajax
 
-Il s'agit de l'appel standard.
+This is the standard call.
 
 ### Offline
 
-Ce mode permet de renvoyer ce qui est en cache sans restrinction de temps, c'est à dire qu'il ignore le paramètre `ttl` du mode cache.
+This mode allows you to return what is cached without time restraint, ie it ignores the `ttl` parameter of the cache mode.
 
 # Interface
 
-> Cette partie concerne la partie serveur
+> This part concerns the server part
 
-Pour aider un exemple d'interface est diponible dans `api/exemple.php`.
+To help an Interface Example is available in `api/Example.php`.
 
 ## Construction
 
-La construction d'une interface se fait en créant un objet `Oda\OdaInterface`.
+The construction of an interface is done by creating an object `Oda\OdaInterface`.
 
-Le constructeur attends une paramètre de type `Oda\OdaPrepareInterface`.
+The constructor waits for a type parameter `Oda\OdaPrepareInterface`.
 
-Les paramètres:
-* `modeDebug`: (Boolean) (par défaut faux) à vrai des informations supplémentaires seront fournis à l'exécution.
-* `modePublic`: (Boolean) (par défaut vrai) Voir le chapitre sur la sécurité
-* `modeSortie`: (Boolean) (par défaut json) Voir le capitre sur le mode de sortie
-* `fileName`: (String) (par défaut null) Voir le capitre sur le mode de sortie
-* `arrayIntput`: (Array) (par défaut vide) Il s'agit du tableau des paramètres qu'attend l'interface
-* `arrayIntputOpt`: (Array) (par défaut vide) Il s'agit du tableau des paramètres optionels pour l'interface, avec leur valeur par défaut
+Parameters:
+* `modeDebug`: (Boolean) (False default) to true additional information will be provided at runtime.
+* `modePublic`: (Boolean) (par défaut vrai) See the chapter on safety
+* `modeSortie`: (Boolean) (par défaut json) See the chapter on output mode
+* `fileName`: (String) (par défaut null) See the chapter on output mode
+* `arrayIntput`: (Array) (par défaut vide) This is the table of parameters that the interface expects
+* `arrayIntputOpt`: (Array) (par défaut vide) This is the table of optional parameters for the interface, with their default value
 
 Example:
 {{code:buildInerface}}
 
-## Mode de sortie
+## Output mode
 
-Les interfaces peuvent être configurer pour renvoyer différent type de contenu.
+Interfaces can be configured to send different types of content.
 
-Pour paramétrer le type de sortie, soit sur l'objet interface avec l'attribut `modeSortie` soit en fournissant le paramètre `ODAFileType`.
+To set the output type either on the interface object with the `output mode` attribute or by supplying the` ODAFileType` parameter.
 
-Les différents types de sortie:
-* `text`: simple texte
-* `json`: format standard
-* `xml`: restriction sur le format des données, un tableau
-* `csv`: restriction sur le format des données, un tableau
+Different types of output:
+* `Text`: simple text
+* `Json`: standard format
+* `Xml`: restriction on data format, array
+* `Csv`: restriction on the format of the data, a table
 
-## Fichier de sortie
+## Output file
 
-Les interfaces peuvent être configurer pour renvoyer un fichier à la place d'afficher les données.
+Interfaces can be configured to return a file instead of displaying the data.
 
-Pour paramétrer le fichier de sortie, soit sur l'objet interface avec l'attribut `fileName` soit en fournissant le paramètre `ODAFileName`.
+To set the output file either on the interface object with the `fileName` attribute or by supplying the` ODAFileName` parameter.
 
-## Les paramètres à destination de l'interface
+## Parameters to the interface
 
-Dans une interface tous les paramètres d'appel sont disponibles dans l'attribut sur l'interface: `inputs`
+In an interface all call parameters are available in the attribute on the interface: `inputs`
 
-Exemple:
+Example:
 {{code:getInput}}
 
-## Les reqêtes
+## The requests
 
-Les interfaces Oda permettent une implémentation intégrer pour le requêtage SQL.
+Oda interfaces allow an embedded implementation for SQL querying.
 
-Exemple:
+Example:
 {{code:reqInterface}}
 
-* Si dans la configuration du côté serveur, il a été spécifié une extension, il n'est toutefois pas nécessaire de l'indiquer dans le nom des tables.
+* If an extension has been specified in the server-side configuration, it is not necessary to specify it in the table names.
 
-## La sortie
+## The output
 
-Pour établir ce que l'interface va afficher en retour de son appel, il faut utiliser des méthodes.
+To establish what the interface will display in return for its call, methods must be used.
 
-* `addDataReqSQL`: (Oda\OdaRetourReqSql) Un facilitateur pour ajouter le retour des requêtes SQL.
-* `addDataObject`: (Objet) Un facilitateur pour ajouter un objet.
-* `addDataStr`: (String) Pour ajouter qu'une chaine.
-* `dieInError`:  (String) Pour retourner une erreur.
+* `addDataReqSQL`: (Oda\OdaRetourReqSql) A facilitator to add the return of SQL queries.
+* `addDataObject`: (Objet) A facilitator to add an object.
+* `addDataStr`: (String) To add a string.
+* `dieInError`:  (String) To return an error.
 
 # Modal (Popup)
 
-* Exemple d'implémentation
+* Example of implementation
 {{code:implModal}}
 
 # Template HTML
 
-* Dans un fichier HTML (patials, template, index.html) définir un template
+* In an HTML file (patials, template, index.html) define a template
 {{code:htmlTemplate}}
 
 * The elements between `{{...}}` Are expressions with variables defined in the scope of the template (see below)

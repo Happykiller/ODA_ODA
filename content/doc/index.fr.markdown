@@ -114,15 +114,15 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 
 > Cette partie concerne la partie cliente
 
-La gestion des appels REST se fait dans le l'extension `$.Oda.Interface`, tout les appels au serveur se feront par cette extension.
+La gestion des appels REST se fait dans le l'extension `$.Oda.Interface`, tous les appels au serveur se feront par cette extension.
 
 ## Mèthode callRest
 
-Le méthode `callRest` est la méthode principale pour tout vos appels.
+Le méthode `callRest` est la méthode principale pour tous vos appels.
 
 1. Les paramètres
 * `p_url` : (chaine de caractère) Cela représente l'url de l'interface (ex : `http://domaine.com/api/interface`)
-* `p_tabSetting` : (objet) l'objet contiendra tout les options pour l'appel, il supporte l'ensemble des paramtères de [jQuery.ajax([settings])](http://api.jquery.com/jquery.ajax/)
+* `p_tabSetting` : (objet) l'objet contiendra toutes les options pour l'appel, il supporte l'ensemble des paramtères de [jQuery.ajax([settings])](http://api.jquery.com/jquery.ajax/)
 <ul>
   <li>
      <code>dataType</code> : (String) type du data soumis (ex : 'json')
@@ -131,13 +131,13 @@ Le méthode `callRest` est la méthode principale pour tout vos appels.
      ... (autres paramètres standards)
   </li>
   <li>
-     <code>functionRetour</code> : (function(response)) la fonction a exectué en cas de retour réussi, la seul présence de se paramètre suffit à déclarer l'appel <b>synchrone</b> ou <b>asynchrone</b>
+     <code>functionRetour</code> : (function(response)) la fonction a exéctué en cas de retour réussi, la seul présence de se paramètre suffit à déclarer l'appel <b>synchrone</b> ou <b>asynchrone</b>
   </li>
   <li>
      <code>odaCacheOnDemande</code> : (Boolean) Dans le cas d'une interface avec un cache optionable
   </li>
 </ul>
-* `p_tabInput` : (objet) l'objet contiendra tout les données nécéssaires ou optionelles pour l'interface
+* `p_tabInput` : (objet) l'objet contiendra tout les données nécéssaires ou optionnelles pour l'interface
 
 2. Le retour
 
@@ -166,7 +166,7 @@ Le cache est gérer dans le stockage locale du navigateur (limiter suivant les n
 Les paramètres :
 * `key` : (String) la chaine d'identification de l'interface
 * `ttl` : (Integer) C'est le temps pendant lequel le cache est valable
-* `onDemande` :  (Boolean) Optionel, si il est positioné à vrai alors le cache n'est utilisé que si spécifié dans l'appel. Voir le paramètre `odaCacheOnDemande` de la méthode callRest.
+* `onDemande` :  (Boolean) Optionnel, si il est positionné à vrai alors le cache n'est utilisé que si spécifié dans l'appel. Voir le paramètre `odaCacheOnDemande` de la méthode callRest.
 
 Exemple :
 {{code:cacheSetExample}}
@@ -179,7 +179,7 @@ Chaque interface peut utiliser cette fonction, pour l'utiliser il faut déclarer
 
 Les paramètres :
 * `interface` : (String) la chaine d'identification de l'interface
-* `value` : (Objet) Il s'agit d'une liste pour conditioner les données retourner suivant les paramètres d'appel
+* `value` : (Objet) Il s'agit d'une liste pour conditionner les données retourner suivant les paramètres d'appel
 <ul>
   <li>
      <code>args</code> : (String | Objet) "default" ou l'objet contenant les paramètres
@@ -204,7 +204,7 @@ Ce mode permet de renvoyer ce qui est en cache sans restrinction de temps, c'est
 
 > Cette partie concerne la partie serveur
 
-Pour aider un exemple d'interface est diponible dans `api/exemple.php`.
+Pour aider un exemple d'interface est disponible dans `api/exemple.php`.
 
 ## Construction
 
@@ -215,17 +215,17 @@ Le constructeur attends une paramètre de type `Oda\OdaPrepareInterface`.
 Les paramètres :
 * `modeDebug` : (Boolean) (par défaut faux) à vrai des informations supplémentaires seront fournis à l'exécution.
 * `modePublic` : (Boolean) (par défaut vrai) Voir le chapitre sur la sécurité
-* `modeSortie` : (Boolean) (par défaut json) Voir le capitre sur le mode de sortie
-* `fileName` : (String) (par défaut null) Voir le capitre sur le mode de sortie
+* `modeSortie` : (Boolean) (par défaut json) Voir le chapitre sur le mode de sortie
+* `fileName` : (String) (par défaut null) Voir le chapitre sur le mode de sortie
 * `arrayIntput` : (Array) (par défaut vide) Il s'agit du tableau des paramètres qu'attend l'interface
-* `arrayIntputOpt` : (Array) (par défaut vide) Il s'agit du tableau des paramètres optionels pour l'interface, avec leur valeur par défaut
+* `arrayIntputOpt` : (Array) (par défaut vide) Il s'agit du tableau des paramètres optionnels pour l'interface, avec leur valeur par défaut
 
 Example :
 {{code:buildInerface}}
 
 ## Mode de sortie
 
-Les interfaces peuvent être configurer pour renvoyer différent type de contenu.
+Les interfaces peuvent être configuré pour renvoyer différent type de contenu.
 
 Pour paramétrer le type de sortie, soit sur l'objet interface avec l'attribut `modeSortie` soit en fournissant le paramètre `ODAFileType`.
 
@@ -248,7 +248,7 @@ Dans une interface tous les paramètres d'appel sont disponibles dans l'attribut
 Exemple :
 {{code:getInput}}
 
-## Les reqêtes
+## Les requêtes
 
 Les interfaces Oda permettent une implémentation intégrer pour le requêtage SQL.
 
