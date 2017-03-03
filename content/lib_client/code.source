@@ -171,80 +171,80 @@ $
     |    |-- timerDebounce
     |    |-- timerThrottle
     |    |-- lastThrottle
-    |    |-- checkParams(params, def)
-    |    |-- urlDownloadFromServerResources(params)
-    |    |-- timeout(func, time, arg)
-    |    |-- arrondir(value, precision)
-    |    |-- clone(params)
-    |    |-- deepEqual(elt1, elt2)
-    |    |-- debounce(callback, delay)
-    |    |-- decodeHtml(html)
-    |    |-- findBetweenWords(params)
-    |    |-- replaceAll(params)
-    |    |-- clearSlashes(params)
-    |    |-- getLangBrowser(params)
-    |    |-- getListValeurPourAttribut(params)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.checkParams");'>checkParams(params, def)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.urlDownloadFromServerResources");'>urlDownloadFromServerResources(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.timeout");'>timeout(func, time, arg)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.arrondir");'>arrondir(value, precision)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.clone");'>clone(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.deepEqual");'>deepEqual(elt1, elt2)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.debounce");'>debounce(callback, delay)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.decodeHtml");'>decodeHtml(html)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.findBetweenWords");'>findBetweenWords(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.replaceAll");'>replaceAll(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.clearSlashes");'>clearSlashes(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.getLangBrowser");'>getLangBrowser(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.getListValeurPourAttribut");'>getListValeurPourAttribut(params)</a>
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.getTypeOfVar");'>getTypeOfVar(var)</a>
-    |    |-- isInArray(params)
-    |    |-- isUndefined(params)
-    |    |-- getMilise(params)
-    |    |-- getParameterGet(params)
-    |    |-- getParamsLibrary(params)
-    |    |-- objectSize(params)
-    |    |-- objDataTableFromJsonArray(params)
-    |    |-- order(params)
-    |    |-- orderInter(params)
-    |    |-- pad2(params)
-    |    |-- postResources(params)
-    |    |-- throttle(params)
-    |    |-- detectBrower(params)
-    |    |-- isOdaConpatible(params)
-    |    |-- merge(params)
-    |    +-- filter(params)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.isInArray");'>isInArray(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.isUndefined");'>isUndefined(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.getMilise");'>getMilise(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.getParameterGet");'>getParameterGet(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.getParamsLibrary");'>getParamsLibrary(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.objectSize");'>objectSize(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.objDataTableFromJsonArray");'>objDataTableFromJsonArray(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.order");'>order(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.orderInter");'>orderInter(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.pad2");'>pad2(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.postResources");'>postResources(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.throttle");'>throttle(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.detectBrower");'>detectBrower(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.isOdaConpatible");'>isOdaConpatible(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.merge");'>merge(params)</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.filter");'>filter(params)</a>
     |-- I8n
     |    |-- datas
-    |    |-- get(group, tag, options)
-    |    |-- getByString(tag)
-    |    +-- getByGroupName(groupName)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.I8n.get");'>get(group, tag, options)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.I8n.getByString");'>getByString(tag)</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.I8n.getByGroupName");'>getByGroupName(groupName)</a>
     |-- Security
-    |    |-- auth(params)
-    |    |-- loadRight()
-    |    +-- logout()
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Security.auth");'>auth(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Security.loadRight");'>loadRight()</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Security.logout");'>logout()</a>
     +-- Worker
-    |    |-- lib()
-    |    |-- message(cmd, parameter)
-    |    |-- initWorker(nameWorker, dataInit, functionCore, fonctionRetour)
-    |    +-- terminateWorker(worker)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Security.lib");'>lib()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Security.message");'>message(cmd, parameter)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Security.initWorker");'>initWorker(nameWorker, dataInit, functionCore, fonctionRetour)</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Security.terminateWorker");'>terminateWorker(worker)</a>
     |-- Tuto
     |    |-- enable
     |    |-- currentElt
     |    |-- listElt
-    |    |-- start()
-    |    |-- readed()
-    |    +-- show()
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tuto.start");'>start()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tuto.readed");'>readed()</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tuto.show");'>show()</a>
     |-- Scope
-    |    |-- transform(params)
-    |    |-- init(params)
-    |    |-- checkInputText(params)
-    |    |-- checkInputSelect(params)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.transform");'>transform(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.init");'>init(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.checkInputText");'>checkInputText(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.checkInputSelect");'>checkInputSelect(params)</a>
     |    +-- Gardian
     |         |-- inventory
-    |         |-- add(params)
-    |         |-- remove(params)
-    |         |-- removeAll(params)
-    |         +-- findByElt(params)
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.Gardian.add");'>add(params)</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.Gardian.remove");'>remove(params)</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.Gardian.removeAll");'>removeAll(params)</a>
+    |         +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.Gardian.findByElt");'>findByElt(params)</a>
     |-- Storage
     |    |-- version
     |    |-- ttl_default
     |    |-- storageKey
-    |    |-- isStorageAvaible()
-    |    |-- set(key, value, ttl)
-    |    |-- get(key, default)
-    |    |-- setTtl(key, ttl)
-    |    |-- getTtl(key)
-    |    |-- remove(key)
-    |    |-- reset()
-    |    +-- getIndex(filtre)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Storage.isStorageAvaible");'>isStorageAvaible()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Storage.set");'>set(key, value, ttl)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Storage.get");'>get(key, default)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Storage.setTtl");'>setTtl(key, ttl)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Storage.getTtl");'>getTtl(key)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Storage.remove");'>remove(key)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Storage.reset");'>reset()</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Storage.getIndex");'>getIndex(filtre)</a>
     |-- Router
     |    |-- current
     |    |-- routes
@@ -253,21 +253,27 @@ $
     |    |-- routeDependencies
     |    |-- routesAllowedDefault
     |    |-- MiddleWares
-    |    |-- navigateTo(request)
-    |    |-- addRoute(name, routeDef)
-    |    |-- addMiddleWare(name, middleWareDef)
-    |    |-- addDependencies(name, dependenciesLoad)
-    |    |-- loadPartial(params)
-    |    |-- startRooter()
-    |    +-- routerGo(params)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Router.navigateTo");'>navigateTo(request)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Router.addRoute");'>addRoute(name, routeDef)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Router.addMiddleWare");'>addMiddleWare(name, middleWareDef)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Router.addDependencies");'>addDependencies(name, dependenciesLoad)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Router.loadPartial");'>loadPartial(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Router.startRooter");'>startRooter()</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Router.routerGo");'>routerGo(params)</a>
     |-- Google
-    |    |-- sessionState({callback})
-    |    +-- startSessionAuth(functionOk, functionKo)
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Google.init");'>init()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Google.sessionState");'>sessionState({callback})</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Google.handleClientLoad");'>handleClientLoad()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Google.loadGapis");'>loadGapis(tabApi, callbackFunction)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Google.callbackAuthSession");'>callbackAuthSession()</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Google.handleAuthResult");'>handleAuthResult(authResult)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Google.callServiceGoogleAuth");'>callServiceGoogleAuth(callMethodeOk)</a>
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Google.startSessionAuth");'>startSessionAuth(functionOk, functionKo)</a>
     |-- Log
-         |-- info(msg)
-         |-- trace(msg)
-         |-- debug(msg)
-         |-- error(msg)
-         +-- warning(msg)
+         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Log.info");'>info(msg)</a>
+         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Log.trace");'>trace(msg)</a>
+         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Log.debug");'>debug(msg)</a>
+         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Log.error");'>error(msg)</a>
+         +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Log.warning");'>warning(msg)</a>
 </pre>
 code:mapjs:end
