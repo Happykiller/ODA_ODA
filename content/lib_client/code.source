@@ -110,7 +110,7 @@ $
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.getRangs");'>getRangs(params)</a> 
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.addStat");'>addStat(params)</a> 
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.sendMail");'>sendMail(params)</a> 
-    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.traceLog");'>traceLog(params)
+    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Interface.traceLog");'>traceLog(params)</a> 
     |-- Display
     |    |-- Polyfill
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Polyfill.createHtmlElement");'>createHtmlElement(params)</a>
