@@ -40,3 +40,139 @@ AND c.`indice` in (<listOfIndice>)
 SET `id_menu` = concat(`id_menu`,b.`id`,';');
 ```
 code:addRouteMenuRight:end
+
+code:bowerjson:begin
+```
+{
+	"name": "appli",
+	"version": "0.0.1",
+	"homepage": "votre home page",
+	"authors": ["Prénom Nom <votreMail>"],
+	"description": "une description",
+	"keywords": ["keywork"],
+	"license": "MIT",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules"
+	],
+	"dependencies": {
+	  "Oda" : "*"
+	}
+}
+```
+code:bowerjson:end
+
+code:bowerupdate:begin
+```
+bower update
+```
+code:bowerupdate:end
+
+code:bowerlinkJquery:begin
+```
+<script src="<bower_components>/jquery/dist/jquery.min.js"></script>
+```
+code:bowerlinkJquery:end
+
+code:bowerlinkOda:begin
+```
+<script src="<bower_components>/Oda/dist/Oda.js"></script>
+```
+code:bowerlinkOda:end
+
+code:npmUpdate:begin
+```
+npm update
+```
+code:npmUpdate:end
+
+code:composerJson:begin
+```
+{
+  "name": "vendor_name/package_name",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "author's name",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "happykiller/oda": "@dev"
+  },
+  "autoload": {
+    "psr-4": { "Projet\\": "class" }
+  }
+}
+```
+code:composerJson:end
+
+code:npmDeployMini:begin
+```
+npm run deploy-mini
+```
+code:npmDeployMini:end
+
+code:npmDeployApp:begin
+```
+npm run deploy-app
+```
+code:npmDeployApp:end
+
+code:npmDeployFull:begin
+```
+npm run deploy-full
+```
+code:npmDeployFull:end
+
+code:composerUpdate:begin
+```
+composer update
+```
+code:composerUpdate:end
+
+code:phpInstall:begin
+```
+php installer.php
+```
+code:phpInstall:end
+
+code:addRoute:begin
+```
+$.Oda.Router.addRoute("chargesContest", {
+  "path" : "partials/chargesContest.html",
+  "title" : "chargesContest.title",
+  "urls" : ["chargesContest"],
+  "middleWares" : ["support","auth"]
+});
+code:addRoute:end
+
+code:routesAllowed:begin
+```
+$.Oda.Router.routesAllowed.push('chargesContest')
+```
+code:routesAllowed:end
+
+code:tutoContent:begin
+```
+<!-- tuto -->
+<div style="display: none">
+    <div oda-tuto-content="tuto-cool">
+        <span oda-label="home.tuto-cool"></span>
+    </div>
+    <div oda-tuto-content="tuto-metricsPaquets">
+        <span oda-label="home.tuto-metricsPaquets"></span>
+    </div>
+</div>
+<!-- /tuto -->
+```
+code:tutoContent:end
+
+code:tutoAdd:begin
+```
+<span oda-tuto=id:tuto-cool;location:bottom;bt-next:true;" oda-label="home.activity">home.activity</span>
+```
+code:tutoAdd:end

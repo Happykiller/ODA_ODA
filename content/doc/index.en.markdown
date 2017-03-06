@@ -319,8 +319,8 @@ Example implementation:
 ## Enriching an existing component
 * This is to create a new attribute for an html tag
 
-Example utilisation :
+Example utilisation:
 {{code:htmlEditWebConponant}}
 
-Example implementation
+Example implementation:
 {{code:jsEditWebConponant}}

@@ -18,40 +18,20 @@ template: tuto
 ## Scènario utilisation en tant que simple librairie
 
 1. Créer un fichier bower.json à la racine de votre projet avec en contenu :
-```
-{
-	"name": "appli",
-	"version": "0.0.1",
-	"homepage": "votre home page",
-	"authors": ["Prénom Nom <votreMail>"],
-	"description": "une description",
-	"keywords": ["keywork"],
-	"license": "MIT",
-	"private": true,
-	"ignore": [
-		"**/.*",
-		"node_modules"
-	],
-	"dependencies": {
-	  "Oda" : "*"
-	}
-}
-```
+{{code:bowerjson}}
+
 2. Avec bower lancer la commande :
-* Pour installer bower (Gestionaire de dépendance pour client web) : [ici](http://bower.io/#install-bower)
-```
-bower update
-```
+* Pour installer bower (Gestionnaire de dépendance pour client web) : [ici](http://bower.io/#install-bower)
+{{code:bowerupdate}}
+
 3. Pré-requis :
-* Oda client est une exetention de jQuery il est donc nécéssaire de l'importer aussi ;
-```
-<script src="<bower_components>/jquery/dist/jquery.min.js"></script>
-```
+* Oda client est une extension de jQuery il est donc nécéssaire de l'importer aussi
+{{code:bowerlinkJquery}}
+
 4. La librairie est prête à être utilisé
 * Dans le header de votre source html :
-```
-<script src="<bower_components>/Oda/dist/Oda.js"></script>
-```
+{{code:bowerlinkOda}}
+
 5. Scope utilisable
 * Oda client étant sans contexte, seul les méthodes statiques seront utilisables, typiquement comme celle de `$.Oda.Tooling`
 > ex : $.Oda.Tooling.getLangBrowser();
@@ -59,86 +39,57 @@ bower update
 ## Scènario de deployement du client avec initiatialisation minimal, application, application complètement prise en charge par Oda
 
 1. Créer un fichier `bower.json` à la racine de votre projet avec en contenu :
-```
-{
-  "name": "appli",
-  "version": "0.0.1",
-  "homepage": "votre home page",
-  "authors": ["Prénom Nom <votreMail>"],
-  "description": "une description",
-  "keywords": ["keywork"],
-  "license": "MIT",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules"
-  ],
-  "dependencies": {
-    "Oda" : "*"
-  }
-}
-```
+{{code:bowerjson}}
+
 2. Avec bower lancer la commande :
-* Pour installer bower (Gestionaire de dépendance pour client web) : [ici](http://bower.io/#install-bower)
-```
-bower update
-```
+* Pour installer bower (Gestionnaire de dépendance pour client web) : [ici](http://bower.io/#install-bower)
+{{code:bowerupdate}}
+
 3. Pour aider à la création du projet, Oda met à disposition des scripts Gulp, il va donc falloir avoir installer NodeJs.
 * Pour installer Node Js (permet d'executer du javascript sur la machine, et gestionnaire de dépendance) : [ici](https://nodejs.org/en/)
+
 4. Importer les dépendances nécéssaire au scripts de deployement
 * Aller dans `<bower_components>/Oda/deploy/`
 * exécuter la commande pour installer toutes les dépendances
-```
-npm update
-```
-5. Script de deployement à executer suivant vos besoin
+{{code:npmUpdate}}
+
+5. Script de déploiement à executer suivant vos besoin
+code:npmDeployMini:begin
 ```
 npm run deploy-mini
 ```
+code:npmDeployMini:end
 Ou
+code:npmDeployApp:begin
 ```
 npm run deploy-app
 ```
+code:npmDeployApp:end
 Ou
+code:npmDeployFull:begin
 ```
 npm run deploy-full
 ```
+code:npmDeployFull:end
+
 6. Dans les cas app et full éditer le fichier de configuration `config/config.js`
 
 ## Scènario de deployement du serveur
 
 1. Dans la racine de votre projet serveur (peu-être /server/ sur le même environement que le client)
+
 2. Nous aurons besoin de composer (gestionaire de dépendance pour PHP)
 * Pour installer composer : [ici](https://getcomposer.org/)
+
 3. Créer un fichier `composer.json`
-```
-{
-  "name": "vendor_name/package_name",
-  "description": "description_text",
-  "minimum-stability": "stable",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "author's name",
-      "email": "email@example.com"
-    }
-  ],
-  "require": {
-    "happykiller/oda": "@dev"
-  },
-  "autoload": {
-    "psr-4": { "Projet\\": "class" }
-  }
-}
-```
+{{code:composerJson}}
+
 4. Exécuter la commande pour mettre à jour les dépendances PHP avec Oda
-```
-composer update
-```
-5. Allez dans le dossier `<vendor>/happykiller/oda/deploy/` et lancer la commande
-```
-php installer.php
-```
+{{code:composerUpdate}}
+
+5. Aller dans le dossier `<vendor>/happykiller/oda/deploy/` et lancer la commande
+{{code:phpInstall}}
+
 6. Editer le fichier de configuration `<vendor>/include/config.php`
 
 # Ajouter une route
@@ -146,19 +97,10 @@ php installer.php
 > Ce tutoriel a pour objectif de créer une nouvelle route.
 
 1. Dans l'application
-```
-$.Oda.Router.addRoute("chargesContest", {
-  "path" : "partials/chargesContest.html",
-  "title" : "chargesContest.title",
-  "urls" : ["chargesContest"],
-  "middleWares" : ["support","auth"]
-});
-```
+{{code:addRoute}}
 
-2. Ajouter *manuelement* le **droit** `$.Oda.Router.routesAllowed`
-```
-$.Oda.Router.routesAllowed.push('chargesContest')
-```
+2. Ajouter *manuellement* le **droit** `$.Oda.Router.routesAllowed`
+{{code:routesAllowed}}
 
 3. Gestion des droits par $.Oda.Security.loadRight()
   * Rajouter le menu dans la table `api_tab_menu`
@@ -181,24 +123,11 @@ La liste des rangs par défaut:
 
 1. Déclarer le contenu de vos bulles d'aide
     * Rajouter des div avec la balise `oda-tuto-content` dans les parties voulues
-```
-<!-- tuto -->
-<div style="display: none">
-    <div oda-tuto-content="tuto-cool">
-        <span oda-label="home.tuto-cool"></span>
-    </div>
-    <div oda-tuto-content="tuto-metricsPaquets">
-        <span oda-label="home.tuto-metricsPaquets"></span>
-    </div>
-</div>
-<!-- /tuto -->
-```
+{{code:tutoContent}}    
 
 2. Décider de l'endroit où accrocher
     * Rajouter la balise `oda-tuto` dans le code des éléments
     * id (obligatoire)
     * locaction (optionel) : pour positionner
     * bt-next (optionel) : pour conditionner son affichage à la séquence globale
-```
-<span oda-tuto=id:tuto-cool;location:bottom;bt-next:true;" oda-label="home.activity">home.activity</span>
-```
+{{code:tutoAdd}}

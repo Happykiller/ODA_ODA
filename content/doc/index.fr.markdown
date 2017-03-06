@@ -268,7 +268,7 @@ Pour établir ce que l'interface va afficher en retour de son appel, il faut uti
 
 # Modal (Popup)
 
-* Exemple d'implémentation
+* Exemple d'implémentation :
 {{code:implModal}}
 
 # Template HTML

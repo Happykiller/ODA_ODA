@@ -1,9 +1,9 @@
 ---
-title: Library client (Javascript)
+title: Client library (Javascript)
 template: lib_client
 
 ---
 
-# Client Map
+# Map of the client library
 
 {{code:mapjs}}
