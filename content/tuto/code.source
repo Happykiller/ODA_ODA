@@ -148,6 +148,7 @@ $.Oda.Router.addRoute("chargesContest", {
   "urls" : ["chargesContest"],
   "middleWares" : ["support","auth"]
 });
+```
 code:addRoute:end
 
 code:routesAllowed:begin
