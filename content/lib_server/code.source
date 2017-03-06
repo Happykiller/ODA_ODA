@@ -1,0 +1,74 @@
+code:mapFiles:begin
+```
+/
+|-- db/
+|   |-- 000-xxx/
+|   |   +-- 000-xxx/
+|   |       |-- do.sql
+|   |       +-- unDo.sql
+|   +-- migration.php
+|-- deploy/
+|   |-- default/
+|   |   |-- api/
+|   |   |   |-- rest/
+|   |   |   |   |-- doc.markdown
+|   |   |   |   +-- index.php
+|   |   |   +-- exemple.php
+|   |   |-- class/
+|   |   |   |-- EntityInterface.php
+|   |   |   +-- ProjectInterface.php
+|   |   |-- config/
+|   |   |   +-- config.php
+|   |   |-- db/
+|   |   |   |-- 000-xxx/
+|   |   |   |   +-- 000-xxx/
+|   |   |   |       |-- do.sql
+|   |   |   |       +-- unDo.sql
+|   |   |   +-- migration.php
+|   |   |-- phpscript/
+|   |   |-- resources/
+|   |   |   +-- avatars/
+|   |   |       +-- ADMI.png
+|   |   |-- tests/
+|   |   |   +-- EntityInterfaceTest.php
+|   |   |-- .htaccess
+|   |   +-- header.php
+|   +-- installer.php
+|-- dist/
+|   |-- InterfaceRest/
+|   |   |-- SessionInterface.php
+|   |   +-- UserInterface.php
+|   |-- SimpleObject/
+|   |   |-- OdaConfig.php
+|   |   |-- OdaDate.php
+|   |   |-- OdaException.php
+|   |   |-- OdaPrepareBd.php
+|   |   |-- OdaPrepareInterface.php
+|   |   |-- OdaPrepareReqSql.php
+|   |   |-- OdaRetourInterface.php
+|   |   |-- OdaRetourReqSql.php
+|   |   +-- OdaUser.php
+|   |-- OdaLib.php
+|   |-- OdaLibBd.php
+|   |-- OdaLibInterface.php
+|   |-- OdaMigration.php
+|   |-- OdaMigration.php
+|   +-- OdaRestInterface.php
+|-- resources/
+|   |-- api/
+|   |   |-- rest/
+|   |   |   |-- doc.markdown
+|   |   |   +-- index.php
+|   |   |-- tests/
+|   |   |   +-- test_secu.php
+|   |   +-- exemple.php
+|   +-- script/
+|       |-- getResources.php
+|       |-- postResources.php
+|       +-- send_mail.php
+|-- tests/
+|   +-- OdaLibBdTest.php
+|   +-- OdaLibTest.php
++-- composer.json
+```
+code:mapFiles:end
