@@ -8,52 +8,44 @@ template: tuto
 
 > !Attention! : il est bon de savoir que le framework Oda peut être utiliser de plusieurs manières
 
-- En tant que simple librairie de méthode
-- En tant que framework avec une initiatialisation minimal (i8n, notification, message d'acceuil)
-- En tant que framework avec une initiatialisation application (comme précèdament + éléments propre à l'application ses i8n, sa configuration, ses styles, gestion des routes et sa classe)
-- En tant que framework avec une initiatialisation application complètement prise en charge par Oda (comme précèdament + mise en place de la scène, menu, thème)
+* En tant que simple librairie de méthode
+* En tant que framework avec une initiatialisation minimal (i8n, notification, message d'acceuil)
+* En tant que framework avec une initiatialisation application (comme précèdament + éléments propre à l'application ses i8n, sa configuration, ses styles, gestion des routes et sa classe)
+* En tant que framework avec une initiatialisation application complètement prise en charge par Oda (comme précèdament + mise en place de la scène, menu, thème)
 
 > Ce tutoriel a pour objectif de vous aider à créer une application à partir de zéro.
 
 ## Scènario utilisation en tant que simple librairie
 
-1. Créer un fichier bower.json à la racine de votre projet avec en contenu :
+* Créer un fichier bower.json à la racine de votre projet avec en contenu : 
 {{code:bowerjson}}
-
-2. Avec bower lancer la commande :
-* Pour installer bower (Gestionnaire de dépendance pour client web) : [ici](http://bower.io/#install-bower)
-{{code:bowerupdate}}
-
-3. Pré-requis :
-* Oda client est une extension de jQuery il est donc nécéssaire de l'importer aussi
+* Avec bower lancer la commande :
+  * Pour installer bower (Gestionnaire de dépendance pour client web) : [ici](http://bower.io/#install-bower){{code:bowerupdate}}
+* Pré-requis :
+  * Oda client est une extension de jQuery il est donc nécéssaire de l'importer aussi 
 {{code:bowerlinkJquery}}
-
-4. La librairie est prête à être utilisé
-* Dans le header de votre source html :
+* La librairie est prête à être utilisé
+  * Dans le header de votre source html : 
 {{code:bowerlinkOda}}
+* Scope utilisable
+  * Oda client étant sans contexte, seul les méthodes statiques seront utilisables, typiquement comme celle de `$.Oda.Tooling`
 
-5. Scope utilisable
-* Oda client étant sans contexte, seul les méthodes statiques seront utilisables, typiquement comme celle de `$.Oda.Tooling`
-> ex : $.Oda.Tooling.getLangBrowser();
+
+* Exemple : $.Oda.Tooling.getLangBrowser();
 
 ## Scènario de deployement du client avec initiatialisation minimal, application, application complètement prise en charge par Oda
 
-1. Créer un fichier `bower.json` à la racine de votre projet avec en contenu :
+* Créer un fichier `bower.json` à la racine de votre projet avec en contenu : 
 {{code:bowerjson}}
-
-2. Avec bower lancer la commande :
-* Pour installer bower (Gestionnaire de dépendance pour client web) : [ici](http://bower.io/#install-bower)
+* Avec bower lancer la commande :
+  * Pour installer bower (Gestionnaire de dépendance pour client web) : [ici](http://bower.io/#install-bower) 
 {{code:bowerupdate}}
-
-3. Pour aider à la création du projet, Oda met à disposition des scripts Gulp, il va donc falloir avoir installer NodeJs.
-* Pour installer Node Js (permet d'executer du javascript sur la machine, et gestionnaire de dépendance) : [ici](https://nodejs.org/en/)
-
-4. Importer les dépendances nécéssaire au scripts de deployement
-* Aller dans `<bower_components>/Oda/deploy/`
-* exécuter la commande pour installer toutes les dépendances
-{{code:npmUpdate}}
-
-5. Script de déploiement à executer suivant vos besoin
+* Pour aider à la création du projet, Oda met à disposition des scripts Gulp, il va donc falloir avoir installer NodeJs.
+  * Pour installer Node Js (permet d'executer du javascript sur la machine, et gestionnaire de dépendance) : [ici](https://nodejs.org/en/)
+* Importer les dépendances nécéssaire au scripts de deployement
+  * Aller dans `<bower_components>/Oda/deploy/`
+  * exécuter la commande pour installer toutes les dépendances {{code:npmUpdate}}
+* Script de déploiement à executer suivant vos besoin
 code:npmDeployMini:begin
 ```
 npm run deploy-mini
@@ -71,48 +63,36 @@ code:npmDeployFull:begin
 npm run deploy-full
 ```
 code:npmDeployFull:end
-
-6. Dans les cas app et full éditer le fichier de configuration `config/config.js`
+* Dans les cas app et full éditer le fichier de configuration `config/config.js`
 
 ## Scènario de deployement du serveur
 
-1. Dans la racine de votre projet serveur (peu-être /server/ sur le même environement que le client)
-
-2. Nous aurons besoin de composer (gestionaire de dépendance pour PHP)
-* Pour installer composer : [ici](https://getcomposer.org/)
-
-3. Créer un fichier `composer.json`
-{{code:composerJson}}
-
-4. Exécuter la commande pour mettre à jour les dépendances PHP avec Oda
+* Dans la racine de votre projet serveur (peu-être /server/ sur le même environement que le client)
+* Nous aurons besoin de composer (gestionaire de dépendance pour PHP)
+  * Pour installer composer : [ici](https://getcomposer.org/)
+* Créer un fichier `composer.json` {{code:composerJson}}
+* Exécuter la commande pour mettre à jour les dépendances PHP avec Oda 
 {{code:composerUpdate}}
-
-5. Aller dans le dossier `<vendor>/happykiller/oda/deploy/` et lancer la commande
+* Aller dans le dossier `<vendor>/happykiller/oda/deploy/` et lancer la commande 
 {{code:phpInstall}}
-
-6. Editer le fichier de configuration `<vendor>/include/config.php`
+* Editer le fichier de configuration `<vendor>/include/config.php`
 
 # Ajouter une route
 
 > Ce tutoriel a pour objectif de créer une nouvelle route.
 
-1. Dans l'application
+* Dans l'application 
 {{code:addRoute}}
-
-2. Ajouter *manuellement* le **droit** `$.Oda.Router.routesAllowed`
+*Ajouter *manuellement* le **droit** `$.Oda.Router.routesAllowed` 
 {{code:routesAllowed}}
-
-3. Gestion des droits par $.Oda.Security.loadRight()
-* Rajouter le menu dans la table `api_tab_menu`
+* Gestion des droits par $.Oda.Security.loadRight()
+  * Rajouter le menu dans la table `api_tab_menu` 
 {{code:addRouteMenu}}
-
-La liste des categories par défaut :
+  * La liste des categories par défaut : 
 {{code:listMenuCate}}
-
-4. Rajouter l'id du menu dans la table `menu_rangs_droit` pour le ou les rangs voulu
+* Rajouter l'id du menu dans la table `menu_rangs_droit` pour le ou les rangs voulu 
 {{code:addRouteMenuRight}}
-
-La liste des rangs par défaut:
+  * La liste des rangs par défaut: 
 {{code:listRank}}
 
 # Ajouter de la guidance
@@ -121,13 +101,12 @@ La liste des rangs par défaut:
 
 > Ce tutoriel a pour objectif de créer de l'aide visuel pour guider les utilisateurs
 
-1. Déclarer le contenu de vos bulles d'aide
-* Rajouter des div avec la balise `oda-tuto-content` dans les parties voulues
+* Déclarer le contenu de vos bulles d'aide
+  * Rajouter des div avec la balise `oda-tuto-content` dans les parties voulues 
 {{code:tutoContent}}    
-
-2. Décider de l'endroit où accrocher
-* Rajouter la balise `oda-tuto` dans le code des éléments
-* id (obligatoire)
-* locaction (optionel) : pour positionner
-* bt-next (optionel) : pour conditionner son affichage à la séquence globale
+* Décider de l'endroit où accrocher
+  *  Rajouter la balise `oda-tuto` dans le code des éléments
+  * id (obligatoire)
+  * locaction (optionel) : pour positionner
+  * bt-next (optionel) : pour conditionner son affichage à la séquence globale 
 {{code:tutoAdd}}

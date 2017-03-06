@@ -8,52 +8,44 @@ template: tuto
 
 > !Warning! : It is good to know that the Oda framework can be used in several ways
 
-- As a simple method library
-- As a framework with minimal initiatization (i8n, notification, welcome message)
-- As a framework with an application initiatization (as before + elements specific to the application its i8n, its configuration, its styles, management routes and its class)
-- As a framework with an initiatization application completely supported by Oda (as before + setting up the scene, menu, theme)
+* As a simple method library
+* As a framework with minimal initiatization (i8n, notification, welcome message)
+* As a framework with an application initiatization (as before + elements specific to the application its i8n, its configuration, its styles, management routes and its class)
+* As a framework with an initiatization application completely supported by Oda (as before + setting up the scene, menu, theme)
 
 > This tutorial aims to help you create an application from scratch.
 
 ## Scenario use as a simple library
 
-1. Create a bower.json file at the root of your project with content:
-{{code:bowerjson}}
-
-2. With bower start the command:
-* To install bower (Web Client Dependency Manager): [ici](http://bower.io/#install-bower)
+* Create a bower.json file at the root of your project with content: {{code:bowerjson}}
+* With bower start the command:
+  * To install bower (Web Client Dependency Manager): [ici](http://bower.io/#install-bower)
 {{code:bowerupdate}}
-
-3. Prerequisites:
-* Oda client is an extension of jQuery so it is necessary to import it too
+* Prerequisites:
+  * Oda client is an extension of jQuery so it is necessary to import it too 
 {{code:bowerlinkJquery}}
-
-4. The library is ready to be used
-* In the header of your source html:
+* The library is ready to be used
+  * In the header of your source html: 
 {{code:bowerlinkOda}}
+* Scope usable
+  * Oda client being contextless, only static methods will be usable, typically as `$.Oda.Tooling`
 
-5. Scope usable
-* Oda client being contextless, only static methods will be usable, typically as `$.Oda.Tooling`
-> ex: $.Oda.Tooling.getLangBrowser();
+
+* Example: $.Oda.Tooling.getLangBrowser();
 
 ## Customer deployment scenario with minimal initialization, application, application fully supported by Oda
 
-1. Create a `bower.json` file at the root of your project with content:
+* Create a `bower.json` file at the root of your project with content: 
 {{code:bowerjson}}
-
-2. With bower start the command:
-* To install bower (Web Client Dependency Manager): [ici](http://bower.io/#install-bower)
+* With bower start the command:
+  * To install bower (Web Client Dependency Manager): [ici](http://bower.io/#install-bower) 
 {{code:bowerupdate}}
-
-3. To help create the project, Oda makes available Gulp scripts, so it will be necessary to install NodeJs.
-* To install Node Js (run javascript on the machine, and dependency manager): [here] (https://nodejs.org/en/)
-
-4. Import necessary dependencies to the deployment scripts
-* Go to `<bower_components> / Oda / deploy /`
-* Run command to install all dependencies
-{{code:npmUpdate}}
-
-5. Deployment script to be executed according to your needs
+* To help create the project, Oda makes available Gulp scripts, so it will be necessary to install NodeJs.
+  * To install Node Js (run javascript on the machine, and dependency manager): [here] (https://nodejs.org/en/)
+* Import necessary dependencies to the deployment scripts
+  * Go to `<bower_components> / Oda / deploy /`
+  * Run command to install all dependencies {{code:npmUpdate}}
+* Deployment script to be executed according to your needs
 code:npmDeployMini:begin
 ```
 npm run deploy-mini
@@ -71,48 +63,37 @@ code:npmDeployFull:begin
 npm run deploy-full
 ```
 code:npmDeployFull:end
-
-6. In the cases app and full edit the configuration file `config / config.js`
+* In the cases app and full edit the configuration file `config / config.js`
 
 ## Server Deployment Scenario
 
-1. In the root of your server project (maybe / server / on the same environment as the client)
-
-2. We will need to compose (dependency management for PHP)
-* To install composer: [here] (https://getcomposer.org/)
-
-3. Create a `composer.json` file
+* In the root of your server project (maybe / server / on the same environment as the client)
+1. We will need to compose (dependency management for PHP)
+  * To install composer: [here] (https://getcomposer.org/)
+* Create a `composer.json` file 
 {{code:composerJson}}
-
-4. Run the command to update the PHP dependencies with Oda
+* Run the command to update the PHP dependencies with Oda 
 {{code:composerUpdate}}
-
-5. Go to the `<vendor> / happykiller / oda / deploy /` folder and run the command
+* Go to the `<vendor> / happykiller / oda / deploy /` folder and run the command 
 {{code:phpInstall}}
-
-6. Edit the configuration file `<vendor>/include/config.php`
+* Edit the configuration file `<vendor>/include/config.php`
 
 # Ajouter une route
 
 > This tutorial aims to create a new route.
 
-1. In the application
+* In the application
 {{code:addRoute}}
-
-2. Add * manually * the ** right ** `$.Oda.Router.routesAllowed`
+* Add *manually* the **right** `$.Oda.Router.routesAllowed` 
 {{code:routesAllowed}}
-
-3. Management of rights $.Oda.Security.loadRight()
-* Add menu to table `api_tab_menu`
+* Management of rights $.Oda.Security.loadRight()
+  * Add menu to table `api_tab_menu` 
 {{code:addRouteMenu}}
-
-The list of default categories:
+  * The list of default categories: 
 {{code:listMenuCate}}
-
-4. Add the menu id in the table `menu_rangs_droit` For the desired rank
+* Add the menu id in the table `menu_rangs_droit` For the desired rank 
 {{code:addRouteMenuRight}}
-
-The list of default rank:
+  * The list of default rank: 
 {{code:listRank}}
 
 # Add tooltips
@@ -121,13 +102,12 @@ The list of default rank:
 
 > This tutorial aims to create visual aid to guide users
 
-1. Declare the content of your tooltips
-* Add div with the `oda-tutorial-content` tag in the desired parts
+* Declare the content of your tooltips
+  * Add div with the `oda-tutorial-content` tag in the desired parts 
 {{code:tutoContent}}  
-
-2. Decide where to hang
-* Add the `oda-tuto` tag in the code elements
-* id (mandatory)
-* locaction (optional) : to position
-* bt-next (optional) : to condition its display in the overall sequence
+* Decide where to hang
+  * Add the `oda-tuto` tag in the code elements
+  * id (mandatory)
+  * locaction (optional): to position
+  * bt-next (optional): to condition its display in the overall sequence 
 {{code:tutoAdd}}

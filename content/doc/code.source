@@ -6,6 +6,11 @@ code:tabRangsDroit:begin
 ```
 code:tabRangsDroit:end
 
+code:getI8n:begin
+```
+var tagValue = $.Oda.I8n.get('oda-project','userLabel');
+```
+code:getI8n:end
 
 code:buidInterface:begin
 ```
