@@ -103,7 +103,7 @@ code:npmDeployFull:end
 {{code:routesAllowed}}
 
 3. Gestion des droits par $.Oda.Security.loadRight()
-  * Rajouter le menu dans la table `api_tab_menu`
+* Rajouter le menu dans la table `api_tab_menu`
 {{code:addRouteMenu}}
 
 La liste des categories par défaut :
@@ -122,12 +122,12 @@ La liste des rangs par défaut:
 > Ce tutoriel a pour objectif de créer de l'aide visuel pour guider les utilisateurs
 
 1. Déclarer le contenu de vos bulles d'aide
-    * Rajouter des div avec la balise `oda-tuto-content` dans les parties voulues
+* Rajouter des div avec la balise `oda-tuto-content` dans les parties voulues
 {{code:tutoContent}}    
 
 2. Décider de l'endroit où accrocher
-    * Rajouter la balise `oda-tuto` dans le code des éléments
-    * id (obligatoire)
-    * locaction (optionel) : pour positionner
-    * bt-next (optionel) : pour conditionner son affichage à la séquence globale
+* Rajouter la balise `oda-tuto` dans le code des éléments
+* id (obligatoire)
+* locaction (optionel) : pour positionner
+* bt-next (optionel) : pour conditionner son affichage à la séquence globale
 {{code:tutoAdd}}

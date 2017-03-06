@@ -103,7 +103,7 @@ code:npmDeployFull:end
 {{code:routesAllowed}}
 
 3. Management of rights $.Oda.Security.loadRight()
-  * Add menu to table `api_tab_menu`
+* Add menu to table `api_tab_menu`
 {{code:addRouteMenu}}
 
 The list of default categories:
@@ -122,12 +122,12 @@ The list of default rank:
 > This tutorial aims to create visual aid to guide users
 
 1. Declare the content of your tooltips
-    * Add div with the `oda-tutorial-content` tag in the desired parts
+* Add div with the `oda-tutorial-content` tag in the desired parts
 {{code:tutoContent}}  
 
 2. Decide where to hang
-    * Add the `oda-tuto` tag in the code elements
-    * id (mandatory)
-    * locaction (optional) : to position
-    * bt-next (optional) : to condition its display in the overall sequence
+* Add the `oda-tuto` tag in the code elements
+* id (mandatory)
+* locaction (optional) : to position
+* bt-next (optional) : to condition its display in the overall sequence
 {{code:tutoAdd}}
