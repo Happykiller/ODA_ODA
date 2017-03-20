@@ -119,20 +119,18 @@ code:implModal:begin
 $.Oda.Display.Popup.open({
     "name" : "pExemple",
     "size" : "lg",
-    "label" : $.Oda.I8n.get('group','entete'),
-    "details" : strHtml,
-    "footer" : '<button type="button" oda-label="oda-main.bt-submit" oda-submit="submit" onclick="$.Oda.App.Controller.Part.submit();" class="btn btn-primary disabled" disabled>Submit</button >',
+    "label" : $.Oda.I8n.get('group','attr'),
+    "details" : "test",
+    "footer" : '<button type="button" oda-label="oda-main.bt-submit" oda-submit="submit" onclick="$.Oda.App.Controller.method();" class="btn btn-primary disabled" disabled>Submit</button >',
     "callback" : function(){
         $.Oda.Scope.Gardian.add({
             id : "gEditPatient",
-            listElt : ["firstName", "lastName"],
+            listElt : ["input"],
             function : function(e){
-                if( ($("#firstName").data("isOk")) && ($("#lastName").data("isOk")) ){
-                    $("#submit").removeClass("disabled");
-                    $("#submit").removeAttr("disabled");
+                if( ($("#firstName").data("isOk")) ){
+                    $("#submit").btEnable();
                 }else{
-                    $("#submit").addClass("disabled");
-                    $("#submit").attr("disabled", true);
+                    $("#submit").btDisable();
                 }
             }
         });
@@ -170,7 +168,7 @@ code:jsTemplate:end
 
 code:widgetButton:begin
 ```
-<button type="button" oda-submit="submit" onclick="$.Oda.Controler.Auth.goIn();" class="btn btn-primary disabled" disabled><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> <label oda-label="oda-main.bt-submit>"></label></button>
+<button type="button" oda-submit="submit" onclick="$.Oda.Controler.Auth.goIn();" class="btn btn-primary disabled" disabled><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> <label oda-label="oda-main.bt-submit"></label></button>
 ```
 code:widgetButton:end
 
