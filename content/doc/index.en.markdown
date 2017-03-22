@@ -6,6 +6,28 @@ text_lib_server: Library server
 
 ---
 
+# Execution mode
+
+> This part concerns the client part
+
+## Execution type
+
+* There are several ways to use the Oda FrameWork.
+   * Simple library
+   * Application
+   * CMS
+* To configure the desired operating mode, add an argument to the FrameWork import line.
+{{code:modeExecution}}
+
+## Debug
+
+* It is obvious that the developer can debug his work will make his life easier.
+* The first tip is to use FrameWork in non-mined version when importing.
+   * With this you will be able to better analyze what happens in FrameWork
+{{code:importDebug}}
+* It is possible to make the traces appear with `$ .Oda.log.debug` by adding to the import of FrameWork the` debug` argument
+{{code:modeDebug}}
+
 # I8n
 
 > This part concerns the client part

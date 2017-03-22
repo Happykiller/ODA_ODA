@@ -1,3 +1,30 @@
+code:modeExecution:begin
+  * Lib
+```
+<script src="<pathDependencies>/Oda/dist/Oda.min.js"></script>
+```
+  * App
+```
+<script src="<pathDependencies>/Oda/dist/Oda.min.js?modeExecution=app"></script>
+```
+  * Lib
+```
+<script src="<pathDependencies>/Oda/dist/Oda.min.js?modeExecution=full"></script>
+```
+code:modeExecution:end
+
+code:importDebug:begin
+```
+<script src="<pathDependencies>/Oda/dist/Oda.js"></script>
+```
+code:importDebug:end
+
+code:modeDebug:begin
+```
+<script src="<pathDependencies>/Oda/dist/Oda.js?debug=true"></script>
+```
+code:modeDebug:end
+
 code:tabRangsDroit:begin
 ```
 | id_rang       | id_menu       |

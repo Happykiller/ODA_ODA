@@ -6,6 +6,28 @@ text_lib_server: Librairie Servuer
 
 ---
 
+# Mode d'exécution
+
+> Cette partie concerne la partie cliente
+
+## Type d'exécution
+
+* Il existe plusieurs façon d'utiliser le FrameWork Oda.
+  * Librairie simple
+  * Application 
+  * CMS
+* Pour configurer le mode de fonctionement voulu il faut ajouter un argument à la ligne d'import du FrameWork.
+{{code:modeExecution}}
+
+## Debug
+
+* Il est évident que le dévellopeur pouvoir débugger son travail lui facilitera la vie. 
+* Le premier conseil est d'utiliser le FrameWork en version non minifié lors de l'import.
+  * Avec cela vous pourrez mieux analyser ce qui se passe dans le FrameWork
+{{code:importDebug}}
+* Il est possible de faire apparaitre les traces avec `$.Oda.log.debug` en ajoutant à l'importation du FrameWork l'arguement `debug`
+{{code:modeDebug}}
+
 # I8n
 
 > Cette partie concerne la partie cliente
