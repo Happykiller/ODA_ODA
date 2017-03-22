@@ -13,17 +13,20 @@ code:modeExecution:begin
 ```
 code:modeExecution:end
 
+
 code:importDebug:begin
 ```
 <script src="<pathDependencies>/Oda/dist/Oda.js"></script>
 ```
 code:importDebug:end
 
+
 code:modeDebug:begin
 ```
 <script src="<pathDependencies>/Oda/dist/Oda.js?debug=true"></script>
 ```
 code:modeDebug:end
+
 
 code:tabRangsDroit:begin
 ```
@@ -33,11 +36,13 @@ code:tabRangsDroit:begin
 ```
 code:tabRangsDroit:end
 
+
 code:getI8n:begin
 ```
 var tagValue = $.Oda.I8n.get('oda-project','userLabel');
 ```
 code:getI8n:end
+
 
 code:buidInterface:begin
 ```
@@ -297,3 +302,36 @@ $.Oda.Display.Polyfill.extendHtmlElement({
 });
 ```
 code:jsEditWebConponant:end
+
+
+code:table:begin
+```
+$.Oda.Display.Table.createDataTable({
+    target: "test",
+    data: [{
+        id: 1
+    }],
+    attribute: [
+        {
+            header: "Id",
+            size: "50px",
+            align: "center",
+            value: function(data, type, full, meta, row){
+                return row.id;
+            }
+        }
+    ]
+});
+```
+code:table:end
+
+
+code:tableData:begin
+```
+[
+    {
+        "attr": value
+    }
+]
+```
+code:tableData:end

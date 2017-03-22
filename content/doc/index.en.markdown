@@ -276,10 +276,23 @@ Example:
 
 ## Gardian
 * Guards allow you to listen to changes on form fields
-
-
 * Example:
 {{code:gardian}}
+
+# Table
+
+> This part concerns the client part
+
+* The method for implementing a given table with (sort, pagination, filter) is `$ .Oda.Display.Table.createDataTable`
+* The available parameters are
+  * `Target`: for the id of the container
+  * `Attribute`: json with` value` and `header` required,` withFilter`, `align`,` size` are optional
+  * `Option`: used to inject parameters of the` DataTables` library as `aaSorting`
+  * `Data`: for formatting data
+{{code:tableData}}
+
+* Implementation example:
+{{code:table}}
 
 # Web component
 * It is possible to declare web components

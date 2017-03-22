@@ -280,10 +280,23 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 
 ## Gardien
 * Les gardiens permettent d'écouter des changements sur des champs des formulaires
-
-
 * Exemple :
 {{code:gardian}}
+
+# Tableau
+
+> Cette partie concerne la partie cliente
+
+* La méthode pour l'implémentation d'une table donnée avec (tri, pagination, filtre) est `$.Oda.Display.Table.createDataTable`
+* Les paramètres disponibles sont
+  * `target` : pour l'id du conteneur
+  * `attribute` : json avec `value` et `header` obligatoires, `withFilter`, `align`, `size` sont eux optionels
+  * `option`: sert à injecter des paramètres de la librarie `DataTables` comme `aaSorting`
+  * `data` : pour les données formater comme : 
+{{code:tableData}}
+
+* Exemple d'implémentation :
+{{code:table}}
 
 # Web composant
 * Il est possible de déclarer des web composants
