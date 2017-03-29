@@ -200,9 +200,17 @@ code:jsTemplate:end
 
 code:widgetButton:begin
 ```
-<button type="button" oda-submit="submit" onclick="$.Oda.Controler.Auth.goIn();" class="btn btn-primary disabled" disabled><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> <label oda-label="oda-main.bt-submit"></label></button>
+<oda-btn oda-btn-name="submit" oda-btn-style="primary" oda-btn-enter="1" oda-btn-icon-before="ok" oda-btn-icon-after="info" oda-btn-click="$.Oda.Controller.Auth.goIn();" disabled>oda-main.bt-submit</oda-btn>
 ```
 code:widgetButton:end
+
+
+code:widgetButtonEnaDisa:begin
+```
+$('#submit).btEnable();
+$('#submit).btDisable();
+```
+code:widgetButtonEnaDisa:end
 
 
 code:widgetCheckbox:begin

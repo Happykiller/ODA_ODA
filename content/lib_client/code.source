@@ -164,9 +164,13 @@ $
     |    |-- Push
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Push.create");'>create(params)</a>
     |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Push.createI8n");'>createI8n(params)</a>
-    |    +-- TemplateHtml
-    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.TemplateHtml.create");'>create({name, scope})</a>
-    |         +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.TemplateHtml.eval");'>eval({exrp, scope})</a>
+    |    |-- TemplateHtml
+    |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.TemplateHtml.create");'>create({name, scope})</a>
+    |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.TemplateHtml.eval");'>eval({exrp, scope})</a>
+    |    +-- Widget
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.load");'>load()</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadBtn");'>loadBtn()</a>
+    |         +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.checkBtnEnter");'>checkBtnEnter()</a>
     |-- Tooling
     |    |-- timerDebounce
     |    |-- timerThrottle

@@ -263,6 +263,21 @@ Example:
 ## Widgets
 
 ### Button
+* The widget button `oda-btn` is managed by a webcomponent, it supports the following options:
+  * `Oda-btn-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `Oda-btn-style`: To choose the" style "to apply (` primary`, `success`,` info`, `warning`,` danger`), it must take into account a declared `class` tag.
+  * 'oda-btn-icon-before` and `oda-btn-icon-after`: To add an icon to the [glyphs] button (http://getbootstrap.com/components/#glyphicons), click the following icon: 
+  * `Oda-btn-click`: Javascript action to be done on the click
+  * `Oda-btn-enter`: To give the button the click action on the" Enter "key, the value indicated allows to manage if several button with this property are displayed, the highest priority will win.
+  * `Disabled`: To disable the button
+  * Content, if the content matches an I8n search it will be replaced.
+
+
+* It is necessary to know that it is possible to activate and deactivate the buttons as well:
+{{Code: widgetButtonEnaDisa}}
+
+
+* Example of implementation:
 {{code:widgetButton}}
 
 ### Checkbox
