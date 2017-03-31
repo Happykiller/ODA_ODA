@@ -288,6 +288,23 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 {{code:widgetCheckbox}}
 
 ### Input text
+
+
+* Le widget input text `oda-input-text` est géré par un webcomponant, il supporte les options suivantes :
+  * `oda-input-text-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
+  * `oda-input-text-type` : Pour choisir le "style" à appliquer (`text`, `password`, `number`, `date`, [att_input_type](http://getbootstrap.com/components/#glyphicons ))
+  * `oda-input-text-label` : Pour afficher un label en haut
+  * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n)
+  * `oda-input-text-advice` : Pour afficher un bouton d'aide, sur clic un popover affichera le text (support le i8n)
+  * `oda-input-text-placeholder` : Pour afficher du text dans le champ
+  * `oda-input-text-check` : Vérifie la syntaxe en se bassant sur une expression régulière, on peux utliser celle déjà déclarer dans le framework
+  * `oda-input-text-paste` : Pour bloquer le coller
+  * `oda-input-text-debounce` : Pour activier le debounce pour la propagation automatique
+  * `oda-input-text-throttle` : Pour activier le throttle pour la propagation automatique
+  * `required` : Pour rendre le champ obligatoire
+
+
+* Exemple d'implémentation :
 {{code:widgetText}}
 
 ### Input select

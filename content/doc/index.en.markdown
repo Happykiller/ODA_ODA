@@ -284,6 +284,23 @@ Example:
 {{code:widgetCheckbox}}
 
 ### Input text
+
+
+* The input text widget 'oda-input-text` is managed by a webcomponent, it supports the following options:
+  * `Oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `Oda-input-text-type`: To choose the style you want to apply (` text`, `password`,` number`, `date`, [att_input_type] (http://getbootstrap.com/components/ #glyphicons))
+  * `Oda-input-text-label`: To display a label at the top
+  * `Oda-input-text-tips`: To display information below the field (support the i8n)
+  * `Oda-input-text-advice`: To display a help button, click on a popover to display the text (support the i8n)
+  * `Oda-input-text-placeholder`: To display text in the field
+  * `Oda-input-text-check`: Verify the syntax by bassing on a regular expression, we can use the one already declared in the framework
+  * `Oda-input-text-paste`: To block the paste
+  * `Oda-input-text-debounce`: To enable debounce for automatic propagation
+  * `Oda-input-text-throttle`: To activate the throttle for automatic propagation
+  * `Required`: To make the field mandatory
+
+
+* Example of implementation:
 {{code:widgetText}}
 
 ### Input select

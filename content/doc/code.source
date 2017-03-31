@@ -230,10 +230,18 @@ code:widgetCheckbox:end
 
 code:widgetText:begin
 ```
-<div class="form-group">
-    <label for="title" oda-label="activity.activityTitle">activity.activityTitle</label>
-    <input required type="text" class="form-control" oda-input-text="title" oda-input-text-tips="activity.activityTitle-tips" oda-input-text-placeholder="activity.activityTitle-placeholder" oda-input-text-check="Oda.Regexs:noInjection">
-</div>
+<oda-input-text
+    oda-input-text-name="login"
+    oda-input-text-type="text"
+    oda-input-text-label="oda-main.login"
+    oda-input-text-tips="oda-main.io-login-tips"
+    oda-input-text-advice="oda-main.io-login-advice"
+    oda-input-text-placeholder="oda-main.io-login-placeholder"
+    oda-input-text-check="Oda.Regexs:login" 
+    oda-input-text-paste="false" 
+    oda-input-text-debounce="200"
+    required>
+</oda-input-text>
 ```
 code:widgetText:end
 
