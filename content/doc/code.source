@@ -242,7 +242,6 @@ code:widgetText:begin
     oda-input-text-debounce="200"
     oda-input-text-value="me"
     required>
-</oda-input-text>
 ```
 code:widgetText:end
 
