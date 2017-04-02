@@ -290,6 +290,7 @@ Example:
   * `Oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
   * `Oda-input-text-type`: To choose the style you want to apply (` text`, `password`,` number`, `date`, [att_input_type] (http://getbootstrap.com/components/ #glyphicons))
   * `Oda-input-text-label`: To display a label at the top
+  * `oda-input-text-value` : For initialize value
   * `Oda-input-text-tips`: To display information below the field (support the i8n)
   * `Oda-input-text-advice`: To display a help button, click on a popover to display the text (support the i8n)
   * `Oda-input-text-placeholder`: To display text in the field

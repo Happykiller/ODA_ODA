@@ -294,6 +294,7 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
   * `oda-input-text-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
   * `oda-input-text-type` : Pour choisir le "style" à appliquer (`text`, `password`, `number`, `date`, [att_input_type](http://getbootstrap.com/components/#glyphicons ))
   * `oda-input-text-label` : Pour afficher un label en haut
+  * `oda-input-text-value` : Pour initialiser une valeur
   * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n)
   * `oda-input-text-advice` : Pour afficher un bouton d'aide, sur clic un popover affichera le text (support le i8n)
   * `oda-input-text-placeholder` : Pour afficher du text dans le champ
