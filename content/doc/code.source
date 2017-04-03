@@ -241,7 +241,7 @@ code:widgetText:begin
     oda-input-text-paste="false" 
     oda-input-text-debounce="200"
     oda-input-text-value="me"
-    required>
+    required/>
 ```
 code:widgetText:end
 
