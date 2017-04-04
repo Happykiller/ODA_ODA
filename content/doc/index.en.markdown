@@ -293,7 +293,7 @@ Example:
   * `oda-input-text-value` : For initialize value
   * `Oda-input-text-tips`: To display information below the field (support the i8n)
   * `Oda-input-text-advice`: To display a help button, click on a popover to display the text (support the i8n)
-  * `Oda-input-text-placeholder`: To display text in the field
+  * `Oda-input-text-placeholder`: To display text in the field (support the i8n)
   * `Oda-input-text-check`: Verify the syntax by bassing on a regular expression, we can use the one already declared in the framework
   * `Oda-input-text-paste`: To block the paste
   * `Oda-input-text-debounce`: To enable debounce for automatic propagation
@@ -303,6 +303,28 @@ Example:
 
 * Example of implementation:
 {{code:widgetText}}
+
+
+### Input area
+
+
+* The input text widget 'oda-input-area` is managed by a webcomponent, it supports the following options:
+  * `Oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `Oda-input-text-hight`: To select the height of the field
+  * `Oda-input-text-label`: To display a label at the top
+  * `Oda-input-text-value`: To initialize a value
+  * `Oda-input-text-tips`: To display information below the field (support the i8n)
+  * `Oda-input-text-placeholder`: To display text in the field (support the i8n)
+  * `Oda-input-text-check`: Verify the syntax by bassing on a regular expression, we can use the one already declared in the framework
+  * `Oda-input-text-paste`: To block the paste
+  * `Oda-input-text-debounce`: To enable debounce for automatic propagation
+  * `Oda-input-text-throttle`: To activate the throttle for automatic propagation
+  * `Required`: To make the field mandatory
+
+
+* Example of implementation:
+{{code:widgetTextArea}}
+
 
 ### Input select
 {{code:widgetSelect}}

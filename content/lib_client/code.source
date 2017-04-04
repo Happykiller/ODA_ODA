@@ -170,6 +170,10 @@ $
     |    +-- Widget
     |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.load");'>load()</a>
     |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadBtn");'>loadBtn()</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.checkInputText");'>checkInputText({elt, required, check})</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.checkTextValue");'>checkTextValue({elt, text, required, check})</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadTextInput");'>loadTextInput()</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadAreaInput");'>loadAreaInput()</a>
     |         +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.checkBtnEnter");'>checkBtnEnter()</a>
     |-- Tooling
     |    |-- timerDebounce

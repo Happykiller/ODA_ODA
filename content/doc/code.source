@@ -246,6 +246,22 @@ code:widgetText:begin
 code:widgetText:end
 
 
+code:widgetTextArea:begin
+```
+<oda-input-area
+    oda-input-area-name="input_message"
+    oda-input-area-label="oda-admin.messageCreateMessage"
+    oda-input-area-tips="oda-main.messageCreateMessage-tips"
+    oda-input-area-placeholder="oda-main.messageCreateMessage-placeholder"
+    oda-input-area-hight="10"
+    oda-input-area-paste="false"
+    oda-input-area-check=".{25,}"
+    oda-input-area-rich="true"
+    required/>
+```
+code:widgetTextArea:end
+
+
 code:widgetSelect:begin
 ```
 <div class="form-group">
