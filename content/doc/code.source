@@ -264,14 +264,12 @@ code:widgetTextArea:end
 
 code:widgetSelect:begin
 ```
-<div class="form-group">
-    <label for="start" oda-label="activity.activityStart">activity.activityStart</label>
-    <select class="form-control" oda-input-select="start" required>
-        <option value="" oda-label="oda-main.select-default"></option>
-        <option value="00:00">00:00</option>
-        <option value="00:30">00:30</option>
-    </select>
-</div>
+<oda-input-checkbox 
+    oda-input-checkbox-name="check" 
+    oda-input-checkbox-label="oda-main.login" 
+    oda-input-checkbox-tips="oda-main.login-tips" 
+    oda-input-checkbox-value="true" 
+    required/>
 ```
 code:widgetSelect:end
 

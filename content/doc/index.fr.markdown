@@ -284,8 +284,6 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 * Exemple d'implémentation :
 {{code:widgetButton}}
 
-### Checkbox
-{{code:widgetCheckbox}}
 
 ### Input text
 
@@ -312,7 +310,7 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 ### Input area
 
 
-* Le widget input text `oda-input-area` est géré par un webcomponant, il supporte les options suivantes :
+* Le widget input area `oda-input-area` est géré par un webcomponant, il supporte les options suivantes :
   * `oda-input-text-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
   * `oda-input-text-hight` : Pour choisir la hauteur du champs
   * `oda-input-text-label` : Pour afficher un label en haut
@@ -323,11 +321,27 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
   * `oda-input-text-paste` : Pour bloquer le coller
   * `oda-input-text-debounce` : Pour activier le debounce pour la propagation automatique
   * `oda-input-text-throttle` : Pour activier le throttle pour la propagation automatique
+  * `oda-input-text-rich` : Pour avoir la palette d'outil afin de créer du code html enrichie
   * `required` : Pour rendre le champ obligatoire
 
 
 * Exemple d'implémentation :
 {{code:widgetTextArea}}
+
+
+### Checkbox
+
+
+* Le widget input checkbox `oda-input-checkbox` est géré par un webcomponant, il supporte les options suivantes :
+  * `oda-input-text-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
+  * `oda-input-text-label` : Pour afficher un label en haut
+  * `oda-input-text-value` : Pour initialiser une valeur
+  * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n)
+  * `required` : Pour rendre le champ obligatoire
+
+
+* Exemple d'implémentation :
+{{code:widgetCheckbox}}
 
 
 ### Input select
