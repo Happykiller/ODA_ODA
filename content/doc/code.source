@@ -215,15 +215,12 @@ code:widgetButtonEnaDisa:end
 
 code:widgetCheckbox:begin
 ```
-<div class="form-group">
-    <label oda-label="activity.activityModeDay">activity.activityModeDay</label>
-    <div class="checkbox">
-        <input type="checkbox" oda-input-checkbox="allDay">
-        <label oda-label="activity.activityAllDay">
-            activity.activityAllDay
-        </label>
-    </div>
-</div>
+<oda-input-checkbox 
+    oda-input-checkbox-name="check" 
+    oda-input-checkbox-label="oda-main.login" 
+    oda-input-checkbox-tips="oda-main.login-tips" 
+    oda-input-checkbox-value="true" 
+    required/>
 ```
 code:widgetCheckbox:end
 
@@ -264,12 +261,7 @@ code:widgetTextArea:end
 
 code:widgetSelect:begin
 ```
-<oda-input-checkbox 
-    oda-input-checkbox-name="check" 
-    oda-input-checkbox-label="oda-main.login" 
-    oda-input-checkbox-tips="oda-main.login-tips" 
-    oda-input-checkbox-value="true" 
-    required/>
+TODO
 ```
 code:widgetSelect:end
 
