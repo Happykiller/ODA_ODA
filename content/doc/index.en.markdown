@@ -361,6 +361,19 @@ Example:
 {{code:widgetSelect}}
 
 
+### Loading
+
+
+* The input checkbox widget 'oda-loading` is managed by a webcomponent.
+
+
+* Example of implementation:
+{{code:widgetLoading}}
+
+
+* An overview:
+
+
 ## Gardian
 * Guards allow you to listen to changes on form fields
 * Example:

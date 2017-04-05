@@ -273,6 +273,12 @@ code:widgetSelect:begin
 ```
 code:widgetSelect:end
 
+code:widgetLoading:begin
+```
+<oda-loading/>
+```
+code:widgetLoading:end
+
 
 code:gardian:begin
 ```

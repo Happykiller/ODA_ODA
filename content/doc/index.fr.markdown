@@ -347,7 +347,7 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 ### Select
 
 
-* Le widget input checkbox `oda-input-select` est géré par un webcomponant, il supporte les options suivantes :
+* Le widget `oda-input-select` est géré par un webcomponant, il supporte les options suivantes :
   * `oda-input-selecttext-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
   * `oda-input-select-label` : Pour afficher un label en haut.
   * `oda-input-select-tips` : Pour afficher de l'information en dessous du champ (support le i8n).
@@ -361,6 +361,19 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 
 * Exemple d'implémentation :
 {{code:widgetSelect}}
+
+
+### Loading
+
+
+* Le widget 'oda-loading` est géré par un webcomponant.
+
+
+* Exemple d'implémentation :
+{{code:widgetLoading}}
+
+
+* Un aperçu :
 
 
 ## Gardien

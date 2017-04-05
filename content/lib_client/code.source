@@ -115,7 +115,6 @@ $
     |    |-- Polyfill
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Polyfill.createHtmlElement");'>createHtmlElement(params)</a>
     |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Polyfill.extendHtmlElement");'>extendHtmlElement(params)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.loading");'>loading(div)</a>
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.render");'>render({id,html})</a>
     |    |-- Menu
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Menu.remove");'>remove()</a>
@@ -174,6 +173,7 @@ $
     |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadTextInput");'>loadTextInput()</a>
     |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadAreaInput");'>loadAreaInput()</a>
     |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadCheckboxInput");'>loadCheckboxInput()</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadLoading");'>loadLoading()</a>
     |         +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.checkBtnEnter");'>checkBtnEnter()</a>
     |-- Tooling
     |    |-- timerDebounce
