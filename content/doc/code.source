@@ -261,7 +261,15 @@ code:widgetTextArea:end
 
 code:widgetSelect:begin
 ```
-TODO
+<oda-input-select 
+    oda-input-select-name="rank" 
+    oda-input-select-label="admin.rank"
+    oda-input-select-value="2"
+    oda-input-select-availables="[{id:1,label:'one'},{id:2,label:'two'}]"
+    oda-input-select-display="elt.id + ':' + elt.label"
+    oda-input-select-response="elt.id"
+    oda-input-select-order="asc"
+    required/>
 ```
 code:widgetSelect:end
 

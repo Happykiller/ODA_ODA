@@ -283,7 +283,7 @@ Example:
 {{code:widgetButton}}
 
 
-### Input text
+### Text
 
 
 * The input text widget 'oda-input-text` is managed by a webcomponent, it supports the following options:
@@ -305,7 +305,7 @@ Example:
 {{code:widgetText}}
 
 
-### Input area
+### Area
 
 
 * The input text widget 'oda-input-area` is managed by a webcomponent, it supports the following options:
@@ -342,8 +342,24 @@ Example:
 {{code:widgetCheckbox}}
 
 
-### Input select
+### Select
+
+
+* The input checkbox widget 'oda-input-select` is managed by a webcomponent, it supports the following options:
+  * `oda-input-selecttext-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `oda-input-select-label`: To display a label at the top.
+  * `oda-input-select-tips`: To display information below the field (support the i8n).
+  * `oda-input-select-value`: To initialize a value.
+  * `oda-input-select-order`: To order the display (` asc`, `desc`).
+  * `oda-input-select-availables`: Must contain a simple value list (` ['one', 'two'] `) or as an object 'One'}, {id: 2, label: 'two'}] `).
+  * `oda-input-select-display`: Required if the list of values ​​is an object to define the value to display.
+  * `oda-input-select-response`: Required if the list of values ​​is an object to define the value to return.
+  * `Required`: To make the field mandatory.
+
+
+* Example of implementation:
 {{code:widgetSelect}}
+
 
 ## Gardian
 * Guards allow you to listen to changes on form fields

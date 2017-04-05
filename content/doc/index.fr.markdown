@@ -270,10 +270,10 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 * Le widget bouton `oda-btn` est géré par un webcomponant, il supporte les options suivantes :
   * `oda-btn-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
   * `oda-btn-style` : Pour choisir le "style" à appliquer (`primary`, `success`, `info`, `warning`, `danger`), il prendre en compte une balise `class` déclarée.
-  * `oda-btn-icon-before` et `oda-btn-icon-after` : Pour ajouter un icon au bouton ([glyphs](http://getbootstrap.com/components/#glyphicons ))
-  * `oda-btn-click` : Action Javascript à faire sur le clic
+  * `oda-btn-icon-before` et `oda-btn-icon-after` : Pour ajouter un icon au bouton ([glyphs](http://getbootstrap.com/components/#glyphicons )).
+  * `oda-btn-click` : Action Javascript à faire sur le clic.
   * `oda-btn-enter` : Pour conférer au bouton l'action click sur la touche "Entrée", la valeur a indiqué permet de gérer si plusieurs bouton avec cette propriétée sont affichés, la priorité la plus haute gagnera.
-  * `disabled`: Pour désactiver le bouton
+  * `disabled`: Pour désactiver le bouton.
   * Contenu, si le contenu correspond à une recherche I8n il sera remplacé.
 
 
@@ -285,44 +285,44 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 {{code:widgetButton}}
 
 
-### Input text
+### Text
 
 
 * Le widget input text `oda-input-text` est géré par un webcomponant, il supporte les options suivantes :
   * `oda-input-text-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
-  * `oda-input-text-type` : Pour choisir le "style" à appliquer (`text`, `password`, `number`, `date`, [att_input_type](http://getbootstrap.com/components/#glyphicons ))
-  * `oda-input-text-label` : Pour afficher un label en haut
-  * `oda-input-text-value` : Pour initialiser une valeur
-  * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n)
-  * `oda-input-text-advice` : Pour afficher un bouton d'aide, sur clic un popover affichera le text (support le i8n)
-  * `oda-input-text-placeholder` : Pour afficher du text dans le champ (support le i8n)
-  * `oda-input-text-check` : Vérifie la syntaxe en se bassant sur une expression régulière, on peux utliser celle déjà déclarer dans le framework
-  * `oda-input-text-paste` : Pour bloquer le coller
-  * `oda-input-text-debounce` : Pour activier le debounce pour la propagation automatique
-  * `oda-input-text-throttle` : Pour activier le throttle pour la propagation automatique
-  * `required` : Pour rendre le champ obligatoire
+  * `oda-input-text-type` : Pour choisir le "style" à appliquer (`text`, `password`, `number`, `date`, [att_input_type](http://getbootstrap.com/components/#glyphicons )).
+  * `oda-input-text-label` : Pour afficher un label en haut.
+  * `oda-input-text-value` : Pour initialiser une valeur.
+  * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n).
+  * `oda-input-text-advice` : Pour afficher un bouton d'aide, sur clic un popover affichera le text (support le i8n).
+  * `oda-input-text-placeholder` : Pour afficher du text dans le champ (support le i8n).
+  * `oda-input-text-check` : Vérifie la syntaxe en se bassant sur une expression régulière, on peux utliser celle déjà déclarer dans le framework.
+  * `oda-input-text-paste` : Pour bloquer le coller.
+  * `oda-input-text-debounce` : Pour activier le debounce pour la propagation automatique.
+  * `oda-input-text-throttle` : Pour activier le throttle pour la propagation automatique.
+  * `required` : Pour rendre le champ obligatoire.
 
 
 * Exemple d'implémentation :
 {{code:widgetText}}
 
 
-### Input area
+### Area
 
 
 * Le widget input area `oda-input-area` est géré par un webcomponant, il supporte les options suivantes :
   * `oda-input-text-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
-  * `oda-input-text-hight` : Pour choisir la hauteur du champs
-  * `oda-input-text-label` : Pour afficher un label en haut
-  * `oda-input-text-value` : Pour initialiser une valeur
-  * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n)
-  * `oda-input-text-placeholder` : Pour afficher du text dans le champ (support le i8n)
-  * `oda-input-text-check` : Vérifie la syntaxe en se bassant sur une expression régulière, on peux utliser celle déjà déclarer dans le framework
-  * `oda-input-text-paste` : Pour bloquer le coller
-  * `oda-input-text-debounce` : Pour activier le debounce pour la propagation automatique
-  * `oda-input-text-throttle` : Pour activier le throttle pour la propagation automatique
-  * `oda-input-text-rich` : Pour avoir la palette d'outil afin de créer du code html enrichie
-  * `required` : Pour rendre le champ obligatoire
+  * `oda-input-text-hight` : Pour choisir la hauteur du champs.
+  * `oda-input-text-label` : Pour afficher un label en haut.
+  * `oda-input-text-value` : Pour initialiser une valeur.
+  * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n).
+  * `oda-input-text-placeholder` : Pour afficher du text dans le champ (support le i8n).
+  * `oda-input-text-check` : Vérifie la syntaxe en se bassant sur une expression régulière, on peux utliser celle déjà déclarer dans le framework.
+  * `oda-input-text-paste` : Pour bloquer le coller.
+  * `oda-input-text-debounce` : Pour activier le debounce pour la propagation automatique.
+  * `oda-input-text-throttle` : Pour activier le throttle pour la propagation automatique.
+  * `oda-input-text-rich` : Pour avoir la palette d'outil afin de créer du code html enrichie.
+  * `required` : Pour rendre le champ obligatoire.
 
 
 * Exemple d'implémentation :
@@ -334,18 +334,34 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 
 * Le widget input checkbox `oda-input-checkbox` est géré par un webcomponant, il supporte les options suivantes :
   * `oda-input-text-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
-  * `oda-input-text-label` : Pour afficher un label en haut
-  * `oda-input-text-value` : Pour initialiser une valeur
-  * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n)
-  * `required` : Pour rendre le champ obligatoire
+  * `oda-input-text-label` : Pour afficher un label en haut.
+  * `oda-input-text-value` : Pour initialiser une valeur.
+  * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n).
+  * `required` : Pour rendre le champ obligatoire.
 
 
 * Exemple d'implémentation :
 {{code:widgetCheckbox}}
 
 
-### Input select
+### Select
+
+
+* Le widget input checkbox `oda-input-select` est géré par un webcomponant, il supporte les options suivantes :
+  * `oda-input-selecttext-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
+  * `oda-input-select-label` : Pour afficher un label en haut.
+  * `oda-input-select-tips` : Pour afficher de l'information en dessous du champ (support le i8n).
+  * `oda-input-select-value` : Pour initialiser une valeur.
+  * `oda-input-select-order` : Pour orderonner l'affichage (`asc`,`desc`).
+  * `oda-input-select-availables` : Doit contenir une liste de valeur, soit simple (`['one','two']`), soit sous forme d'objet (`[{id:1,label:'one'},{id:2,label:'two'}]`).
+  * `oda-input-select-display` : Obligatoire si la liste des valeurs est sous forme d'objet pour définir la valeur à afficher.
+  * `oda-input-select-response` : Obligatoire si la liste des valeurs est sous forme d'objet pour définir la valeur à retourner.
+  * `required` : Pour rendre le champ obligatoire.
+
+
+* Exemple d'implémentation :
 {{code:widgetSelect}}
+
 
 ## Gardien
 * Les gardiens permettent d'écouter des changements sur des champs des formulaires
