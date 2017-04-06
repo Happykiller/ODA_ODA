@@ -273,11 +273,26 @@ code:widgetSelect:begin
 ```
 code:widgetSelect:end
 
+
 code:widgetLoading:begin
 ```
 <oda-loading/>
 ```
 code:widgetLoading:end
+
+
+code:widgetLabel:begin
+```
+<oda-label oda-label-value="oda-main.authentication"/>
+```
+code:widgetLabel:end
+
+
+code:widgetLabelComplexe:begin
+```
+<oda-label oda-label-value="test" oda-label-group="oda-main" oda-label-lang="jp" oda-label-default-lang="es" oda-label-variables="{'var1':'var1','var2':'var2'}"/>
+```
+code:widgetLabelComplexe:end
 
 
 code:gardian:begin

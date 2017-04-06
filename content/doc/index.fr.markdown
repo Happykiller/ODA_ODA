@@ -375,6 +375,29 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 
 * Un aperçu :
 
+![loading](../content/img/loading.gif)
+
+
+### Label
+
+* Ce widget sert à afficher du texte avec traitement I8n.
+
+
+* Le widget `oda-label` est géré par un webcomponant, il supporte les options suivantes :
+  * `oda-label-value` : Il s'agit du tag I8n.
+  * `oda-label-group` : Dans le cas d'une implémentation complexe, il faut fournir le groupe.
+  * `oda-label-lang` : Dans le cas d'une implémentation complexe, on peux spécifier la langue voulu.
+  * `oda-label-default-lang` : Dans le cas d'une implémentation complexe, on peux spécifier la langue par default en cas ou la langue voulu n'est pas trouvé.
+  * `oda-label-variables` : Dans le cas d'une implémentation complexe, on peux spécifier les valeurs à remplacer dans la traduction.
+
+
+* Exemple d'implémentation simple :
+{{code:widgetLabel}}
+
+
+* Exemple d'implémentation complexe :
+{{code:widgetLabelComplexe}}
+
 
 ## Gardien
 * Les gardiens permettent d'écouter des changements sur des champs des formulaires

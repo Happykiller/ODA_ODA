@@ -373,6 +373,29 @@ Example:
 
 * An overview:
 
+![loading](../content/img/loading.gif)
+
+
+### Label
+
+* This widget is used to display text with I8n processing.
+
+
+* The 'oda-label` widget is managed by a webcomponent, it supports the following options:
+   * `Oda-label-value`: This is the I8n tag.
+   * `Oda-label-group`: In the case of a complex implementation, the group must be supplied.
+   * `Oda-label-lang`: In the case of a complex implementation, you can specify the desired language.
+   * `Oda-label-default-lang`: In the case of a complex implementation, the language can be specified by default if the desired language is not found.
+   * `Oda-label-variables`: In the case of a complex implementation, we can specify the values to be replaced in the translation.
+
+
+* Example of implementation simple:
+{{code:widgetLabel}}
+
+
+* Example of implementation complexe:
+{{code:widgetLabelComplexe}}
+
 
 ## Gardian
 * Guards allow you to listen to changes on form fields
