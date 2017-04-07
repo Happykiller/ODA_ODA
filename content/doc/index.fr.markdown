@@ -300,6 +300,7 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
   * `oda-input-text-paste` : Pour bloquer le coller.
   * `oda-input-text-debounce` : Pour activier le debounce pour la propagation automatique.
   * `oda-input-text-throttle` : Pour activier le throttle pour la propagation automatique.
+  * `disabled` : Pour rendre le champs non éditable.
   * `required` : Pour rendre le champ obligatoire.
 
 

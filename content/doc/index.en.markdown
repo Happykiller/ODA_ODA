@@ -290,7 +290,7 @@ Example:
   * `oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
   * `oda-input-text-type`: To choose the style you want to apply (` text`, `password`,` number`, `date`, [att_input_type] (http://getbootstrap.com/components/ #glyphicons))
   * `oda-input-text-label`: To display a label at the top
-  * `oda-input-text-value` : For initialize value
+  * `oda-input-text-value`: For initialize value
   * `oda-input-text-tips`: To display information below the field (support the i8n)
   * `oda-input-text-advice`: To display a help button, click on a popover to display the text (support the i8n)
   * `oda-input-text-placeholder`: To display text in the field (support the i8n)
@@ -298,6 +298,7 @@ Example:
   * `oda-input-text-paste`: To block the paste
   * `oda-input-text-debounce`: To enable debounce for automatic propagation
   * `oda-input-text-throttle`: To activate the throttle for automatic propagation
+  * `disabled`: To make the field not editable.
   * `Required`: To make the field mandatory
 
 
