@@ -115,9 +115,6 @@ $
     |    |-- Polyfill
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Polyfill.createHtmlElement");'>createHtmlElement(params)</a>
     |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Polyfill.extendHtmlElement");'>extendHtmlElement(params)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.jsonToStringSingleQuote");'>jsonToStringSingleQuote(json)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.loading");'>loading(div)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.render");'>render({id,html})</a>
     |    |-- Menu
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Menu.remove");'>remove()</a>
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Menu.show");'>show()</a>
@@ -227,10 +224,6 @@ $
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tuto.readed");'>readed()</a>
     |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tuto.show");'>show()</a>
     |-- Scope
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.transform");'>transform(params)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.init");'>init(params)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.checkInputText");'>checkInputText(params)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.checkInputSelect");'>checkInputSelect(params)</a>
     |    +-- Gardian
     |         |-- inventory
     |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.Gardian.add");'>add(params)</a>
