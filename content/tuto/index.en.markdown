@@ -46,23 +46,17 @@ template: tuto
   * Go to `<bower_components> / Oda / deploy /`
   * Run command to install all dependencies {{code:npmUpdate}}
 * Deployment script to be executed according to your needs
-code:npmDeployMini:begin
-```
-npm run deploy-mini
-```
-code:npmDeployMini:end
+
+{{code:npmDeployMini}}
+
 Or
-code:npmDeployApp:begin
-```
-npm run deploy-app
-```
-code:npmDeployApp:end
-Or
-code:npmDeployFull:begin
-```
-npm run deploy-full
-```
-code:npmDeployFull:end
+
+{{code:npmDeployApp}}
+
+Or 
+
+{{code:npmDeployFull}}
+
 * In the cases app and full edit the configuration file `config / config.js`
 
 ## Server Deployment Scenario

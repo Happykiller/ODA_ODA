@@ -46,23 +46,18 @@ template: tuto
   * Aller dans `<bower_components>/Oda/deploy/`
   * exécuter la commande pour installer toutes les dépendances {{code:npmUpdate}}
 * Script de déploiement à executer suivant vos besoin
-code:npmDeployMini:begin
-```
-npm run deploy-mini
-```
-code:npmDeployMini:end
+
+{{code:npmDeployMini}}
+
 Ou
-code:npmDeployApp:begin
-```
-npm run deploy-app
-```
-code:npmDeployApp:end
-Ou
-code:npmDeployFull:begin
-```
-npm run deploy-full
-```
-code:npmDeployFull:end
+
+{{code:npmDeployApp}}
+
+Ou 
+
+{{code:npmDeployFull}}
+
+
 * Dans les cas app et full éditer le fichier de configuration `config/config.js`
 
 ## Scènario de deployement du serveur
