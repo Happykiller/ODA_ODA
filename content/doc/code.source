@@ -215,15 +215,12 @@ code:widgetButtonEnaDisa:end
 
 code:widgetCheckbox:begin
 ```
-<div class="form-group">
-    <label oda-label="activity.activityModeDay">activity.activityModeDay</label>
-    <div class="checkbox">
-        <input type="checkbox" oda-input-checkbox="allDay">
-        <label oda-label="activity.activityAllDay">
-            activity.activityAllDay
-        </label>
-    </div>
-</div>
+<oda-input-checkbox 
+    oda-input-checkbox-name="check" 
+    oda-input-checkbox-label="oda-main.login" 
+    oda-input-checkbox-tips="oda-main.login-tips" 
+    oda-input-checkbox-value="true" 
+    required/>
 ```
 code:widgetCheckbox:end
 
@@ -241,23 +238,62 @@ code:widgetText:begin
     oda-input-text-paste="false" 
     oda-input-text-debounce="200"
     oda-input-text-value="me"
-    required>
+    disabled
+    required/>
 ```
 code:widgetText:end
 
 
+code:widgetTextArea:begin
+```
+<oda-input-area
+    oda-input-area-name="input_message"
+    oda-input-area-label="oda-admin.messageCreateMessage"
+    oda-input-area-tips="oda-main.messageCreateMessage-tips"
+    oda-input-area-placeholder="oda-main.messageCreateMessage-placeholder"
+    oda-input-area-hight="10"
+    oda-input-area-paste="false"
+    oda-input-area-check=".{25,}"
+    oda-input-area-rich="true"
+    required/>
+```
+code:widgetTextArea:end
+
+
 code:widgetSelect:begin
 ```
-<div class="form-group">
-    <label for="start" oda-label="activity.activityStart">activity.activityStart</label>
-    <select class="form-control" oda-input-select="start" required>
-        <option value="" oda-label="oda-main.select-default"></option>
-        <option value="00:00">00:00</option>
-        <option value="00:30">00:30</option>
-    </select>
-</div>
+<oda-input-select 
+    oda-input-select-name="rank" 
+    oda-input-select-label="admin.rank"
+    oda-input-select-value="2"
+    oda-input-select-availables="[{id:1,label:'one'},{id:2,label:'two'}]"
+    oda-input-select-display="elt.id + ':' + elt.label"
+    oda-input-select-response="elt.id"
+    oda-input-select-order="asc"
+    required/>
 ```
 code:widgetSelect:end
+
+
+code:widgetLoading:begin
+```
+<oda-loading/>
+```
+code:widgetLoading:end
+
+
+code:widgetLabel:begin
+```
+<oda-label oda-label-value="oda-main.authentication"/>
+```
+code:widgetLabel:end
+
+
+code:widgetLabelComplexe:begin
+```
+<oda-label oda-label-value="test" oda-label-group="oda-main" oda-label-lang="jp" oda-label-default-lang="es" oda-label-variables="{'var1':'var1','var2':'var2'}"/>
+```
+code:widgetLabelComplexe:end
 
 
 code:gardian:begin

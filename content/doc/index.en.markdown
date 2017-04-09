@@ -263,12 +263,14 @@ Example:
 ## Widgets
 
 ### Button
+
+
 * The widget button `oda-btn` is managed by a webcomponent, it supports the following options:
-  * `Oda-btn-name`: To save the identifier and the name, there is a check of unicity at the creation.
-  * `Oda-btn-style`: To choose the" style "to apply (` primary`, `success`,` info`, `warning`,` danger`), it must take into account a declared `class` tag.
+  * `oda-btn-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `oda-btn-style`: To choose the" style "to apply (` primary`, `success`,` info`, `warning`,` danger`), it must take into account a declared `class` tag.
   * 'oda-btn-icon-before` and `oda-btn-icon-after`: To add an icon to the [glyphs] button (http://getbootstrap.com/components/#glyphicons), click the following icon: 
-  * `Oda-btn-click`: Javascript action to be done on the click
-  * `Oda-btn-enter`: To give the button the click action on the" Enter "key, the value indicated allows to manage if several button with this property are displayed, the highest priority will win.
+  * `oda-btn-click`: Javascript action to be done on the click
+  * `oda-btn-enter`: To give the button the click action on the" Enter "key, the value indicated allows to manage if several button with this property are displayed, the highest priority will win.
   * `Disabled`: To disable the button
   * Content, if the content matches an I8n search it will be replaced.
 
@@ -280,32 +282,121 @@ Example:
 * Example of implementation:
 {{code:widgetButton}}
 
-### Checkbox
-{{code:widgetCheckbox}}
 
-### Input text
+### Text
 
 
 * The input text widget 'oda-input-text` is managed by a webcomponent, it supports the following options:
-  * `Oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
-  * `Oda-input-text-type`: To choose the style you want to apply (` text`, `password`,` number`, `date`, [att_input_type] (http://getbootstrap.com/components/ #glyphicons))
-  * `Oda-input-text-label`: To display a label at the top
-  * `oda-input-text-value` : For initialize value
-  * `Oda-input-text-tips`: To display information below the field (support the i8n)
-  * `Oda-input-text-advice`: To display a help button, click on a popover to display the text (support the i8n)
-  * `Oda-input-text-placeholder`: To display text in the field
-  * `Oda-input-text-check`: Verify the syntax by bassing on a regular expression, we can use the one already declared in the framework
-  * `Oda-input-text-paste`: To block the paste
-  * `Oda-input-text-debounce`: To enable debounce for automatic propagation
-  * `Oda-input-text-throttle`: To activate the throttle for automatic propagation
+  * `oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `oda-input-text-type`: To choose the style you want to apply (` text`, `password`,` number`, `date`, [att_input_type] (http://getbootstrap.com/components/ #glyphicons))
+  * `oda-input-text-label`: To display a label at the top
+  * `oda-input-text-value`: For initialize value
+  * `oda-input-text-tips`: To display information below the field (support the i8n)
+  * `oda-input-text-advice`: To display a help button, click on a popover to display the text (support the i8n)
+  * `oda-input-text-placeholder`: To display text in the field (support the i8n)
+  * `oda-input-text-check`: Verify the syntax by bassing on a regular expression, we can use the one already declared in the framework
+  * `oda-input-text-paste`: To block the paste
+  * `oda-input-text-debounce`: To enable debounce for automatic propagation
+  * `oda-input-text-throttle`: To activate the throttle for automatic propagation
+  * `disabled`: To make the field not editable.
   * `Required`: To make the field mandatory
 
 
 * Example of implementation:
 {{code:widgetText}}
 
-### Input select
+
+### Area
+
+
+* The input text widget 'oda-input-area` is managed by a webcomponent, it supports the following options:
+  * `oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `oda-input-text-hight`: To select the height of the field
+  * `oda-input-text-label`: To display a label at the top
+  * `oda-input-text-value`: To initialize a value
+  * `oda-input-text-tips`: To display information below the field (support the i8n)
+  * `oda-input-text-placeholder`: To display text in the field (support the i8n)
+  * `oda-input-text-check`: Verify the syntax by bassing on a regular expression, we can use the one already declared in the framework
+  * `oda-input-text-paste`: To block the paste
+  * `oda-input-text-debounce`: To enable debounce for automatic propagation
+  * `oda-input-text-throttle`: To activate the throttle for automatic propagation
+  * `oda-input-text-rich`: To have the tool palette to create enriched html code
+  * `Required`: To make the field mandatory
+
+
+* Example of implementation:
+{{code:widgetTextArea}}
+
+
+### Checkbox
+
+
+* The input checkbox 'oda-input-checkbox` is managed by a webcomponent and supports the following options:
+   * `oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
+   * `oda-input-text-label`: To display a label at the top
+   * `oda-input-text-value`: To initialize a value
+   * `oda-input-text-tips`: To display information below the field (support the i8n)
+   * `Required`: To make the field mandatory
+
+
+* Example of implementation:
+{{code:widgetCheckbox}}
+
+
+### Select
+
+
+* The input checkbox widget 'oda-input-select` is managed by a webcomponent, it supports the following options:
+  * `oda-input-selecttext-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `oda-input-select-label`: To display a label at the top.
+  * `oda-input-select-tips`: To display information below the field (support the i8n).
+  * `oda-input-select-value`: To initialize a value.
+  * `oda-input-select-order`: To order the display (` asc`, `desc`).
+  * `oda-input-select-availables`: Must contain a simple value list (` ['one', 'two'] `) or as an object 'One'}, {id: 2, label: 'two'}] `).
+  * `oda-input-select-display`: Required if the list of values ​​is an object to define the value to display.
+  * `oda-input-select-response`: Required if the list of values ​​is an object to define the value to return.
+  * `Required`: To make the field mandatory.
+
+
+* Example of implementation:
 {{code:widgetSelect}}
+
+
+### Loading
+
+
+* The input checkbox widget 'oda-loading` is managed by a webcomponent.
+
+
+* Example of implementation:
+{{code:widgetLoading}}
+
+
+* An overview:
+
+![loading](../content/img/loading.gif)
+
+
+### Label
+
+* This widget is used to display text with I8n processing.
+
+
+* The 'oda-label` widget is managed by a webcomponent, it supports the following options:
+   * `Oda-label-value`: This is the I8n tag.
+   * `Oda-label-group`: In the case of a complex implementation, the group must be supplied.
+   * `Oda-label-lang`: In the case of a complex implementation, you can specify the desired language.
+   * `Oda-label-default-lang`: In the case of a complex implementation, the language can be specified by default if the desired language is not found.
+   * `Oda-label-variables`: In the case of a complex implementation, we can specify the values to be replaced in the translation.
+
+
+* Example of implementation simple:
+{{code:widgetLabel}}
+
+
+* Example of implementation complexe:
+{{code:widgetLabelComplexe}}
+
 
 ## Gardian
 * Guards allow you to listen to changes on form fields

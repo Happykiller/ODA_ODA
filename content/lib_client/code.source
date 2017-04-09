@@ -115,6 +115,7 @@ $
     |    |-- Polyfill
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Polyfill.createHtmlElement");'>createHtmlElement(params)</a>
     |    |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Polyfill.extendHtmlElement");'>extendHtmlElement(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.render");'>render({id,html})</a>
     |    |-- Menu
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Menu.remove");'>remove()</a>
     |    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Menu.show");'>show()</a>
@@ -167,6 +168,13 @@ $
     |    +-- Widget
     |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.load");'>load()</a>
     |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadBtn");'>loadBtn()</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.checkInputText");'>checkInputText({elt, required, check})</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.checkTextValue");'>checkTextValue({elt, text, required, check})</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadTextInput");'>loadTextInput()</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadAreaInput");'>loadAreaInput()</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadCheckboxInput");'>loadCheckboxInput()</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadLoading");'>loadLoading()</a>
+    |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.loadlabel");'>loadlabel()</a>
     |         +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Display.Widget.checkBtnEnter");'>checkBtnEnter()</a>
     |-- Tooling
     |    |-- timerDebounce
@@ -200,7 +208,8 @@ $
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.throttle");'>throttle(params)</a>
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.detectBrower");'>detectBrower(params)</a>
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.isOdaConpatible");'>isOdaConpatible(params)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.merge");'>merge(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.merge");'>merge(params)</a>$.Oda.Tooling.jsonToStringHtml
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.jsonToStringHtml");'>jsonToStringHtml({json})</a>
     |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.filter");'>filter(params)</a>
     |-- I8n
     |    |-- datas
@@ -224,6 +233,9 @@ $
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tuto.readed");'>readed()</a>
     |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tuto.show");'>show()</a>
     |-- Scope
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.init");'>init(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.checkInputText");'>checkInputText(params)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.checkInputSelect");'>checkInputSelect(params)</a>
     |    +-- Gardian
     |         |-- inventory
     |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.Gardian.add");'>add(params)</a>
