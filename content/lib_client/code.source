@@ -232,9 +232,6 @@ $
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tuto.readed");'>readed()</a>
     |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tuto.show");'>show()</a>
     |-- Scope
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.init");'>init(params)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.checkInputText");'>checkInputText(params)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.checkInputSelect");'>checkInputSelect(params)</a>
     |    +-- Gardian
     |         |-- inventory
     |         |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Scope.Gardian.add");'>add(params)</a>
