@@ -207,8 +207,10 @@ $
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.throttle");'>throttle(params)</a>
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.detectBrower");'>detectBrower(params)</a>
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.isOdaConpatible");'>isOdaConpatible(params)</a>
-    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.merge");'>merge(params)</a>$.Oda.Tooling.jsonToStringHtml
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.merge");'>merge(params)</a>
     |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.jsonToStringHtml");'>jsonToStringHtml({json})</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.stringToOdaCrypt");'>stringToOdaCrypt(str)</a>
+    |    |-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.odaCryptToString");'>odaCryptToString(odaCrypt)</a>
     |    +-- <a href='#' onclick='getUrlForFunction("@name $.Oda.Tooling.filter");'>filter(params)</a>
     |-- I8n
     |    |-- datas
