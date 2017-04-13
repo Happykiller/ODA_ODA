@@ -269,8 +269,8 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 ### Bouton
 * Le widget bouton `oda-btn` est géré par un webcomponant, il supporte les options suivantes :
   * `oda-btn-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
-  * `oda-btn-style` : Pour choisir le "style" à appliquer (`primary`, `success`, `info`, `warning`, `danger`), il prendre en compte une balise `class` déclarée.
   * `oda-btn-tips`: Pour afficher de l'information (support le i8n).
+  * `oda-btn-style` : Pour choisir le "style" à appliquer (`primary`, `success`, `info`, `warning`, `danger`), il prendre en compte une balise `class` déclarée.
   * `oda-btn-icon-before` et `oda-btn-icon-after` : Pour ajouter un icon au bouton ([glyphs](http://getbootstrap.com/components/#glyphicons )).
   * `oda-btn-click` : Action Javascript à faire sur le clic.
   * `oda-btn-enter` : Pour conférer au bouton l'action click sur la touche "Entrée", la valeur a indiqué permet de gérer si plusieurs bouton avec cette propriétée sont affichés, la priorité la plus haute gagnera.
