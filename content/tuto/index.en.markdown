@@ -92,7 +92,7 @@ Or
 
 # Add tooltips
 
-![Image of Yaktocat](../assets/img/tuto.gif)
+![Image of Yaktocat](../content/img/tuto.gif)
 
 > This tutorial aims to create visual aid to guide users
 

@@ -92,7 +92,7 @@ Ou
 
 # Ajouter de la guidance
 
-![Image of Yaktocat](../assets/img/tuto.gif)
+![Image of Yaktocat](../content/img/tuto.gif)
 
 > Ce tutoriel a pour objectif de créer de l'aide visuel pour guider les utilisateurs
 
