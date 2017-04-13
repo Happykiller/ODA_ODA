@@ -322,6 +322,7 @@ Example:
   * `oda-input-area-debounce`: To enable debounce for automatic propagation
   * `oda-input-area-throttle`: To activate the throttle for automatic propagation
   * `oda-input-area-rich`: To have the tool palette to create enriched html code
+  * `disabled`: To make the field not editable.
   * `Required`: To make the field mandatory
 
 
@@ -333,11 +334,12 @@ Example:
 
 
 * The input checkbox 'oda-input-checkbox` is managed by a webcomponent and supports the following options:
-   * `oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
-   * `oda-input-text-label`: To display a label at the top
-   * `oda-input-text-value`: To initialize a value
-   * `oda-input-text-tips`: To display information below the field (support the i8n)
-   * `Required`: To make the field mandatory
+  * `oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `oda-input-text-label`: To display a label at the top
+  * `oda-input-text-value`: To initialize a value
+  * `oda-input-text-tips`: To display information below the field (support the i8n)
+  * `disabled`: To make the field not editable.
+  * `Required`: To make the field mandatory
 
 
 * Example of implementation:
@@ -356,6 +358,7 @@ Example:
   * `oda-input-select-availables`: Must contain a simple value list (` ['one', 'two'] `) or as an object 'One'}, {id: 2, label: 'two'}] `).
   * `oda-input-select-display`: Required if the list of values ​​is an object to define the value to display.
   * `oda-input-select-response`: Required if the list of values ​​is an object to define the value to return.
+  * `disabled`: To make the field not editable.
   * `Required`: To make the field mandatory.
 
 

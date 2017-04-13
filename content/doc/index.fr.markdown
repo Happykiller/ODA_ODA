@@ -324,6 +324,7 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
   * `oda-input-area-debounce` : Pour activier le debounce pour la propagation automatique.
   * `oda-input-area-throttle` : Pour activier le throttle pour la propagation automatique.
   * `oda-input-area-rich` : Pour avoir la palette d'outil afin de créer du code html enrichie.
+  * `disabled` : Pour rendre le champs non éditable.
   * `required` : Pour rendre le champ obligatoire.
 
 
@@ -339,6 +340,7 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
   * `oda-input-text-label` : Pour afficher un label en haut.
   * `oda-input-text-value` : Pour initialiser une valeur.
   * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n).
+  * `disabled` : Pour rendre le champs non éditable.
   * `required` : Pour rendre le champ obligatoire.
 
 
@@ -358,6 +360,7 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
   * `oda-input-select-availables` : Doit contenir une liste de valeur, soit simple (`['one','two']`), soit sous forme d'objet (`[{id:1,label:'one'},{id:2,label:'two'}]`).
   * `oda-input-select-display` : Obligatoire si la liste des valeurs est sous forme d'objet pour définir la valeur à afficher.
   * `oda-input-select-response` : Obligatoire si la liste des valeurs est sous forme d'objet pour définir la valeur à retourner.
+  * `disabled` : Pour rendre le champs non éditable.
   * `required` : Pour rendre le champ obligatoire.
 
 
