@@ -267,6 +267,7 @@ Example:
 
 * The widget button `oda-btn` is managed by a webcomponent, it supports the following options:
   * `oda-btn-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `oda-btn-tips`: To display information (support the i8n).
   * `oda-btn-style`: To choose the" style "to apply (` primary`, `success`,` info`, `warning`,` danger`), it must take into account a declared `class` tag.
   * 'oda-btn-icon-before` and `oda-btn-icon-after`: To add an icon to the [glyphs] button (http://getbootstrap.com/components/#glyphicons), click the following icon: 
   * `oda-btn-click`: Javascript action to be done on the click
@@ -310,17 +311,17 @@ Example:
 
 
 * The input text widget 'oda-input-area` is managed by a webcomponent, it supports the following options:
-  * `oda-input-text-name`: To save the identifier and the name, there is a check of unicity at the creation.
-  * `oda-input-text-hight`: To select the height of the field
-  * `oda-input-text-label`: To display a label at the top
-  * `oda-input-text-value`: To initialize a value
-  * `oda-input-text-tips`: To display information below the field (support the i8n)
-  * `oda-input-text-placeholder`: To display text in the field (support the i8n)
-  * `oda-input-text-check`: Verify the syntax by bassing on a regular expression, we can use the one already declared in the framework
-  * `oda-input-text-paste`: To block the paste
-  * `oda-input-text-debounce`: To enable debounce for automatic propagation
-  * `oda-input-text-throttle`: To activate the throttle for automatic propagation
-  * `oda-input-text-rich`: To have the tool palette to create enriched html code
+  * `oda-input-area-name`: To save the identifier and the name, there is a check of unicity at the creation.
+  * `oda-input-area-hight`: To select the height of the field
+  * `oda-input-area-label`: To display a label at the top
+  * `oda-input-area-value`: To initialize a value
+  * `oda-input-area-tips`: To display information below the field (support the i8n)
+  * `oda-input-area-placeholder`: To display text in the field (support the i8n)
+  * `oda-input-area-check`: Verify the syntax by bassing on a regular expression, we can use the one already declared in the framework
+  * `oda-input-area-paste`: To block the paste
+  * `oda-input-area-debounce`: To enable debounce for automatic propagation
+  * `oda-input-area-throttle`: To activate the throttle for automatic propagation
+  * `oda-input-area-rich`: To have the tool palette to create enriched html code
   * `Required`: To make the field mandatory
 
 

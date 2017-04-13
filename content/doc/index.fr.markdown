@@ -270,6 +270,7 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 * Le widget bouton `oda-btn` est géré par un webcomponant, il supporte les options suivantes :
   * `oda-btn-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
   * `oda-btn-style` : Pour choisir le "style" à appliquer (`primary`, `success`, `info`, `warning`, `danger`), il prendre en compte une balise `class` déclarée.
+  * `oda-btn-tips`: Pour afficher de l'information (support le i8n).
   * `oda-btn-icon-before` et `oda-btn-icon-after` : Pour ajouter un icon au bouton ([glyphs](http://getbootstrap.com/components/#glyphicons )).
   * `oda-btn-click` : Action Javascript à faire sur le clic.
   * `oda-btn-enter` : Pour conférer au bouton l'action click sur la touche "Entrée", la valeur a indiqué permet de gérer si plusieurs bouton avec cette propriétée sont affichés, la priorité la plus haute gagnera.
@@ -312,17 +313,17 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
 
 
 * Le widget input area `oda-input-area` est géré par un webcomponant, il supporte les options suivantes :
-  * `oda-input-text-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
-  * `oda-input-text-hight` : Pour choisir la hauteur du champs.
-  * `oda-input-text-label` : Pour afficher un label en haut.
-  * `oda-input-text-value` : Pour initialiser une valeur.
-  * `oda-input-text-tips` : Pour afficher de l'information en dessous du champ (support le i8n).
-  * `oda-input-text-placeholder` : Pour afficher du text dans le champ (support le i8n).
-  * `oda-input-text-check` : Vérifie la syntaxe en se bassant sur une expression régulière, on peux utliser celle déjà déclarer dans le framework.
-  * `oda-input-text-paste` : Pour bloquer le coller.
-  * `oda-input-text-debounce` : Pour activier le debounce pour la propagation automatique.
-  * `oda-input-text-throttle` : Pour activier le throttle pour la propagation automatique.
-  * `oda-input-text-rich` : Pour avoir la palette d'outil afin de créer du code html enrichie.
+  * `oda-input-area-name` : Pour enregistrer l'identifiant et le nom, il y a une vérification d'unicité à la création.
+  * `oda-input-area-hight` : Pour choisir la hauteur du champs.
+  * `oda-input-area-label` : Pour afficher un label en haut.
+  * `oda-input-area-value` : Pour initialiser une valeur.
+  * `oda-input-area-tips` : Pour afficher de l'information en dessous du champ (support le i8n).
+  * `oda-input-area-placeholder` : Pour afficher du text dans le champ (support le i8n).
+  * `oda-input-area-check` : Vérifie la syntaxe en se bassant sur une expression régulière, on peux utliser celle déjà déclarer dans le framework.
+  * `oda-input-area-paste` : Pour bloquer le coller.
+  * `oda-input-area-debounce` : Pour activier le debounce pour la propagation automatique.
+  * `oda-input-area-throttle` : Pour activier le throttle pour la propagation automatique.
+  * `oda-input-area-rich` : Pour avoir la palette d'outil afin de créer du code html enrichie.
   * `required` : Pour rendre le champ obligatoire.
 
 
