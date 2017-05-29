@@ -106,9 +106,15 @@ text_lib_server: Librairie Servuer
 * Si votre interface (ex : <monInterface>) est déclaré privé, et que dans la table `api_tab_rang_api` elle est déclaré des
 restrictions seront appliqués.
 * Exemple :
-{{code:tabInterfaceRight}
-* Dans cette exemple il est défini que l'interface qui contient le mot `exemple` (fichier `<server>/api/exemple.php`)
-permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieurs ou égale en indice au rang `3` (Responsable).
+{{code:tabInterfaceRight}}
+* Dans cette exemple il est défini que l'interface `/user/` permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieurs ou égale en indice au rang `3` (Responsable).
+
+### Héritage de la navigation
+
+* A la déclaration de l'interface il est possible de définir les droits d'accès par rapport à la navigation en utilisant le paramètre `inheritRightRoute`.
+* Exemple :
+{{code:inheritRightRoute}}
+
 
 # Appel REST
 
@@ -246,6 +252,15 @@ permet pour son mode privé que (car fermé open = `0`) pour les rangs inférieu
   * `addDataObject` : (Objet) Un facilitateur pour ajouter un objet.
   * `addDataStr` : (String) Pour ajouter qu'une chaine.
   * `dieInError` :  (String) Pour retourner une erreur.
+
+## Appel au interface
+
+* Il est possible de fournir des paramètres systèmes aux interfaces (paramètre dans l'appel REST)
+
+
+* Les paramètres systèmes :
+  * `odaOffset` : Pour utiliser la pagination, la variable `$this->odaOffset` sera disponbile dans les scripts PHP.
+  * `odaLimit` : Pour utiliser la pagination, la variable `$this->odaLimit` sera disponbile dans les scripts PHP. 
 
 # Modal (Popup)
 

@@ -104,8 +104,14 @@ text_lib_server: Library server
 * If your interface (eg <myInterface>) is declared private, and in the `api_tab_rang_api` table is reported
 restrictions will apply.
 * Example:
-{{code:tabInterfaceRight}
-* In this example it is defined that the interface which contains the word `example` (file` <server> / api / exemple.php`) allows for its private mode that (because closed open = `0`) for the lower rows or equal in index to the rank` 3` (Responsible).
+{{code:tabInterfaceRight}}
+* In this example it is defined that the interface which contains the word `user` allows for its private mode that (because closed open = `0`) for the lower rows or equal in index to the rank` 3` (Responsible).
+
+### Inheritance of navigation
+
+* To the declaration of the interface it is possible to define the rights of access with respect to the navigation using the parameter `inheritRightRoute`.
+* Example :
+{{code:inheritRightRoute}}
 
 # Call REST
 
@@ -242,6 +248,15 @@ Example:
   * `addDataObject`: (Objet) A facilitator to add an object.
   * `addDataStr`: (String) To add a string.
   * `dieInError`:  (String) To return an error.
+
+## Call to interface
+
+* It is possible to provide system parameters to the interfaces (parameter in the REST call)
+
+
+* System parameters:
+   * `OdaOffset`: To use pagination, the` $ this-> odaOffset` variable will be available in PHP scripts.
+   * `OdaLimit`: To use pagination, the` $ this-> odaLimit` variable will be available in PHP scripts.
 
 # Modal (Popup)
 

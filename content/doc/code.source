@@ -56,11 +56,24 @@ code:buidInterface:end
 
 code:tabInterfaceRight:begin
 ```
-| interface     | id_rang       | open          |
-| ------------- | ------------- | ------------- |
-| exemple       | 3             | 0             |
+| interface     | methode       | id_rang       | open          |
+| ------------- | ------------- | ------------- | ------------- |
+| exemple       | GET           | 3             | 0             |
 ```
 code:tabInterfaceRight:end
+
+
+code:inheritRightRoute:begin
+```
+$slim->get('/example/', function () use ($slim) {
+    $params = new OdaPrepareInterface();
+    $params->slim = $slim;
+    $params->inheritRightRoute = 'admin';
+    $INTERFACE = new ExampleInterface($params);
+    $INTERFACE->get();
+});
+```
+code:inheritRightRoute:end
 
 
 code:callExample:begin
