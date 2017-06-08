@@ -66,8 +66,7 @@ code:tabInterfaceRight:end
 code:inheritRightRoute:begin
 ```
 $slim->get('/example/', function () use ($slim) {
-    $params = new OdaPrepareInterface();
-    $params->slim = $slim;
+    $params = new OdaPrepareInterface($slim);
     $params->inheritRightRoute = 'admin';
     $INTERFACE = new ExampleInterface($params);
     $INTERFACE->get();
