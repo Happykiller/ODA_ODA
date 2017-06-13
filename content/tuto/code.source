@@ -112,19 +112,19 @@ code:composerJson:end
 
 code:npmDeployMini:begin
 ```
-npm run deploy-mini
+npm run install-mini
 ```
 code:npmDeployMini:end
 
 code:npmDeployApp:begin
 ```
-npm run deploy-app
+npm run install-app
 ```
 code:npmDeployApp:end
 
 code:npmDeployFull:begin
 ```
-npm run deploy-full
+npm run install-full
 ```
 code:npmDeployFull:end
 
