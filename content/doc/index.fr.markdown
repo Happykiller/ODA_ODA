@@ -463,3 +463,38 @@ restrictions seront appliqués.
 
 * Exemple implémentation :
 {{code:jsEditWebConponant}}
+
+
+# WebSocket
+* Il est possible de créer une communication "live" entre les clients et le serveur grâce aux WebSocket.
+* Ref : [Wiki:WebSocket](https://fr.wikipedia.org/wiki/WebSocket)
+
+
+## Partie serveur
+* Pour assurer le bon fonctionnement des websocket il faut avec un thread actif, pour se faire le framework vous guide.
+  * Implémenter une classe avec comme exemple `<server>/class/ProjectWebsockets.php`, cette class sert à apporter de la valeur si souhaité aux méthodes de base. 
+  * Implémenter une classe pour execution afin d'instancier le service websocket. Pour exemple `<server>/script/demonWebsoket.php`. Cela permetra de créer une route qui utilisera l'implémentation précédament faite.
+  * Executer le script par ex : `php demonWebsoket.php`.
+
+## Partie client
+* L'utillisation par le client est simplifié, il s'agit de se connecter au service, puis d'envoyer des messages et d'écouter les évènements de connection, deconnection et reception.
+
+* Exemple connection :
+{{code:websocketCon}}
+
+* Exemple évènement connection :
+{{code:websocketEvtCon}}
+
+* TODO
+* Exemple évènement ouverture :
+{{code:websocketEvtOpen}}
+
+* TODO
+* Exemple évènement déconnection :
+{{code:websocketEvtDeco}}
+
+* Exemple évènement réception :
+{{code:websocketEvtReceive}}
+
+* Exemple envoi :
+{{code:websocketSent}}

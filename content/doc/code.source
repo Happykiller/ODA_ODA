@@ -399,3 +399,59 @@ code:tableData:begin
 ]
 ```
 code:tableData:end
+
+
+code:websocketCon:begin
+```
+var conn = $.Oda.Websocket.connect({
+    host:"localhost",
+    port:4242,
+    instance:"test"
+});
+```
+code:websocketCon:end
+
+
+code:websocketEvtCon:begin
+```
+conn.onConnect = function(e) { 
+    Console.log('Connection success.');
+};
+```
+code:websocketEvtCon:end
+
+
+code:websocketEvtOpen:begin
+```
+conn.onOpen = function(e) { 
+    Console.log('New connection.');
+};
+```
+code:websocketEvtOpen:end
+
+
+code:websocketEvtDeco:begin
+```
+conn.onClose = function(e) { 
+    Console.log('Close connection.');
+};
+```
+code:websocketEvtDeco:end
+
+
+code:websocketEvtReceive:begin
+```
+conn.onMessage = function(e) { 
+    Console.log('New message');
+};
+```
+code:websocketEvtReceive:end
+
+
+code:websocketSent:begin
+```
+conn.sent({
+    attr: "hello"
+});
+```
+code:websocketSent:end
